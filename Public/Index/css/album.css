@@ -1,0 +1,92 @@
+
+	#body{
+		width:960px;
+		height:800px;
+		margin:0 auto;
+		/*background-color:yellow;*/
+		/*position:relative;*/
+	}
+	img{
+		cursor:pointer;
+	}
+	/*上方导航条的*/
+	#nav{
+		/*background-color:orange;*/
+		width:300px;
+		font-size:12px;
+		/*margin-top:18px;*/
+		margin-bottom:18px;
+	}
+	#nav a{
+		text-decoration:none;
+		color:#3D3D3D;
+	}
+	#left{
+		margin-right:20px;
+		width:160px;
+		float:left;
+	}
+	#left table{
+		border-collapse:collapse;
+	}
+	#left table tr{
+		/*border:1px solid red;*/
+	}
+	#left table tr td{
+		/*border:1px solid red;*/
+		font-size:12px;
+	}
+	#r_action{
+		width:765px;
+		clear:both;
+		height:auto;
+		float:right;
+		border-bottom:1px solid #D4D4D4;
+		/*background-color:yellow;*/
+	 }
+	#r_a_pic{
+		float:right;
+ 		height:26px;
+		margin-top:14px;
+		margin-left:10px;
+		margin-bottom:11px;
+ 	}
+ 	#r_a_cb{
+		float:left;
+		margin-top:20px;
+		width:80px;
+		height:20px;
+		line-height:20px;
+		font-size:11px;
+		color:#878787;
+		}
+	#r_list{
+		width:765px;
+		height:30px;
+		float:right;
+	}
+	#r_l_pic{
+		float:right;
+		height:15px;
+		margin-top:10px;
+		margin-left:15px;
+		margin-bottom:11px;
+		margin-right:5px;
+	}
+	#r_l_cb{
+		float:left;
+		margin-top:10px;
+		width:300px;
+		height:20px;
+		line-height:20px;
+		font-size:11px;
+	}
+	#title{
+		font-size:13px;
+		/*margin-bottom:20px;*/
+		/*background-color:orange;*/
+
+	}
+	#right{
+		margin-top:10px;
+	}

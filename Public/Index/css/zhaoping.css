@@ -1,0 +1,65 @@
+*{margin: 0 auto;padding:0px;}
+#top{width: 960px;height: 100px;margin: 0 auto;}
+#dh{width: 100%;height: 50px;background: #2BABE8}
+.dh-l{width: 960px;height: 50px;margin: 0 auto}
+.dh-l ul li{width: 150px;height: 50px;float: left;background: #2BABE8;text-align: center;cursor: pointer;list-style: none}
+.dh-l ul li a{display: block;line-height: 50px;font-size: 18px;color: white;font-weight: 600;text-decoration: none}
+.dh-l ul li a:hover{background: #48CBFF}
+.ku{text-decoration: none;color: white;font-size: 12px;float: right;line-height: 50px}
+.ku:hover{text-decoration: underline;}
+#img img{width: 100%}
+#fuli{width: 100%;height: 140px;background: #F8F8F8;text-align: center;}
+#zhiwei{width: 960px;height: 225px;margin: 0 auto;margin-top: 20px}
+.zhi-img{width: 460px;height: 195px;cursor: pointer;float: left;margin-top: 22px;margin-left: 10px }
+.zhi-img:hover{border: 2px solid #00AAEF}
+.zhi-test{width: 460px;height: 195px;background: white;float: right;margin-top: 18px;margin-right: 10px}
+.test-top{width: 460px;height: 35px;border-bottom: 1px solid #DDDDDD}
+.test-top span{font-size: 17px;color: #343434;float: left;line-height: 35px;font-weight: 600;margin-left: 10px;border-bottom: 2px solid #00AAEF}
+.test-top a{text-decoration: none;color: #0089C1;font-size: 12px;float: right;margin-right: 10px;line-height: 35px}
+.test-top a:hover{text-decoration: underline;}
+.test-c{width: 460px;height: 160px;margin-top: 3px;margin-left: 20px}
+.test-c ul{width: 460px;height: 160px;color: #0087BD}
+.test-c ul li{width: 220px;height: 39px;float: left;border-bottom:1px dashed #DDDDDD }
+.test-c ul li a{text-decoration: none;line-height: 39px;color: #0087BD;font-size: 14px;font-family: "宋体";display: block;}
+.test-c ul li a:hover{text-decoration: underline;}
+#kugou{width: 960px;height: 710px;margin-top: 10px}
+.kugou-top{width: 960px;height: 40px;border-bottom: 1px solid #ccc}
+.kugou-top span{font-size: 20px;color: #343434;line-height: 40px;font-weight: 600;float: left;border-bottom: 2px solid #00AAEF;width: 100px;height: 40px;display: block;}
+.kugou-img{width: 960px;height: 700px;margin-top: 10px;}
+.kugou-img ul li{float: left;list-style: none;margin:0px 10px 15px 0px;}
+.kugou-img ul li h5{width: 310px;height: 20px;text-align: center;}
+.kugou-img ul li span{line-height: 20px;font-size: 12px;font-family: "宋体";font-weight: 400;color: #545454}
+#xinxi{width: 960px;height: 250px;}
+.xinxi-top{width: 960px;height: 40px;border-bottom: 1px solid #ccc}
+.xinxi-top span{font-size: 20px;color: #343434;line-height: 40px;font-weight: 600;float: left;border-bottom: 2px solid #00AAEF;width: 100px;height: 40px;display: block;}
+.xinxi-c{width: 960px;height: 170px;margin-top: 40px;float: left}
+.xin-l{width: 300px;height: 170px;float: left;border-right: 1px solid #ccc;}
+.xin-c{width: 358px;height: 170px;float: left;}
+.xin-r{width: 300px;height: 170px;float: left;border-left: 1px solid #ccc}
+.xin-l-top{width: 220px;height: 50px;float: left;border-bottom: 1px dashed #ccc}
+.xin-l-top span{font-size: 18px;color: #343434;line-height: 50px;font-weight: 600;display: block;}
+.xin-l-list{width: 300px;height: 100px;margin-top: 60px}
+.xin-l-list p{margin-bottom: 30px;font-size: 13px;color: #888888}
+.xin-l-list span{color: #2B2B2B}
+
+.xin-c-top{width: 220px;height: 50px;float: left;border-bottom: 1px dashed #ccc;margin-left: 50px}
+.xin-c-top span{font-size: 18px;color: #343434;line-height: 50px;font-weight: 600;display: block;}
+.xin-c-list{width: 300px;height: 100px;margin-top: 8px;float: left;margin-left: 50px}
+.xin-c-list p{margin-bottom: 30px;font-size: 13px;color: #888888}
+.xin-c-list span{color: #2B2B2B}
+
+.xin-r-top{width: 220px;height: 50px;float: left;border-bottom: 1px dashed #ccc;margin-left: 50px}
+.xin-r-top span{font-size: 18px;color: #343434;line-height: 50px;font-weight: 600;display: block;}
+.xin-r-list{width: 300px;height: 100px;margin-top: 8px;float: left;margin-left: 50px}
+.xin-r-list p{margin-bottom: 30px;font-size: 13px;color: #888888}
+.xin-r-list span{color: #2B2B2B}
+#guanggao{width: 960px;height: 20px;margin-top: 20px}
+#guanggao span{font-size: 12px;color: #999999}
+#foot{margin-top: 20px;width: 960px;}
+.foot-dh ul li{list-style-type: none;float: left;}
+.foot-dh ul li a{text-decoration: none;font-size: 12px;color:#666666;}
+.foot-ti{float: left;}
+.foot-ti ul li{list-style-type: none;margin-top: 8px;font-size: 12px;color:#999999;}
+.foot-ti ul li a{text-decoration: none;}
+.foot-img{float: right;}
+#aa{width: 960px;height: 2px;background:#878787;margin-top: 20px}

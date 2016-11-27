@@ -1,0 +1,26 @@
+*{margin: 0 auto;padding:0px;list-style: none;}
+body{background: #DBDBDB}
+#all{width: 740px;height: 500px;border: 1px solid #ccc;background: white;margin-top: 100px}
+#play{width: 40px;height:40px;background-image:url(../images/png/4.png);cursor: pointer;}
+.a-top{width: 740px;height: 40px;}
+.a-top img{margin-left: 10px}
+.dh{width: 740px;height: 110px;background:#31A8E0}
+.a-dh{width: 310px;height: 110px;background: #31A8E0;float: left;border-right: 1px solid #ccc}
+.a-dh #singer{height: 90px;margin-top: 8px;border: 2px solid white;margin-left: 10px;float: left;}
+.tit{width: 200px;height: 40px;display: block;float: left;line-height: 40px;margin-top: 10px;text-align: center;}
+.tit #namesong{font-size: 16px;color: white;font-family: "宋体";font-weight: 700;float: left;text-overflow:clip;white-space:nowrap; overflow:hidden;width: 150px;margin-left: 30px}
+.b-dh img{margin-top: 20px;margin-left: 15px}
+.txt{width: 740px;height: 350px}
+.t-left{width: 310px;height: 350px;float: left;border-right: 1px solid #ccc;}
+.left-top{width: 310px;height: 40px;background: #EFEFEF;text-align: center;line-height: 40px}
+.left-top span{font-size: 18px;color: #999999;font-family: "黑体"}
+.tt{width: 310px;height:250px;margin-top:10px;}
+.ta{width: 310px;height: 134px;margin-left:40px;}
+.ta-left{width: 240px;height: 283px;float: left}
+.ta-left  ul{width: 310px;height: 34px;float: left;}
+.ta-left  ul:hover{background: #C2E5F4;cursor: pointer;}
+/*.ta-left ul li{list-style: none;float: left;color: #666666;font-size: 14px;font-family: "宋体";line-height: 34px;text-overflow:clip;white-space:nowrap; overflow:hidden;}*/
+.nums{width: 50px;height: 34px;float: left;text-align: center;line-height: 34px}
+.title{color: #666666;font-size: 14px;font-family: "宋体";line-height: 34px;text-overflow:clip;white-space:nowrap; overflow:hidden;width: 120px;float: left;}
+.t-right{width: 429px;height: 350px;float: left}
+#porder:hover{cursor:pointer;}

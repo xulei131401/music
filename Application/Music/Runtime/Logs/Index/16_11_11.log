@@ -1,0 +1,1063 @@
+[ 2016-11-11T15:24:29+08:00 ] ::1 /music/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SELECT * FROM `website` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `website`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `excellent` LIMIT 1,8   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `excellent` LIMIT 0,7   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `rank` WHERE ( name='欧美新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=7 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='蒙面新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='网络红歌榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗分享榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=13 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗TOP500' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=5 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='中国TOP排行榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=18 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='香港RTHK电台榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=24 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='美国BillBoard榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=19 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE ( pid = 0 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('7','8','37','9','10','11','12','1')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('13','14','15','16','17','2')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('18','19','20','21','22','3')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('28','29','30','31','5')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('32','33','34','35','36','6')  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 34 行.
+NOTIC: [8] Undefined variable: rt1 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 254 行.
+NOTIC: [8] Undefined variable: rt2 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 262 行.
+NOTIC: [8] Undefined variable: vv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 337 行.
+NOTIC: [8] Undefined variable: bb F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 353 行.
+NOTIC: [8] Undefined variable: bv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 361 行.
+NOTIC: [8] Undefined variable: zz F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 428 行.
+NOTIC: [8] Undefined variable: zt F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 436 行.
+NOTIC: [8] Undefined variable: mu F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 479 行.
+NOTIC: [8] Undefined variable: mi F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 487 行.
+NOTIC: [8] Undefined variable: nn F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 503 行.
+NOTIC: [8] Undefined variable: nm F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 511 行.
+NOTIC: [8] Undefined variable: fs F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 578 行.
+NOTIC: [8] Undefined variable: sf F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 586 行.
+NOTIC: [8] Undefined variable: ds F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 602 行.
+NOTIC: [8] Undefined variable: sd F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 610 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.273000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.273000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015000s ]
+
+[ 2016-11-11T15:24:33+08:00 ] ::1 /music/index.php/Index/Rank/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `rank`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id F:\wamp64\www\music\Application\Music\Index\Controller\RankController.class.php 第 13 行.
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9) ORDER BY id asc LIMIT 0,5   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 33 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:24:35+08:00 ] ::1 /music/index.php/Index/Classify/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: id F:\wamp64\www\music\Application\Music\Index\Controller\ClassifyController.class.php 第 12 行.
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc LIMIT 0,12   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:24:36+08:00 ] ::1 /music/index.php/Index/Classify/index/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc LIMIT 0,12   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:24:37+08:00 ] ::1 /music/index.php/Index/Audio/playClassify/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `song` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:24:54+08:00 ] ::1 /music/Public/Home/images/loginsj.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:23+08:00 ] ::1 /music/Public/css/admin_cont_css.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:23+08:00 ] ::1 /music/Public/css/admin_cont_main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:23+08:00 ] ::1 /music/Public/images/admin_cont/list_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:25+08:00 ] ::1 /music/Public/css/admin_cont_css.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:25+08:00 ] ::1 /music/Public/css/admin_cont_main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:25+08:00 ] ::1 /music/Public/images/admin_cont/list_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:26+08:00 ] ::1 /music/Public/css/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:26+08:00 ] ::1 /music/Public/css/css.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:33+08:00 ] ::1 /music/Public/css/admin_cont_css.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:33+08:00 ] ::1 /music/Public/css/admin_cont_main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:33+08:00 ] ::1 /music/Public/images/admin_cont/list_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:34+08:00 ] ::1 /music/Public/css/css.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:34+08:00 ] ::1 /music/Public/css/main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_riyuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_mengmiangewang.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_yueyuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_wangluohongge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_hanyuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_kugoufenxiang.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_5sing.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_yueduxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_fanxing.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_b.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_zhongguotop.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_yingdanqu.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_hanmnet.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_inyue.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_itunes.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_taiwan.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_gang.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/jingdianbang/b_riben.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_yingshijinqu.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:37+08:00 ] ::1 /music/rank/remenbang/b_huayuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_hanyuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_riyuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_mengmiangewang.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_yueyuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_kugoufenxiang.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_wangluohongge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_yueduxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_fanxing.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:39+08:00 ] ::1 /music/rank/remenbang/b_5sing.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_hanmnet.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_b.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_yingdanqu.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_zhongguotop.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_inyue.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_itunes.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_riben.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_taiwan.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/jingdianbang/b_gang.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/remenbang/b_yingshijinqu.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/remenbang/b_huayuxinge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:26:40+08:00 ] ::1 /music/rank/remenbang/b_wangluohongge.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T15:26:44+08:00 ] ::1 /music/Public/css/admin_cont_css.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:44+08:00 ] ::1 /music/Public/css/admin_cont_main.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-11-11T15:26:44+08:00 ] ::1 /music/Public/images/admin_cont/list_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:33:07+08:00 ] ::1 /music/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `website` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `website`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `excellent` LIMIT 1,8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `excellent` LIMIT 0,7   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='欧美新歌榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='蒙面新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='网络红歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗分享榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=13 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗TOP500' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=5 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='中国TOP排行榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=18 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='香港RTHK电台榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=24 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='美国BillBoard榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=19 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE ( pid = 0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('7','8','37','9','10','11','12','1')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('13','14','15','16','17','2')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('18','19','20','21','22','3')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('28','29','30','31','5')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('32','33','34','35','36','6')  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 45 行.
+NOTIC: [8] Undefined index: user F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 45 行.
+NOTIC: [8] Undefined index: user F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 46 行.
+NOTIC: [8] Undefined index: user F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 46 行.
+NOTIC: [8] Undefined variable: rt1 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 254 行.
+NOTIC: [8] Undefined variable: rt2 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 262 行.
+NOTIC: [8] Undefined variable: vv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 337 行.
+NOTIC: [8] Undefined variable: bb F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 353 行.
+NOTIC: [8] Undefined variable: bv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 361 行.
+NOTIC: [8] Undefined variable: zz F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 428 行.
+NOTIC: [8] Undefined variable: zt F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 436 行.
+NOTIC: [8] Undefined variable: mu F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 479 行.
+NOTIC: [8] Undefined variable: mi F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 487 行.
+NOTIC: [8] Undefined variable: nn F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 503 行.
+NOTIC: [8] Undefined variable: nm F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 511 行.
+NOTIC: [8] Undefined variable: fs F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 578 行.
+NOTIC: [8] Undefined variable: sf F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 586 行.
+NOTIC: [8] Undefined variable: ds F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 602 行.
+NOTIC: [8] Undefined variable: sd F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 610 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.161000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T15:36:01+08:00 ] ::1 /music/index.php/Index/Rank/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `rank`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: id F:\wamp64\www\music\Application\Music\Index\Controller\RankController.class.php 第 13 行.
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9) ORDER BY id asc LIMIT 0,5   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 28 行.
+NOTIC: [8] Use of undefined constant pic - assumed 'pic' F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 44 行.
+NOTIC: [8] Undefined index: user F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 44 行.
+NOTIC: [8] Undefined index: user F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 45 行.
+NOTIC: [8] Undefined index: user F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 45 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+NOTIC: [8] Undefined index: float F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\b42e1f71f47ac5aef27ee49586a299e6.php 第 186 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T16:16:00+08:00 ] ::1 /music/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `website` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `website`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `excellent` LIMIT 1,8   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `excellent` LIMIT 0,7   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='欧美新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='蒙面新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='网络红歌榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗分享榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=13 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗TOP500' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=5 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='中国TOP排行榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=18 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='香港RTHK电台榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=24 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='美国BillBoard榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=19 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( pid = 0 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('7','8','37','9','10','11','12','1')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('13','14','15','16','17','2')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('18','19','20','21','22','3')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('28','29','30','31','5')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('32','33','34','35','36','6')  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 34 行.
+NOTIC: [8] Undefined variable: rt1 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 254 行.
+NOTIC: [8] Undefined variable: rt2 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 262 行.
+NOTIC: [8] Undefined variable: vv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 337 行.
+NOTIC: [8] Undefined variable: bb F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 353 行.
+NOTIC: [8] Undefined variable: bv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 361 行.
+NOTIC: [8] Undefined variable: zz F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 428 行.
+NOTIC: [8] Undefined variable: zt F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 436 行.
+NOTIC: [8] Undefined variable: mu F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 479 行.
+NOTIC: [8] Undefined variable: mi F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 487 行.
+NOTIC: [8] Undefined variable: nn F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 503 行.
+NOTIC: [8] Undefined variable: nm F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 511 行.
+NOTIC: [8] Undefined variable: fs F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 578 行.
+NOTIC: [8] Undefined variable: sf F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 586 行.
+NOTIC: [8] Undefined variable: ds F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 602 行.
+NOTIC: [8] Undefined variable: sd F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 610 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.190000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.190000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T16:16:03+08:00 ] ::1 /music/index.php/Index/Classify/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: id F:\wamp64\www\music\Application\Music\Index\Controller\ClassifyController.class.php 第 12 行.
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc LIMIT 0,12   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T16:16:09+08:00 ] ::1 /music/index.php/Index/Audio/playClassify/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T17:37:12+08:00 ] ::1 /music/index.php/Index/Audio/playClassify/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T17:39:00+08:00 ] ::1 /music/index.php/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `website` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `website`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `excellent` LIMIT 1,8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `excellent` LIMIT 0,7   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `link`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='欧美新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='蒙面新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='网络红歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=10 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗分享榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=13 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗飙升榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=4 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='酷狗TOP500' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=5 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='中国TOP排行榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=18 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='香港RTHK电台榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=24 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rank` WHERE ( name='日本新歌榜' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=9 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2) ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `rank` WHERE ( name='美国BillBoard榜' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`rank_id`,`song_id` FROM `rank_song` WHERE ( rank_id=19 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (4,3,2,6,1,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,3,2,6,1,7,8,9,9,8,7,6,5,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9,1,2,1,2,3,4,5,6,7,8,9) ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( pid = 0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('7','8','37','9','10','11','12','1')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('13','14','15','16','17','2')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('18','19','20','21','22','3')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('28','29','30','31','5')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE `id` IN ('32','33','34','35','36','6')  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 34 行.
+NOTIC: [8] Undefined variable: rt1 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 254 行.
+NOTIC: [8] Undefined variable: rt2 F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 262 行.
+NOTIC: [8] Undefined variable: vv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 337 行.
+NOTIC: [8] Undefined variable: bb F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 353 行.
+NOTIC: [8] Undefined variable: bv F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 361 行.
+NOTIC: [8] Undefined variable: zz F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 428 行.
+NOTIC: [8] Undefined variable: zt F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 436 行.
+NOTIC: [8] Undefined variable: mu F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 479 行.
+NOTIC: [8] Undefined variable: mi F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 487 行.
+NOTIC: [8] Undefined variable: nn F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 503 行.
+NOTIC: [8] Undefined variable: nm F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 511 行.
+NOTIC: [8] Undefined variable: fs F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 578 行.
+NOTIC: [8] Undefined variable: sf F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 586 行.
+NOTIC: [8] Undefined variable: ds F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 602 行.
+NOTIC: [8] Undefined variable: sd F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\317f8038a0cd9a6452a445a2e4c1a178.php 第 610 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.158000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T17:39:02+08:00 ] ::1 /music/index.php/Index/Classify/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: id F:\wamp64\www\music\Application\Music\Index\Controller\ClassifyController.class.php 第 12 行.
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc LIMIT 0,12   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T17:39:04+08:00 ] ::1 /music/index.php/Classify/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id F:\wamp64\www\music\Application\Music\Index\Controller\ClassifyController.class.php 第 12 行.
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc LIMIT 12,12   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T17:39:08+08:00 ] ::1 /music/index.php/Classify/index/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: id F:\wamp64\www\music\Application\Music\Index\Controller\ClassifyController.class.php 第 12 行.
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=7 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( id=7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (17,15,14,1,16,13,12,11,10,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46) ORDER BY id asc LIMIT 24,12   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-11T17:39:11+08:00 ] ::1 /music/index.php/Index/Classify/index/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `classify` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (3,4,5,6,7,8,9) ORDER BY id asc LIMIT 0,12   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T17:39:15+08:00 ] ::1 /music/index.php/Index/Classify/index/id/15.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `classify`  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=15 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE ( id=15 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (2,3,4,5,6,7,8,9,47,48,49,50,51,52,53,55,56,57,58,59) ORDER BY id asc LIMIT 0,12   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 5 行.
+NOTIC: [8] Undefined variable: doop F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 28 行.
+NOTIC: [8] Undefined index: username F:\wamp64\www\music\Application\Music\Runtime\Cache\Index\58606367f630ed8d5350ec2e9f6d8b60.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-11T17:39:16+08:00 ] ::1 /music/index.php/Index/Audio/playClassify/id/15.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`classify_id`,`song_id` FROM `classify_song` WHERE ( classify_id=15 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `classify` WHERE ( id=15 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `song` WHERE `id` IN (2,3,4,5,6,7,8,9,47,48,49,50,51,52,53,55,56,57,58,59) ORDER BY id asc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `song` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

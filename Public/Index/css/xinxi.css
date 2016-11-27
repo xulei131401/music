@@ -1,0 +1,34 @@
+*{margin: 0 auto;padding:0px;}
+#top{width: 960px;height: 100px;margin: 0 auto;}
+#dh{width: 100%;height: 50px;background: #2BABE8}
+.dh-l{width: 960px;height: 50px;margin: 0 auto}
+.dh-l ul li{width: 150px;height: 50px;float: left;background: #2BABE8;text-align: center;cursor: pointer;list-style: none}
+.dh-l ul li a{display: block;line-height: 50px;font-size: 18px;color: white;font-weight: 600;text-decoration: none}
+.dh-l ul li a:hover{background: #48CBFF}
+.ku{text-decoration: none;color: white;font-size: 12px;float: right;line-height: 50px}
+.ku:hover{text-decoration: underline;}
+#img img{width: 100%;height: 350px}
+#center{width: 960px}
+.cent-top{width: 960px;height: 30px;margin-top: 15px;line-height: 30px;color: #0087BD;font-size: 14px;font-family: "宋体"}
+.cent-top a{text-decoration: none;color: #333333}
+.cent-top a:hover{text-decoration: underline;}
+.cent-cent{width: 960px;margin-top: 30px;}
+.c-c-top{width: 960px;height: 40px;border-bottom: 1px solid #ccc}
+.c-c-top span{display: block;width: 180px;font-size: 24px;height: 40px;line-height: 40px;float: left;font-weight: 600;border-bottom: 2px solid #00AAEF}
+.c-dh{width: 960px;height: 40px;margin-top: 30px;background: #F5F5F5}
+.c-dh ul li{list-style: none;width: 310px;height: 40px;float: left;line-height: 40px;font-size: 15px;color: #888888;}
+.c-dh .it{margin-left: 29px}
+.c-dh ul li span{font-size: 16px;color: #000000;}
+.c-c-list{width: 960px;margin-top: 20px}
+.c-c-list h5{font-size: 14px;font-weight: 700;margin-bottom: 8px}
+.c-c-list p{color: #555;font-size: 14px;margin-bottom: 14px;line-height: 35px}
+#guanggao{width: 960px;height: 20px;margin-top: 20px}
+#guanggao span{font-size: 12px;color: #999999}
+#foot{margin-top: 20px;width: 960px;}
+.foot-dh ul li{list-style-type: none;float: left;}
+.foot-dh ul li a{text-decoration: none;font-size: 12px;color:#666666;}
+.foot-ti{float: left;}
+.foot-ti ul li{list-style-type: none;margin-top: 8px;font-size: 12px;color:#999999;}
+.foot-ti ul li a{text-decoration: none;}
+.foot-img{float: right;}
+#aa{width: 960px;height: 2px;background:#878787;margin-top: 20px}

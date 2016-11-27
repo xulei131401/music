@@ -1,0 +1,782 @@
+    <!-- 引入头部文件 -->
+    <include file="Header/header"/>
+   <!--  <css href="{:C('T_URL')}/css/bootstrap.min.css" />
+    <js href="{:C('T_URL')}/js/jquery-2.2.2.js" />
+    <js href="{:C('T_URL')}/js/bootstrap.min.js" /> -->
+    <!-- 轮播部分 -->
+	<div id="wrapper">
+	   <!-- 轮播开始 -->
+	   	<div id="myCarousel" class="carousel slide">
+	    <!-- 轮播（Carousel）指标 -->
+	    <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
+	        <li data-target="#myCarousel" data-slide-to="3"></li>
+	    </ol>   
+	    <!-- 轮播（Carousel）项目 -->
+	    <div class="carousel-inner" data-ride="carousel" data-interval="3000" id="lunbo">
+	        <div class="item active">
+	            <img src="{:C('T_URL')}/images/login/lunbo/01.jpg" alt="图1">
+	        </div>
+	        <div class="item">
+	            <img src="{:C('T_URL')}/images/login/lunbo/02.jpg" alt="图2">
+	        </div>
+	        <div class="item">
+	            <img src="{:C('T_URL')}/images/login/lunbo/03.jpg" alt="图3">
+	        </div>
+	        <div class="item">
+	            <img src="{:C('T_URL')}/images/login/lunbo/04.jpg" alt="图4">
+	        </div>
+	    </div>
+	    <!-- 轮播（Carousel）导航 -->
+	    <a class="carousel-control left" href="#myCarousel" 
+	        data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span>
+	    	<span class="sr-only">Previous</span>
+	    </a>
+	    <a class="carousel-control right" href="#myCarousel" 
+	        data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span>
+	    	<span class="sr-only">Next</span>
+	    </a>
+	</div>
+	   	<!--轮播结束-->
+        <div class="and">
+        	<a href="javascript:void(0)"><div class="dian" title="酷狗音乐盒2016官方免费下载"></div></a>
+        	<a href="javascript:void(0)"><div class="andr" title="酷狗音乐盒2016官方免费下载"></div></a>
+        	<a href="javascript:void(0)"><div class="iph" title="酷狗音乐盒2016官方免费下载"></div></a>
+        	<a href="javascript:void(0)"><div class="ipa" title="酷狗音乐盒2016官方免费下载"></div></a>
+        </div>
+	</div>	
+	<!-- 轮播的JS代码 -->
+	
+	<!-- 专辑部分 -->
+	<div id="zhuanji">
+	    <!-- 专辑歌曲部分 -->
+	    <div class="ji-A">
+	        <!-- 专辑头部部分 -->
+			<div class="zhuan-top">
+				<strong>最新专辑</strong>
+				<div id="zui1" class="z-t" title="最新专辑">最新&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+				<div id="zui2" class="z-t" title="最热专辑">最热&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+				<div id="zui3" class="z-t" title="推荐榜">推荐榜</div>
+				<div class="z-t-l">
+					<a href="javascript:void(0)" class="fox" title="酷狗音乐盒2016官方免费下载"><strong>酷狗音乐盒2016官方免费下载</strong></a>
+				    <a href="__MODULE__/Classify/index" class="more" title="更多音乐推荐">更多</a>
+				</div>
+			</div>
+			<!-- 最新 -->
+			<div id="pp1" class="xin">
+				<!-- 专辑开始 -->
+				<div id="fp-1">
+						<!-- 专辑图片 -->
+						<foreach name="gmdlist" item="pop">
+						<ul>
+							<li><a href="__MODULE__/Excellent/songlist/id/{$pop.id}" title="{$pop.name}"><img src="__ROOT__/{$pop.pic}" title="{$pop.name}" width="80px" height="80px"></a>
+							<strong><a href="__MODULE__/Excellent/songlist/id/{$pop.id}" title="{$pop.name}">{$pop.name}</a></strong>
+							<span>{$pop.author}</span></li>
+							
+						</ul>
+						</foreach>
+				</div>
+				
+				<!-- 单曲部分 -->
+				<div class="c-c-l">
+				    <!-- 单曲导航 -->
+					<strong><a href="" title="推荐单曲">推荐单曲</a></strong>
+					<div id="sp1" class="sp" title="华语新歌">华语&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+					<div id="sp2" class="sp" title="欧美新歌">欧美&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+					<div id="sp3" class="sp" title="日韩新歌">日韩&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+					<div id="sp4" class="sp" title="蒙面歌王">蒙面歌王</div>
+				</div>
+				<!-- 酷狗飙升榜 -->
+				<div id="gequ1" class="gequ">
+					<div id="list1" class="gequlist">
+					    <div id="uuu" class="ddf">
+						    <volist name="list1" id="v" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$v['id']))}" title="{$v.singer} - {$v.name}" target="view_window">
+								    <span class="getext">{$v.singer} - {$v.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="uuu1" class="ffd">
+							<volist name="list2" id="u" offset="5" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$u['id']))}" title="{$u.singer} - {$u.name}" target="view_window">
+								    <span class="getext">{$u.singer} - {$u.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#uuu ul li:odd").css({"background-color":"white"});
+                        $("#uuu ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#uuu1 ul li:odd").css({"background-color":"white"});
+                        $("#uuu1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list2" style="display:none" class="gequlist">
+					    <div id="uu" class="ddf">
+						    <volist name="rt1" id="a">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$a['id']))}" title="{$a.singer} - {$a.name}" target="view_window">
+								    <span class="getext">{$a.singer} - {$a.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="uu1" class="ffd">
+							<volist name="rt2" id="b">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$b['id']))}" title="{$b.singer} - {$b.name}" target="view_window">
+								    <span class="getext">{$b.singer} - {$b.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#uu ul li:odd").css({"background-color":"white"});
+                        $("#uu ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#uu1 ul li:odd").css({"background-color":"white"});
+                        $("#uu1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list3" style="display:none" class="gequlist">
+						<div id="u" class="ddf">
+						    <volist name="list3" id="c" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$c['id']))}" title="{$c.singer} - {$c.name}" target="view_window">
+								    <span class="getext">{$c.singer} - {$c.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="u1" class="ffd">
+							<volist name="list3" id="d" offset="0" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$d['id']))}" title="{$d.singer} - {$d.name}" target="view_window">
+								    <span class="getext">{$d.singer} - {$d.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#u ul li:odd").css({"background-color":"white"});
+                        $("#u ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#u1 ul li:odd").css({"background-color":"white"});
+                        $("#u1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+				</div>
+				<!-- 欧美歌曲 -->
+				<div id="gequ2" style="display:none" class="gequ">
+					<div id="list4" class="gequlist">
+						<div id="r" class="ddf">
+						    <volist name="list2" id="ll" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$ll['id']))}" title="{$ll.singer} - {$ll.name}" target="view_window">
+								    <span class="getext">{$ll.singer} - {$ll.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="r1" class="ffd">
+							<volist name="list2" id="yy" offset="5" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$yy['id']))}" title="{$yy.singer} - {$yy.name}" target="view_window">
+								    <span class="getext">{$yy.singer} - {$yy.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#r ul li:odd").css({"background-color":"white"});
+                        $("#r ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#r1 ul li:odd").css({"background-color":"white"});
+                        $("#r1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list5" style="display:none" class="gequlist">
+						<div id="t" class="ddf">
+						    <volist name="list5" id="vo" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$vo['id']))}" title="{$vo.singer} - {$vo.name}" target="view_window">
+								    <span class="getext">{$vo.singer} - {$vo.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="t1" class="ffd">
+							<volist name="vv" id="vv" offset="5" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$vv['id']))}" title="{$vv.singer} - {$vv.name}" target="view_window">
+								    <span class="getext">{$vv.singer} - {$vv.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#t ul li:odd").css({"background-color":"white"});
+                        $("#t ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#t1 ul li:odd").css({"background-color":"white"});
+                        $("#t1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list6" style="display:none" class="gequlist">
+						<div id="w" class="ddf">
+						    <volist name="bb" id="bb">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$bb['id']))}" title="{$bb.singer} - {$bb.name}" target="view_window">
+								    <span class="getext">{$bb.singer} - {$bb.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="w1" class="ffd">
+							<volist name="bv" id="bv">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$bv['id']))}" title="{$bv.singer} - {$bv.name}" target="view_window">
+								    <span class="getext">{$bv.singer} - {$bv.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#w ul li:odd").css({"background-color":"white"});
+                        $("#w ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#w1 ul li:odd").css({"background-color":"white"});
+                        $("#w1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+				</div>
+				<!-- 日韩新歌 -->
+				<div id="gequ3" style="display:none" class="gequ">
+					<div id="list7" class="gequlist">
+						<div id="q" class="ddf">
+						    <volist name="list3" id="rr" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$rr['id']))}" title="{$rr.singer} - {$rr.name}" target="view_window">
+								    <span class="getext">{$rr.singer} - {$rr.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="q1" class="ffd">
+							<volist name="list3" id="tr" offset="5" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$tr['id']))}" title="{$tr.singer} - {$tr.name}" target="view_window">
+								    <span class="getext">{$tr.singer} - {$tr.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#q ul li:odd").css({"background-color":"white"});
+                        $("#q ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#q1 ul li:odd").css({"background-color":"white"});
+                        $("#q1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list8" style="display:none" class="gequlist">
+						<div id="g" class="ddf">
+						    <volist name="list3" id="fr" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$fr['id']))}" title="{$fr.singer} - {$fr.name}" target="view_window">
+								    <span class="getext">{$fr.singer} - {$fr.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="g1" class="ffd">
+							<volist name="list3" id="tf" offset="5" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$tf['id']))}" title="{$tf.singer} - {$tf.name}" target="view_window">
+								    <span class="getext">{$tf.singer} - {$tf.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#g ul li:odd").css({"background-color":"white"});
+                        $("#g ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#g1 ul li:odd").css({"background-color":"white"});
+                        $("#g1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list9" style="display:none" class="gequlist">
+						<div id="h" class="ddf">
+						    <volist name="zz" id="zz">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$zz['id']))}" title="{$zz.singer} - {$zz.name}" target="view_window">
+								    <span class="getext">{$zz.singer} - {$zz.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="h1" class="ffd">
+							<volist name="zt" id="zt">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$zt['id']))}" title="{$zt.singer} - {$zt.name}" target="view_window">
+								    <span class="getext">{$zt.singer} - {$zt.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#h ul li:odd").css({"background-color":"white"});
+                        $("#h ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#h1 ul li:odd").css({"background-color":"white"});
+                        $("#h1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+				</div>
+				<!-- 蒙面歌王 -->
+				<div id="gequ4" style="display:none" class="gequ">
+					<div id="list10" class="gequlist">
+						<div id="i" class="ddf">
+						    <volist name="list4" id="bg" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$bg['id']))}" title="{$bg.singer} - {$bg.name}" target="view_window">
+								    <span class="getext">{$bg.singer} - {$bg.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="i1" class="ffd">
+							<volist name="list4" id="bm" offset="5" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$bm['id']))}" title="{$bm.singer} - {$bm.name}" target="view_window">
+								    <span class="getext">{$bm.singer} - {$bm.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#i ul li:odd").css({"background-color":"white"});
+                        $("#i ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#i1 ul li:odd").css({"background-color":"white"});
+                        $("#i1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list11" style="display:none" class="gequlist">
+						<div id="l" class="ddf">
+						    <volist name="mu" id="mu">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$mu['id']))}" title="{$mu.singer} - {$mu.name}" target="view_window">
+								    <span class="getext">{$mu.singer} - {$mu.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="l1" class="ffd">
+							<volist name="mi" id="mi">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$mi['id']))}" title="{$mi.singer} - {$mi.name}" target="view_window">
+								    <span class="getext">{$mi.singer} - {$mi.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#l ul li:odd").css({"background-color":"white"});
+                        $("#l ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#l1 ul li:odd").css({"background-color":"white"});
+                        $("#l1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="list12" style="display:none" class="gequlist">
+						<div id="j" class="ddf">
+						    <volist name="nn" id="nn">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$nn['id']))}" title="{$nn.singer} - {$nn.name}" target="view_window">
+								    <span class="getext">{$nn.singer} - {$nn.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="j1" class="ffd">
+							<volist name="nm" id="nm">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$nm['id']))}" title="{$nm.singer} - {$nm.name}" target="view_window">
+								    <span class="getext">{$nm.singer} - {$nm.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#j ul li:odd").css({"background-color":"white"});
+                        $("#j ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#j1 ul li:odd").css({"background-color":"white"});
+                        $("#j1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+				</div>
+				<!-- 下面的按钮 全部播放 -->
+				<div class="zhuanji-bu">
+				    <div class="gequ-an">
+						<div id="cur1" class="cur">1</div>
+						<div id="cur2" class="cur">2</div>
+						<div id="cur3" class="cur">3</div>
+					</div>	
+					<!-- <div class="gequ-l">
+						<a href="" title="全部播放"><img src="{:C('T_URL')}/images/login/list.png"></a>
+					</div> -->
+			    </div>
+			</div> 
+			<!-- 最热 -->
+			<div id="pp2" style="display:none" class="re">
+				<!-- 专辑开始 -->
+				<div id="fp-1">
+						<!-- 专辑图片 -->
+						<volist name="mdglist" id="ggp">
+						<ul>
+							<li><a href="__MODULE__/Excellent/songlist/id/{$ggp.id}" title="{$ggp.name}"><img src="__ROOT__/{$ggp.pic}" title="{$ggp.name}" width="80px" height="80px"></a>
+							<strong><a href="__MODULE__/Excellent/songlist/id/{$ggp.id}" title="{$ggp.name}">{$ggp.name}</a></strong>
+							<span>{$ggp.author}</span></li>
+							
+						</ul>
+						</volist>
+				</div>
+				<!-- 最热歌曲 -->
+				<div id="gequr" class="gequ1">
+					<div id="lista" class="gequlist">
+						<div id="tt" class="ddf">
+						    <volist name="list5" id="ee" offset="0" length="5">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$ee['id']))}" title="{$ee.singer} - {$ee.name}">
+								    <span class="getext">{$ee.singer} - {$ee.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="tt1" class="ffd">
+							<volist name="list5" id="er" offset="5" length="5">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$er['id']))}" title="{$er.singer} - {$er.name}">
+								    <span class="getext">{$er.singer} - {$er.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#tt ul li:odd").css({"background-color":"white"});
+                        $("#tt ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#tt1 ul li:odd").css({"background-color":"white"});
+                        $("#tt1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="listb" style="display:none" class="gequlist">
+						<div id="gg" class="ddf">
+						    <volist name="fs" id="fs">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$fs['id']))}" title="{$fs.singer} - {$fs.name}">
+								    <span class="getext">{$fs.singer} - {$fs.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="gg1" class="ffd">
+							<volist name="sf" id="sf">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$sf['id']))}" title="{$sf.singer} - {$sf.name}">
+								    <span class="getext">{$sf.singer} - {$sf.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#gg ul li:odd").css({"background-color":"white"});
+                        $("#gg ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#gg1 ul li:odd").css({"background-color":"white"});
+                        $("#gg1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+					<div id="listc" style="display:none" class="gequlist">
+						<div id="hh" class="ddf">
+						    <volist name="ds" id="ds">
+							<ul class="cler-f">
+								<li class="ord"><a href="{:U('Index/Audio/index',array('id'=>$ds['id']))}" title="{$ds.singer} - {$ds.name}">
+								    <span class="getext">{$ds.singer} - {$ds.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+                        </div>
+                        <div id="hh1" class="ffd">
+							<volist name="sd" id="sd">
+							<ul class="cler-r">
+								<li><a href="{:U('Index/Audio/index',array('id'=>$sd['id']))}" title="{$sd.singer} - {$sd.name}">
+								    <span class="getext">{$sd.singer} - {$sd.name}</span>
+									<span class="list" title="播放">播放</span>
+								</a></li>
+							</ul>
+							</volist>
+						</div>
+					</div>
+					<script type="text/javascript">
+                        $("#hh ul li:odd").css({"background-color":"white"});
+                        $("#hh ul li:even").css({"background-color":"#EFEFEF"});
+                        $("#hh1 ul li:odd").css({"background-color":"white"});
+                        $("#hh1 ul li:even").css({"background-color":"#EFEFEF"});
+					</script>
+				</div>
+				<!-- 下面的按钮 全部播放 -->
+				<div class="zhuanji-buu">
+				    <div class="gequ-ann">
+						<div id="cura" class="cur">1</div>
+						<div id="curb" class="cur">2</div>
+						<div id="curc" class="cur">3</div>
+					</div>	
+					<!-- <div class="gequ-l">
+						<a href="" title="全部播放"><img src="{:C('T_URL')}/images/login/list.png"></a>
+					</div> -->
+			    </div>
+			</div> 
+			<!-- 推荐榜 -->
+			<div id="pp3" style="display:none" class="jian">
+				<div class="left-l">
+				    <div id="kl" class="tuijian-l">
+				        <volist name="list6" id="cf" key="m" offset="6" length="6">
+						<ul class="left-le">
+							<a href="{:U('Index/Audio/index',array('id'=>$cf['id']))}" target="view_window"><li>
+								<span class="numm">{$m+1}</span>
+								<span class="til" title="{$cf.name}">{$cf.name}</span>
+								<span class="per" title="{$cf.singer}">{$cf.singer}</span><br><br>
+								<i>审批文号:WB9714</i>
+							</li></a>
+							
+						</ul>
+						</volist>
+					</div>
+					<div id="kl1" class="tuijian-r">	
+					    <volist name="list6" id="fc" key="m" offset="0" length="6">
+						<ul class="right-le">
+							<a href="{:U('Index/Audio/index',array('id'=>$fc['id']))}" target="view_window"><li>
+								<span class="numm">{$m+1}</span>
+								<span class="til" title="{$fc.name}">{$fc.name}</span>
+								<span class="per" title="{$fc.singer}">{$fc.singer}</span><br><br>
+								<i>审批文号:WB9714</i>
+							</li></a>
+							
+						</ul>
+						</volist>
+					</div>
+					<script type="text/javascript">
+                        $("#kl ul li:odd").css({"background-color":"#EFEFEF"});
+                        $("#kl ul li:even").css({"background-color":"white"});
+                        $("#kl1 ul li:odd").css({"background-color":"#EFEFEF"});
+                        $("#kl1 ul li:even").css({"background-color":"white"});
+					</script>	
+				</div>
+			</div>
+	    </div> 
+	    <!-- 乐库部分 -->
+	    <div class="ji-B">
+	    	<div class="yueku">
+		       <h4>乐库</h4>
+
+		      <ul>
+		       	<volist name="cate" id="v" key="key">
+		       		<li>
+		       			<volist name="v" id="vo" key="k">
+				       		<if condition="$vo['pid'] eq 0">
+				       			<span class="hov">{$vo['name']}</span>
+				       		<else/>
+				       			<a href="{:U('Index/Classify/index',array('id'=>$vo['id']))}" title="{$vo['name']}">{$vo['name']}</a>
+				       		</if>
+ 						</volist>
+ 						<a href="{:U('Index/Classify/index')}" title="更多" class="more-m">更多</a>
+ 						</li>
+			    </volist>
+		     </ul>
+	       </div>
+	   </div> 
+	
+	</div>
+	<!-- 广告部分 -->
+	<div id="guanggao">
+		<a href="JavaScript:void(0)"><img src="{:C('T_URL')}/images/login/guang.jpg" width="960px" height="100px"></a>
+	</div>
+	<!-- 歌曲排行榜单 -->
+	<div id="bang">
+	    <!-- top10榜单 -->
+		<div class="top10">
+		    <!-- top10榜单头部 -->
+		    <div class="top10-top">
+			    <strong><a href="" title="热榜TOP10">热榜TOP10</a></strong>
+				<div id="tp10a" class="tp10" title="最新Top100">最新&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+				<div id="tp10b" class="tp10" title="最热Top500">最热</div>
+				<a href="__MODULE__/Rank/index" class="more-o" title="更多音乐排行榜">更多</a>
+			</div>	
+			<!-- top10榜单列表 -->
+			<!-- 最新top10 -->
+			<div id="tl1" class="top10-list">
+			    <volist name="list7" id="mv" key="m" offset="0" length="10">
+				<ul>
+					<li><a href="{:U('Index/Audio/index',array('id'=>$mv['id']))}" title="{$mv.singer} - {$mv.name}" target="view_window">
+					        <span class="shu">{$m+1}</span>
+							<span class="t-list" title="播放">播放</span>
+							<span class="t-getext">{$mv.singer} - {$mv.name}</span>
+					</a></li>
+					
+				</ul>
+				</volist>
+			</div>
+			<!-- 最热top10 -->
+			<div id="tl2" class="top10-list" style="display:none">
+				<volist name="list8" id="gv" key="m" offset="0" length="10">
+				<ul>
+					<li><a href="{:U('Index/Audio/index',array('id'=>$gv['id']))}" title="{$gv.singer} - {$gv.name}" target="view_window">
+					        <span class="shu">{$m+1}</span>
+							<span class="t-list" title="播放">播放</span>
+							<span class="t-getext">{$gv.singer} - {$gv.name}</span>
+					</a></li>
+					
+				</ul>
+				</volist>
+			</div>
+			<!-- 全部播放按钮 -->
+			<!-- <div class="top10-an">
+				<a href="" title="全部播放"><img src="{:C('T_URL')}/images/login/list.png"></a>
+			</div> -->
+		</div>
+		<!-- 全球热榜开始 -->
+        <div class="worldtop">
+        	<!-- 全球热榜头部 -->
+        	<div class="worldtop-top">
+        		<strong><a href="" title="全球热榜">全球热榜</a></strong>
+				<div id="wt1" class="wt-t" title="香港RTHK电台榜">华语&nbsp;&nbsp;|</div>
+				<div id="wt2" class="wt-t" title="台湾Hito榜">香港&nbsp;&nbsp;|</div>
+				<div id="wt3" class="wt-t" title="英国单曲榜">日韩&nbsp;&nbsp;|</div>
+				<div id="wt4" class="wt-t" title="美国BillBoard榜">欧美</div>
+				<a href="__MODULE__/Rank/index" class="more-e" title="更多音乐排行榜">更多</a>
+        	</div>
+        	<!-- 全球热榜歌曲列表 -->
+        	<!-- 华语排行榜歌曲 -->
+        	<div id="wor1" class="worldtop-list">
+        		<volist name="list9" id="xx" key="m" offset="0" length="10">
+				<ul>
+					<li><a href="{:U('Index/Audio/index',array('id'=>$xx['id']))}" title="{$xx.singer} - {$xx.name}" target="view_window">
+					        <span class="shu">{$m+1}</span>
+							<span class="t-list" title="播放">播放</span>
+							<span class="t-getext">{$xx.singer} - {$xx.name}</span>
+					</a></li>
+					
+				</ul>
+				</volist>
+        	</div>
+        	<!-- 香港排行榜歌曲 -->
+        	<div id="wor2" class="worldtop-list" style="display:none">
+        		<volist name="list10" id="oo" key="m" offset="0" length="10">
+				<ul>
+					<li><a href="{:U('Index/Audio/index',array('id'=>$oo['id']))}" title="【华语】{$oo.singer} - {$oo.name}" target="view_window">
+					        <span class="shu">{$m+1}</span>
+							<span class="t-list" title="播放">播放</span>
+							<span class="t-getext">【华语】{$oo.singer} - {$oo.name}</span>
+					</a></li>
+					
+				</ul>
+				</volist>
+        	</div>
+        	<!-- 日韩排行榜歌曲 -->
+        	<div id="wor3" class="worldtop-list" style="display:none">
+        		<volist name="list11" id="xo" key="m" offset="0" length="10">
+				<ul>
+					<li><a href="{:U('Index/Audio/index',array('id'=>$xo['id']))}" title="{$xo.singer} - {$xo.name}" target="view_window">
+					        <span class="shu">{$m+1}</span>
+							<span class="t-list" title="播放">播放</span>
+							<span class="t-getext">{$xo.singer} - {$xo.name}</span>
+					</a></li>
+					
+				</ul>
+				</volist>
+        	</div>
+        	<!-- 欧美排行榜歌曲 -->
+        	<div id="wor4" class="worldtop-list" style="display:none">
+        		<volist name="list12" id="jo" key="m" offset="0" length="10">
+				<ul>
+					<li><a href="{:U('Index/Audio/index',array('id'=>$jo['id']))}" title="{$jo.singer} - {$jo.name}" target="view_window">
+					        <span class="shu">{$m+1}</span>
+							<span class="t-list" title="播放">播放</span>
+							<span class="t-getext">{$jo.singer} - {$jo.name}</span>
+					</a></li>
+					
+				</ul>
+				</volist>
+        	</div>
+        	<!-- 全部播放按钮 -->
+			<div class="worldtop-an">
+				<a href="JavaScript:void(0)" title="全部播放"><img src="{:C('T_URL')}/images/login/list.png"></a>
+			</div>
+        </div>
+        <!-- 抢先首发开始 -->
+        <div class="first">
+        	<h2 class="hl">抢先首发</h2>
+        	<div class="first-img1">
+        		<a href="JavaScript:void(0)" title="陈奕迅 《让我留在你身边》"><img src="{:C('T_URL')}/images/login/gequ/bb.jpg" title="孟文豪《我要醉在草原上》" width="230px" height="170px"></a>
+        	</div>
+        	<div class="first-img2">
+        		<a href="JavaScript:void(0)" title="周杰伦《床边的故事》"><img src="{:C('T_URL')}/images/login/gequ/cc.jpg" title="嘉旗《出来走走》" width="230px" height="170px"></a>
+        	</div>
+        </div>
+	</div>
+	<!-- 广告部分 -->
+	<div id="guanggao2">
+		<a href="JavaScript:void(0)"><img src="{:C('T_URL')}/images/login/pa.jpg"></a>
+		<a href="JavaScript:void(0)"><img src="{:C('T_URL')}/images/login/pe.jpg" width="250px" height="100px"></a>
+	</div>
+	<!-- 合作伙伴部分 -->
+	<div id="hezuo">
+		<div class="h-title">
+			<a href="JavaScript:void(0)" title="合作伙伴"><strong>合作伙伴</strong></a>
+		</div>
+		<volist name="list" id="v">
+		<div class="h-img">
+			<a href="JavaScript:void(0)" title="{$v.linkname}"><img src="__ROOT__/{$v.linkpic}" height="50px"></a>
+		</div>
+		</volist>
+	</div>
+	<!-- 友情链接 -->
+	
+	<div id="link">
+		<div class="l-title">
+			<a href="JavaScript:void(0)" title="友情链接"><strong>友情链接</strong></a>
+		</div>
+		<volist name="list" id="v">
+		<div class="l-cent">
+			<a href="JavaScript:void(0)" title="{$v.linkname}">{$v.linkname}</a>
+		</div>
+		</volist>
+	</div>
+	
+
+<include file="Header/footer" />

@@ -1,0 +1,125 @@
+<?php if (!defined('THINK_PATH')) exit();?><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加排行榜分类下歌曲</title>
+<link href="/music/Public/css/admin_cont_css.css" type="text/css" rel="stylesheet" />
+<link href="/music/Public/css/admin_cont_main.css" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" href="/music/Public/images/admin_cont/favicon.ico" />
+<script type="text/javascript" src="<?php echo C('T_URL');?>/js/jquery-1.9.1.min.js"></script>
+<style>
+body{overflow-x:hidden; background:#f2f0f5; padding:15px 0px 10px 5px;}
+#searchmain{ font-size:12px;}
+#search{ font-size:12px; background:#548fc9; margin:10px 10px 0 0; display:inline; width:100%; color:#FFF; float:left}
+#search form span{height:40px; line-height:40px; padding:0 0px 0 10px; float:left;}
+#search form input.text-word{height:24px; line-height:24px; width:180px; margin:8px 0 6px 0; padding:0 0px 0 10px; float:left; border:1px solid #FFF;}
+#search form input.text-but{height:24px; line-height:24px; width:55px; background:url(/music/Public/images/admin_cont/list_input.jpg) no-repeat left top; border:none; cursor:pointer; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; color:#666; float:left; margin:8px 0 0 6px; display:inline;}
+#search a.add{ background:url(/music/Public/images/admin_cont/add.jpg) no-repeat -3px 7px #548fc9; padding:0 10px 0 26px; height:40px; line-height:40px; font-size:14px; font-weight:bold; color:#FFF; float:right}
+#search a:hover.add{ text-decoration:underline; color:#d2e9ff;}
+#main-tab{ border:1px solid #eaeaea; background:#FFF; font-size:12px;}
+#main-tab th{ font-size:12px; background:url(/music/Public/images/admin_cont/list_bg.jpg) repeat-x; height:32px; line-height:32px;}
+#main-tab td{ font-size:12px; line-height:40px;}
+#main-tab td a{ font-size:12px; color:#548fc9;}
+#main-tab td a:hover{color:#565656; text-decoration:underline;}
+.bordertop{ border-top:1px solid #ebebeb}
+.borderright{ border-right:1px solid #ebebeb}
+.borderbottom{ border-bottom:1px solid #ebebeb}
+.borderleft{ border-left:1px solid #ebebeb}
+.gray{ color:#dbdbdb;}
+td.fenye{ padding:10px 0 0 0; text-align:right;}
+.bggray{ background:#f9f9f9}
+</style>
+</head>
+<body>
+<!--main_top-->
+<table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
+  <tr>
+    <td width="99%" align="left" valign="top">您的位置：<?php echo ($good["name"]); ?></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+
+
+    <!-- 歌曲查询要做 -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
+  		<tr>
+   		 <td width="90%" align="left" valign="middle">
+	         <form method="post" action="">
+	         <span>歌曲：</span>
+	         <input type="text" name="" value="" class="text-word">
+	         <input name="" type="button" value="查询" class="text-but">
+	         </form>
+         </td>
+  		</tr>
+	</table>
+    <!-- 歌曲查询要做 -->
+
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+    <form method="post" action="<?php echo U('Home/Rank/addSong');?>">
+    <input type="hidden" name="id" value="<?php echo ($good['id']); ?>">
+    <div id="wai">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
+      <tr>
+        <th align="center" valign="middle" class="borderright">歌曲编号</th>
+        <th align="center" valign="middle" class="borderright">歌曲</th>
+        <th align="center" valign="middle" class="borderright">歌手</th>
+        <th align="center" valign="middle">全选<input type="checkbox" id="quanxuan"></th>
+      </tr>
+
+      
+      <!-- 循环所有歌曲 -->
+      <?php if(is_array($songlist)): $i = 0; $__LIST__ = $songlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 判断是否属于已有的值 -->  
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom"><?php echo ($vo["id"]); ?></td>
+        <td align="center" valign="middle" class="borderright borderbottom"><?php echo ($vo["name"]); ?></td>
+        <td align="center" valign="middle" class="borderright borderbottom"><?php echo ($vo["singer"]); ?></td>
+        <td align="center" valign="middle" class="borderbottom">
+              <input type="checkbox" name="check[]" value="<?php echo ($vo["id"]); ?>" class="cls">
+        </td>
+      </tr>
+
+      <!-- 循环所有歌曲 --><?php endforeach; endif; else: echo "" ;endif; ?>
+
+    </table>
+    </div></td>
+    </tr>
+  <tr>
+    <td align="center" valign="top" class="fenye"><?php echo ($page); ?></td>
+  </tr>
+</table>
+<button type="submit" id="bt" style="width:50px;height:30px;">添加</button>
+</form>
+<script type="text/javascript" src="<?php echo C('T_URL');?>/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+      $(function(){
+        $("#quanxuan").click(function(){
+          if(this.checked){
+            $("#wai :checkbox").attr("checked", true);
+          }else{
+            $("#wai :checkbox").attr("checked", false);
+          }
+      });
+          $("#bt").click(function(){
+              songs=new Array();
+              selected=document.getElementsByClassName("cls");
+              //m的作用在于如果没被选中,则songs数组下标不会跟着for循环递增
+              m=0;
+              for(i=0;i<selected.length;i++){     
+                    if(selected[i].checked){
+                       songs[m]=selected[i].value;
+                       m++;
+                    }                
+               }
+               //判断客户是否进行了选择
+               if(songs.length==0){
+                    alert("没有选中");return false;
+               }
+          });
+         
+      });
+     
+</script>
+</body>
+</html>

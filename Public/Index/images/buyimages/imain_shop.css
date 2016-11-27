@@ -1,0 +1,17 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0; FONT-SIZE: 12px}
+ul{ list-style:none;}
+button{ border:0 none; padding:0; cursor:pointer;}
+img{ border:0;}
+a,input{ outline: none;}
+.frame{width:960px; margin:10px auto 0;clear:both;text-align: left;font-family: Microsoft Yahei,'\5b8b\4f53',Arial,Verdana;}
+.foot {width:960px;margin:0px auto; color: #999;}
+.foot a,.foot a:hover {color: #666;text-decoration: none; padding:0px 3px;_padding:0; }
+.links {   zoom: 1; margin-top: 15px; font-size: 12px; color: #666; text-align: center; }
+.links a {  font-size: 12px; font-weight: bold; color: #333;}
+.copyright{ width: 960px; line-height: 21px; margin-top:15px; text-align: center; }
+.copyright,.copyright a{ color: #c1c1c1}
+#footFrame {margin-top: 30px; }
+.foot a.office-verification {zoom:1; padding: 5px 10px; background: url(http://www.kugou.com/common/images/logo_down.jpg) no-repeat left top; background-size: 20px 20px;  }
+.foot a.office-verification img{width: 20px;height: 20px;vertical-align: top;}
+.kugou { width: 153px;  height: 44px;  margin: 10px auto; background: url(http://www.kugou.com/common/images/ikugou.png) no-repeat;}

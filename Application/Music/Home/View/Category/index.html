@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>商品分类显示</title>
+  <link rel="stylesheet" href="{:C('T_URL')}/css/public.css" />
+  <style>
+    .open {
+      display: block;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      border: 1px solid #670768;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <script type="text/javascript" src="{:C('T_URL')}/js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $( 'tr[pid!=0]' ).hide();
+
+      $( '.open' ).toggle( function () {
+        var index = $( this ).parents('tr').attr('id');
+        $( this ).html( '-' );
+        $( 'tr[pid=' + index + ']' ).show();
+      }, function () {
+        var index = $( this ).parents('tr').attr('id');
+        $( this ).html( '+' );
+        $( 'tr[pid=' + index + ']' ).hide();
+      } );
+
+      $( '.del' ).click( function () {
+        return confirm('确认删除该分类？');
+      } );
+    });
+  </script>
+</head>
+<body>
+  <table class="table">
+    <tr pid='0'>
+      <th>展开</th>
+      <th>ID</th>
+      <th>分类名称</th>
+      <th>操作</th>
+    </tr>
+    <foreach name='cate' item='v'>
+      <tr id='{$v.id}' pid='{$v.pid}'>
+        <td width='5%' align='center'><span class='open'>+</span></td>
+        <td  width='8%' align='center'>{$v.id}</td>
+        <td>{:str_repeat('&nbsp;&nbsp;', $v['level'])}<if condition='$v["level"] gt 0'>|</if><if condition='$v["level"] neq 1'><a href="{:U('Home/Category/goods_list', array('id'=>$v['id']))}">{$v.html}{$v.category_name}</a><else/>{$v.html}{$v.category_name}</if></td>
+        <td width='28%'>
+          <a href="{:U('Home/Category/addChild', array('pid' => $v['id']))}" class='bt2'>添加子分类</a>
+          <a href="{:U('Home/Category/edit', array('id' => $v['id']))}" class='bt2'>修改</a>
+          <a href="{:U('Home/Category/del', array('id' => $v['id']))}" class='bt1 del'>删除</a>
+        </td>
+      </tr>
+    </foreach>
+  </table>
+</body>
+</html>

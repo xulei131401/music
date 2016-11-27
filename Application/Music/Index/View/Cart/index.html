@@ -1,0 +1,207 @@
+    <include file="Header/header" />
+	<link rel="stylesheet" href="{:C('T_URL')}/css/titindentsindex.css" type="text/css">
+
+	<!-- 购物车信息-->
+	<div id="gwchbanner">
+		<div id="gwcbanner1">
+			<img src="{:C('T_URL')}/images/buyimages/gouwuche1.png"/>
+		</div>
+		<div id="gwchbanner2">
+			<span>我的购物车</span>
+		</div>
+		<!--购物车信息 -->
+		<div id="gwchbanner3">
+			<div id="gwchbanner3-top">
+				<table style="text-align:center">
+					<tr>
+						<td width='478' height='40'>商品名称</td>
+						<td width='130' height='40'>单品价格</td>
+						<td width='140' height='40'>购买数量</td>	   
+						<td width='135' height='40'>小计</td>
+						<td width='75' height='40'>操作</td>
+					</tr>
+				</table>				
+			</div>
+			<if condition="$list eq null">
+				<div id="nobuy-div"><p id="nobuy-p">您的购物车还是空的，赶紧去买点吧！！</p></div>
+				<div id="gwchbanner5">
+					<a href="__MODULE__/Buyindex/index"><input type="submit" class="gwchbanner5-buy-anniu" value="去购物"</button></a>
+				</div>
+			<else/>
+			<!-- 遍历购物车 -->
+			<foreach name="list" item="v">
+			<div class="gwchbanner3-bottom" name="{$v.id}">
+			<!-- 需遍历的购物车信息 左侧图片部分-->
+				<div class="gwchbanner3-bottom-left">
+					<!-- 产品图片 -->
+					<div class="gwchbanner3-bottom-left1" >
+						<a href=""><img  width='160' height='160' src="{:C('T_URL')}/Uploads/{$v.img}" ></a>
+					</div>
+					<div class="gwchbanner3-bottom-left2">
+						<!-- 购物车左侧颜色和型号 -->
+						<table width=250 height=80 class="gwchbanner3-bottom-left2-table">
+							<tr>
+								<td width=250 height=26 colspan=2>{$v.name}</td>
+							</tr>
+							<tr>
+								<td width=48 height=26>颜色:</td>
+								<td width=202 height=26><if condition="$v.gcolor eq 1"> 随机<elseif condition='$v.gcolor eq 2'/>白色<else /> 黑色</if></td>
+							</tr>
+							<tr>
+								<td width=48 height=26>型号:</td>
+								<td width=202 height=26>基本</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- 需遍历的购物车信息 右侧信息数量等部分-->
+				<div class="gwchbanner3-bottom-right">
+					<table width=440 height=40>
+						<tr>
+							<td width=94 height=40 class="gwchbanner3-bottom-right1" name="{$v.id}" value="{$v.nowprice}">{$v.nowprice}元</td>
+							<td width=140 height=40 >
+								<div  class="gwchbanner3-bottom-right2">	
+									<span class="gwchbanner3-bottom-right2-1" name="{$v.id}">-</span>
+									<input type="text" value={$v.gnum} class="gwchbanner3-bottom-right2-2" width="65" name="{$v.id}">
+									<span class="gwchbanner3-bottom-right2-1" name="{$v.id}">+</span></td>	
+								</div>
+							</td>
+							<td width=164 height=40 class="gwchbanner3-bottom-right3"><span class="gtotalmoney" name="{$v.id}" value={$v.gtotal}>{$v.gtotal}</span></td>
+							<td width=42 height=40><img src="{:C('T_URL')}/images/buyimages/gwchedel.png" value="{$v.id}" class="qudeleteanniu"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			</foreach>
+		</div>
+		<!-- 总价 -->
+		<div id="gwchbanner4">
+			<table width=960 height=120>
+				<tr >
+					<td height=120 id="gwchbanner4-p">商品共计:</td>
+					<td height=120 width=320 id="gwchbanner4-tot">￥{$ggt}元</td>
+				</tr>
+			</table>
+		</div>
+		<div id="gwchbanner5">
+			<button class="gwchbanner5-buy-anniu1" >去结账</button>
+			<a href="__MODULE__/Buyindex/index"><input type="submit" class="gwchbanner5-buy-anniu" value="继续购物"</button></a>
+		</div>
+		</if>
+	</div>
+	<!-- 购物车信息结束 -->
+	<!-- 服务信息开始 -->
+    	<include file="Header/footer" />
+<script type="text/javascript">	
+	$(function(){
+		// 定义空数组用来存储商品信息
+			goodnum=new Array();
+		// 产品数量加减特效
+		$(".gwchbanner3-bottom-right2-1").click(function(){			
+			// 存储当前点击订单的id
+			tgid2=$(this).attr('name');
+			// 获取当前订单商品的单价
+			gprice=$(".gwchbanner3-bottom-right1[name="+tgid2+"]").attr("value");
+			// alert(tgid2);
+			switch($(this).html()){
+				case '+':
+				// 获取原来的值
+				gnumvalu2=parseInt($(".gwchbanner3-bottom-right2-2[name="+tgid2+"]").attr("value"));
+				abb=gnumvalu2+1;
+				$(".gwchbanner3-bottom-right2-2[name="+tgid2+"]").attr("value",abb);
+
+				if(abb>10){
+					alert("亲，单笔下单最大量为10个哦");
+					$(".gwchbanner3-bottom-right2-2[name="+tgid2+"]").attr("value",10);
+					abb=10;
+				}
+
+				// 将数量单价和商品订单id传到控制器里
+				$.ajax({
+					url:"__MODULE__/Titindents/edit1",
+					type:"POST",
+					async:true,
+					data:{"gid":tgid2,"gnum":abb,"gprice":gprice},
+					success:
+					function(data){
+						// alert(data['all']);
+						// 小订单总价插入
+						$(".gtotalmoney[name="+tgid2+"]").html(data['tall']);
+						// 购物车总价插入
+						$("#gwchbanner4-tot").html("￥"+data['all']+"元");
+					}
+				});
+				break;
+				case '-':
+				// 获取原来的值
+				gnumvalu1=parseInt($(".gwchbanner3-bottom-right2-2[name="+tgid2+"]").attr("value"));
+				abb1=gnumvalu1-1;
+				$(".gwchbanner3-bottom-right2-2[name="+tgid2+"]").attr("value",abb1);
+
+				if(abb1<=0){
+					alert("亲，单笔下单最小为1个哦");
+					$(".gwchbanner3-bottom-right2-2[name="+tgid2+"]").attr("value",1);
+					abb1=1;
+				}
+
+				$.ajax({
+					url:"__MODULE__/Titindents/edit1",
+					type:"POST",
+					async:true,
+					data:{"gid":tgid2,"gnum":abb1,"gprice":gprice},
+					success:
+					function(data){
+						// 小订单总价插入
+						$(".gtotalmoney[name="+tgid2+"]").html(data['tall']);
+						// 购物车总价插入
+						$("#gwchbanner4-tot").html("￥"+data['all']+"元");
+					}
+				});
+				break;
+			}
+		});
+
+		// 删除购物车内商品
+		$(".qudeleteanniu").click(function(){
+			// 要删除的商品id
+			ddid=$(this).attr("value");
+			// 获取要删除的总价
+			gdtotal=parseInt($(".gtotalmoney[name="+ddid+"]").html());
+			// alert(gdtotal);
+			// 隐藏显示该商品的div
+			$(".gwchbanner3-bottom[name="+ddid+']').css("display","none");
+
+			// 删除数据库中数据
+			$.ajax({
+				url:"__MODULE__/Titindents/del",
+				type:"POST",
+				async:true,
+				dataType:"html",
+				data:{"tid":ddid,"gtotal":gdtotal},
+				success:
+				function(data){
+					// 将返回的购物车总价插入模板
+					$("#gwchbanner4-tot").html("￥"+data+"元");
+				}
+			});
+		});
+
+		// 点击结账按钮进行传值修改
+		$(".gwchbanner5-buy-anniu1").click(function(){
+			// alert(goodnum['21']);
+			$.ajax({
+				url:"__MODULE__/Titindents/edit",
+				type:"GET",
+				dataType:"html",
+				async:true,
+				success:
+				function(data){
+					
+					if(data=='success'){
+						window.location.href="__MODULE__/Indents/add";
+					}
+				}
+			});
+		});
+	});	
+</script>

@@ -1,0 +1,47 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>修改排行榜分类视图</title>
+	<link rel="stylesheet" href="<?php echo C('T_URL');?>/css/public.css" />
+</head>
+<body>
+	<form action="<?php echo U('Home/Rank/editCate');?>" method='post' enctype="multipart/form-data">
+		<table class="table">
+			<tr>
+				<th colspan='2'>修改排行榜分类信息</th>
+			</tr>
+			<tr>
+				<td width='45%' align='right'>分类名称：</td>
+				<td>
+					<input type="text" name='name' value='<?php echo ($cate["name"]); ?>'/>
+				</td>
+			</tr>
+			<tr>
+				<td width='45%' align='right'>原分类图片：</td>
+				<td>
+					<img src="/music/<?php echo ($cate["pic"]); ?>" alt="" width="100px" height="80px" />
+				</td>
+			</tr>
+			<tr>
+				<td width='45%' align='right'>新分类图片：</td>
+				<td>
+					<input type="file" name='pic'/>
+				</td>
+			</tr>
+			<tr>
+				<td width='45%' align='right'>分类描述：</td>
+				<td>
+					<textarea name="desc" id="desc" cols="30" rows="10"><?php echo ($cate["desc"]); ?></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td height='60' colspan='2' align='center'>
+					<input type="hidden" name='id' value='<?php echo ($cate["id"]); ?>'/>
+					<input type="submit" value='保存修改' class='submit'/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

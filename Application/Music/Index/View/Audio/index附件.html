@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="imageBg">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="pragma" CONTENT="no-cache"> 
+        <meta http-equiv="Cache-Control" CONTENT="no-cache, must-revalidate"> 
+        <meta name="author" content="xulei">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>个人音乐网站播放器</title>
+        <link rel="stylesheet" href="{:C('T_URL')}/css/music.css" />
+        <script type="text/javascript" src="{:C('T_URL')}/js/jquery-2.2.2.min.js"></script>
+        <script type="text/javascript">
+            var astr = {$dataJson};
+            var root = "__ROOT__/";
+            var u = "{:U('Index/Audio/showGeci')}";
+        </script>
+    </head>
+    <body>
+    <!--左上角的标题(有URL)-->
+        <header>
+            <h1> <a href="https://www.semdoing.com/" target="_blank" title="音乐播放器">个人音乐网站播放器</a></h1><sub>123</sub>
+        </header>
+
+        <div class="wrapper">
+            <!--播放器控制-->
+            <div id="player">
+                <audio controls id="audio" src="__ROOT__/{$song['url']}" id="bgAudio">您的浏览器不支持该播放器!:(</audio>
+            </div>
+            <!--控制结束-->
+            <!--左侧歌曲列表-->
+            <div id="playlist">
+            <!--会显示在歌曲列表的上方-->
+                <ol>
+                </ol>
+                <!--歌曲列表下方的换肤-->
+                <div class="info">
+                    <div class="bg" id="bg_dark" title="use color for background"></div>
+                    <div class="bg" id="bg_pic" title="use image for background"></div>
+                    <small> view on 123<a target="_blank" href="https://github.com/wayou/selected/">GitHub</a></small>
+                </div>
+                <!--换肤结束-->
+            </div>
+            <!--中间歌词显示部分-->
+            <div id="lyricWrapper">
+                <div id="lyricContainer">
+                </div>
+            </div>
+        </div>
+        <script src="{:C('T_URL')}/js/selected.js"></script>
+    </body>
+</html>

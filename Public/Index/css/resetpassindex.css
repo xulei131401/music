@@ -1,0 +1,48 @@
+
+	*{
+		margin:0 auto;
+		padding:0px;
+	}
+	#repas-body{
+		margin-top:10px;
+		width:960px;
+		height:460px;
+		border:1px solid #A5D4F2;
+	}
+	#repas-body-top{
+		width:960px;
+		height:60px;
+		text-align:left;
+		line-height: 60px;
+		color:#a3a3a3;
+		background: #f5f5f5;
+		font-size: 23px;
+		font-weight: bolder;
+	}
+	#repas-body-bottom{
+		width:600px;
+		/*border: 1px solid red;*/
+		height:390px;
+	}
+	.repas-body-bottom-left{
+		text-align:right;
+		line-height:60px;
+		color:#489CDF;
+		font-size:17px;
+	}
+	.repas-body-bottom-right{
+		width:250px;
+		height:30px;
+		border:1px solid #ccc;
+		font-size:15px;
+		color:#489CDF;
+	}
+	#repas-body-anniu{
+		width:70px;
+		height:35px;
+		border:0px;
+		background: #3DB9EC;
+		color:#fff;
+		font-size:20px;
+		cursor: pointer;
+	}

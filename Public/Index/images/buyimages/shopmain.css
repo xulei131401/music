@@ -1,0 +1,209 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0;}
+ul{ list-style:none;}
+button{ border:0 none; padding:0; cursor:pointer;}
+img{ border:0;}
+em,i{font-style:normal;}
+.clear {clear:both;}
+.clear_fix {zoom:1;}
+.clear_fix:after {display:block;clear:both;content:".";visibility:hidden;height:0;font-size:0;}
+#public-header a,#public-nav a,#public-footer a{ text-decoration:none; outline:0}
+.public_nav_bd .nav_m_l_r  li.noborder{border: none;}
+/*header*/
+.public-header-wrapper{ width: 100%; height:40px; background-color: #fff}
+#public-header{position:relative; width:960px; height:40px; margin:0 auto; z-index: 9999; font:12px/1.5 \5b8b\4f53, Arial, Verdana;  background:#fff url(http://www.kugou.com/common/images/header_bg.jpg) no-repeat 0 bottom; }
+#public-header a:hover{ text-decoration:underline}
+#public-header .link{ width:163px; height:46px; position:absolute; text-indent:-9999px; left:8px; top:0px; z-index:10}
+#public-header .public_nav_bd .nav_m_l_r a.regLink{   border: 1px solid #fff; padding-top:8px;   text-align: center;  font-size: 14px;  text-indent: 0px; }
+#public-header .login{ position:absolute; right:0; top:0px; width:180px;  z-index:9999; background-image: none;  /*background:url(http://www.kugou.com/common/images/default.png) no-repeat 121px 0;*/ }
+#public-header .blue{color:#45BEEE!important; text-decoration:underline; margin-right:5px; display:inline-block}
+#public-header .login a{ color:#0c85cc;}
+#public-header .logined{padding-right:0!important; right:2px; background:#fff;}
+#public-header .logined .pic{ position:absolute; left:-40px; top:-16px}
+
+
+#public-header .download{ position:absolute; right:138px; top:40px; color:#45beee; overflow: hidden; }
+#public-header .download a{ color:#45beee; display:inline-block; padding-left:23px;}
+#public-header .download a.game{ background:url(http://www.kugou.com/common/images/default.png) no-repeat -132px 0}
+#public-header .download a.client{ background:url(http://www.kugou.com/common/images/default.png) no-repeat -218px 0; padding-left:16px}
+#public-header .download a.player{ background:url(http://www.kugou.com/common/images/default.png) no-repeat -432px 2px}
+#public-header .search{ position:absolute; left:380px; top:52px; width:238px; height:28px; border:1px solid #c4cacb}
+#public-header .search input,#public-header .search button{ float:left;}
+#public-header .search .ipt{ width:190px; padding-left:5px; height:24px; line-height:24px; color:#999; border:0 none; background:#fff; margin-top:2px; border-right:1px solid #c4cacb}
+#public-header .search .sbtn{ width:41px; height:28px;  border:0 none;}
+/*nav*/
+.public-nav-wrapper{position: relative;z-index: 1000; width: 100%; min-width: 960px;  height:60px;  background-color: #008ad4;}
+#public-nav{  width:960px; height:60px; margin:0 auto;font-family:Microsoft YaHei; background-image:none   }
+#public-nav li{ float:left; position:relative}
+#public-nav ul{ float:left; height: 60px;}
+#public-nav h1.logo{ float:left; display: inline; padding: 10px 10px 0px 0px}
+#public-nav .n1 a{display:inline; color:#fff; font-size:16px; height:60px; line-height:60px; padding:0px 11px; text-align:center; }
+#public-nav .hover a,#public-nav .n1 a:hover,#public-nav .n2 a:hover{ background:#008ad4}
+/*#public-nav .hover span{border-style:dashed dashed solid dashed; border-color:transparent transparent #fff transparent; border-width:5px; position:absolute; bottom:-1px; _bottom:10; left:50%; margin-left:-5px; font-size:0; line-height:0}*/
+#public-nav a.hover{ background:#80dbff; color:#fff; }
+#public-nav span{ visibility: hidden;  border-style:dashed dashed solid dashed; border-color:transparent transparent #fff transparent; border-width:7px; position:absolute; bottom:0px; left:50%; margin-left:-7px; font-size:0; line-height:0}
+#public-nav .hover span{ visibility: visible;  border-style:dashed dashed solid dashed; border-color:transparent transparent #fff transparent; border-width:7px; position:absolute; bottom:0px; left:50%; margin-left:-7px; font-size:0; line-height:0}
+
+
+#downloadLink span,#newsLink span{ visibility: hidden; border-style:dashed dashed solid dashed; border-color:transparent transparent #fff transparent; border-width:7px; position:absolute; bottom:0px; left:50%; margin-left:-7px; font-size:0; line-height:0}
+
+#public-nav .nav-line,
+#public-nav .nav-line-new{ float:left; width:12px; height:35px; background:url(http://www.kugou.com/common/images/default.png) no-repeat -337px 0;  margin:0 15px 0 40px; display:inline}
+#public-nav .n2 a{ display:inline; float:left; height:60px; line-height:60px;  padding:0 11px; font-size:16px; color:#fff;   }
+
+#public-nav .nav-line-new{ float:right; margin:0; margin-right:15px; }
+#public-nav .n2_new{ float:right; display:inline; }
+/*btn_zhao*/
+#public-nav .n2_new a.btn_zhao{/*position:absolute;right:164px;top:-2px;*/width:82px;height:22px; margin-top:6px;background:url(http://www.kugou.com/common/images/ico_zhao.png) no-repeat;}
+#public-nav .n2_new a.btn_zhao:hover {background-position:0 -22px;}
+/*二级菜单*/
+/*header css sprint */
+.download-software a.pc,
+.download-software a.android,
+.download-software a.iphone,
+.download-software a.ipad,
+.download-software a.pc:hover,
+.download-software a.android:hover,
+.download-software a.iphone:hover,
+.download-software a.ipad:hover,
+.public_nav_bd .nav_m_l_r .nav_r .perhome,
+.public_nav_bd .nav_m_l_r .nav_r .g_ico{
+ 	background:url(http://www.kugou.com/common/images/header_bg.png) no-repeat;
+ 	text-decoration: none;
+}
+
+.second-wrapper{ display: none; position: absolute; z-index:10000; width: 100%;  height:36px; top:60px; left: 0px; border-bottom: 1px solid #dcdcdc;   }
+.second-bg{ position: absolute; top: 0px; left: 0px; z-index: 999; width: 100%; height: 36px; background-color:#fff; }
+.second-nav{ position: absolute; left: 50%; width:960px;  margin-left: -480px; top:0px; z-index:1000;}
+.download-software,.news{  display: none; width:960px;  height:36px; margin:0 auto; text-align: left;}
+.download-software a,.news a{  font-size: 14px; color:#333;}
+.download-software{ display: none; padding:0px 0px 0px 40px; }
+.download-software a{ padding:7px 40px 7px 25px; line-height: 36px; }
+.download-software a.hover{ color:#008ad4}
+.download-software a:hover{ color:#008ad4}
+.download-software a.pc{  background-position: 0px -2px ; _background-position: 0px -4px }
+.download-software a.android{background-position: 0px -79px;_background-position: 0px -82px}
+.download-software a.iphone{background-position: 0px -155px;_background-position: 0px -158px }
+.download-software a.ipad{ background-position: 0px -232px;_background-position: 0px -235px}
+
+.download-software a.pc:hover{ background-position: 0px -40px; _background-position: 0px -42px }
+.download-software a.android:hover{background-position: 0px -117px ; _background-position: 0px -120px }
+.download-software a.iphone:hover{background-position: 0px -193px ; _background-position: 0px -196px }
+.download-software a.ipad:hover{ background-position: 0px -271px; _background-position: 0px -274px }
+
+.news{ display: none; padding-left:175px;  text-align: left}
+.news a{  padding:0px  20px; line-height: 36px;}
+.news a:hover{ color:#008ad4}
+.news a.hover{ color:#008ad4; font-weight: bold;}
+/*footer*/
+#public-footer{ font:12px/1.5 宋体,Arial,Verdana; clear:both; margin:0 auto 0; width:960px; padding:80px 0 20px; color:#b2b2b2; position:relative;}
+#public-footer p{ padding:0 15px}
+#public-footer .footer-line{border-top:1px solid #c2c2c2; margin-top:10px; height:10px; line-height:0; font-size:0}
+#public-footer .nav{ color:#9b9b9b; padding-top:8px; }
+#public-footer .nav a{ color:#878787; font-size:14px; display:inline-block; margin-bottom:5px; *margin-bottom:0;}
+#public-footer .nav a:hover{color:#5a5a5a; text-decoration:underline}
+#public-footer .link{ width:153px; height:43px; background:url(http://www.kugou.com/common/images/default.png) no-repeat -200px -538px; position:absolute; text-indent:-9999px; bottom:5px; right:15px}
+
+/*chrismax*/
+#snow{ padding:20px 0 0 7px; background:url(http://www.kugou.com/common/images/snow.png) no-repeat;_background:none;
+ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.kugou.com/common/images/snow.png', sizingMethod='crop'); width:961px; height:46px; position:absolute; top:90px; left:-7px; z-index:2}
+#snow a{ float:left; width:107px; height:35px;}
+#snow a.m{ margin-right:66px}
+#snow a.o{ width:78px;}
+.chrismax-head{ background:url(http://www.kugou.com/common/images/chrisHead.png) no-repeat !important; height:110px !important; z-index:2;}
+
+.yuandan-head{ background:url(http://www.kugou.com/common/images/yuandan.png) no-repeat !important; height:110px !important; z-index:2;}
+
+/* new icon */
+.new_icon{ display:inline-block; width:0; height:12px; padding-left:32px; overflow:hidden; background:url(http://www.kugou.com/common/images/new_icon.png) no-repeat;}
+#public-nav li .new_icon{ position:absolute; top:6px; right:-10px;}
+
+/*gb_logo*/
+#public-header a.gb_logo{position:absolute;width:188px;height:42px;top:38px;left:9px; overflow: hidden; display: none;}
+#public-header a.gb_logo:hover {background:url(http://www.kugou.com/common/images/home.png) 160px 3px no-repeat;}
+
+/*新增 购物车样式 以及登录新样式*/
+
+/* 右侧信息 */
+.public_nav_bd .nav_m_l_r{float: right;}
+.public_nav_bd .nav_m_l_r a{display: block; overflow: hidden; text-indent: -9999em;}
+.public_nav_bd .nav_m_l_r .nav_r{color:#fff;width: 40px;height: 38px;position: relative;float: left; border:1px solid #fff; border-radius: 2px;}
+.public_nav_bd .nav_m_l_r .nav_r.w_space{width:1px;line-height: 40px;background: url(../../../common/images/line.png) no-repeat center center;_background: url(../../../common/images/line.png) no-repeat left center;}
+.public_nav_bd .nav_m_l_r .nav_r .perhome{top:10px;left:15px;position: absolute; width: 14px;height: 16px;background-position: 0px -335px ;_background: none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://www.kugou.com/common/images/personal.png');}
+.public_nav_bd .nav_m_l_r .nav_r .loginbtn{width: 14px;height: 16px;top:8px;left:12px;position: absolute;_background-image:none; }
+.public_nav_bd .nav_m_l_r .nav_r .sum_ico{ overflow: hidden;width: 17px;height: 17px;display: block;background: url(../../../common/images/ico.png) no-repeat 0px 0px;top:0px;right: -3px;position: absolute;text-align: center;display: none;}
+.public_nav_bd .nav_m_l_r .nav_r .g_ico{width: 16px;height: 16px;background-position: 0px -310px ; top:10px;left: 12px;position: absolute;_background: none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='http://www.kugou.com/common/images/shop-cart.png');}
+
+/* 没有登录 */
+.public_nav_bd .nav_m_l_r .not_login{}
+.public_nav_bd .nav_m_l_r .not_login .t_ico{background: none; text-align: center;font-size: 14px;text-indent: 0px;width: 30px;height: 20px;left: 2px;color: #fff;}
+.public_nav_bd .nav_m_l_r .not_login .t_ico:hover{text-decoration: underline;}
+.public_nav_bd .nav_m_l_r .not_login #myMsgSum{display: none;}
+.public_nav_bd .nav_m_l_r .hover .liubai{ position: absolute; top:31px; _top:28px; right:0px; z-index: 999999; width:37px; height: 6px; background: #fff; background: url(../../../common/images/arrow_icon.jpg) no-repeat center }
+
+/* 用户信息 */
+.public_nav_bd .nav_m_l_r .hover {background: #fff;border: 1px solid #fff;}
+.public_nav_bd .nav_m_l_r .hover .user_info,.public_nav_bd .nav_m_l_r .hover .shop_cart{display: block;}
+.public_nav_bd .nav_m_l_r .hover .sum_ico{display: none;}
+.public_nav_bd .nav_m_l_r .hover .t_ico{background-position: 0px -335px ;}
+.public_nav_bd .nav_m_l_r .hover .g_ico{background-position: 0px -310px ;}
+.public_nav_bd .nav_m_l_r .user_info{ z-index: 9999; width: 218px;height:320px;background: #fff;border-radius: 2px;border-top-right-radius: 0px;top:36px;right: -1px;position: absolute;color:#333;display: none;border: 1px solid #d3d3d3; }
+.public_nav_bd .nav_m_l_r .user_img{ width: 198px; margin:0px 10px; border-bottom: 1px solid #d3d3d3; position: relative; z-index: 9999;}
+.public_nav_bd .nav_m_l_r .user_img a{width: 71px;height: 71px;display: block;position: relative;overflow: hidden;text-indent: 0px;margin: 17px 15px 15px 7px;float: left;_display:inline; border-bottom: none;}
+.public_nav_bd .nav_m_l_r .user_img .layer{width: 71px;height: 71px;display: block;position: absolute;z-index: 99;top:0px;left: 0px;background: url(../images/user_img_layer.png) no-repeat center top;_background: none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.kugou.com/common/images/user_img_layer.png',sizingMethod='crop');}
+.public_nav_bd .nav_m_l_r .user_img .nick_name{width: 100px;height: 24px;display: block;line-height: 24px;color: #333;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;margin: 0;}
+.public_nav_bd .nav_m_l_r .user_img .nick_name:hover{color: #2680df;}
+.public_nav_bd .nav_m_l_r .txt{float: left;width: 96px;height: 71px;padding-top:30px;overflow: hidden;}
+#public-header .public_nav_bd .nav_m_l_r .txt a{color:#888; font-size: 16px;}
+.public_nav_bd .nav_m_l_r .txt p{float: left;line-height: 32px;width: 90px;overflow: hidden; color: #000}
+.public_nav_bd .nav_m_l_r .txt a.vipIcon{display:block; width:40px; height:15px; margin:10px 0px 0px 0px; padding:0px; background: url(../../../common/images/ico.png) no-repeat}
+.public_nav_bd .nav_m_l_r .txt a.vip_false{background-position: -274px -18px;}
+.public_nav_bd .nav_m_l_r .txt a.vip_true{background-position:-274px 0px; display: none;}
+.public_nav_bd .nav_m_l_r .login_links{width: 198px;margin: 0 auto;}
+.public_nav_bd .nav_m_l_r .login_links a{line-height: 22px;vertical-align: middle;color:#333;padding: 8px 0px;text-indent: 0px;text-align: center;}
+.public_nav_bd .nav_m_l_r .login_links a:hover{color: #2680df}
+.public_nav_bd .nav_m_l_r .login_links .u_ico{width: 18px;height: 18px;display: inline-block;*display: inline;*zoom: 1;line-height: 18px;vertical-align: middle;margin-right: 10px;overflow: hidden;}
+.public_nav_bd .nav_m_l_r .login_links .ico_1{background: url(../../../common/images/ico.png) no-repeat -47px 1px;}
+.public_nav_bd .nav_m_l_r .login_links .ico_2{background: url(../../../common/images/ico.png) no-repeat -65px 1px;}
+.public_nav_bd .nav_m_l_r .login_links .ico_3{background: url(../../../common/images/ico.png) no-repeat -83px 1px;}
+.public_nav_bd .nav_m_l_r .user_info .out_login{width: 86px;height: 26px;background: url(../../../common/images/ico.png) no-repeat -192px -35px;margin:10px auto 20px auto;text-indent: 0px;text-align: center;line-height: 26px;color:#fff;}
+#public-header .login .user_info a.out_login{ color: #fff;} /*修复颜色*/
+.public_nav_bd .nav_m_l_r .user_info .out_login:hover{*color: #fff;background-position: -278px -35px;}
+/* 购物车 */
+.public_nav_bd .nav_m_l_r .shop_cart{position: absolute; width: 278px;background: #fff;right: -1px;top:36px;border-radius: 2px;border-top-right-radius: 0px;padding:10px 0px 10px 0px;display: none;border: 1px solid #d3d3d3;}
+.public_nav_bd .nav_m_l_r .goods_list{width: 260px;margin: 0 auto;}
+.public_nav_bd .nav_m_l_r .goods_list .goods{width: 260px;height: 60px; padding:10px 0px; border-bottom: 1px solid #e5e5e5}
+.public_nav_bd .nav_m_l_r .goods_list .addliubai{height: 16px;  padding:0px;  background-color: #dddcdc;}
+#public-header .login li.addliubai a{display: block; line-height: 16px;  text-align: center; font-size: 12px; text-indent:0; text-decoration: none;  color: #666;}
+#public-header .login li.addliubai a:hover{text-decoration: none;}
+.public_nav_bd .nav_m_l_r .goods_list .goods_img{width: 60px;height:60px;display: block;float: left;text-indent: 0px;margin-right: 7px;}
+.public_nav_bd .nav_m_l_r .goods_list .goods img{}
+.public_nav_bd .nav_m_l_r .goods_list .goods_info{width: 158px;height: 54px;float: left;color: #333;}
+#public-header .public_nav_bd .nav_m_l_r .goods_list .goods_info em.goods_cartName{color: #666; display:block; text-align:left;}
+#public-header .public_nav_bd .nav_m_l_r .goods_list .goods_info a{color: #666;}
+#public-header .public_nav_bd .nav_m_l_r .goods_list .goods_info em{color: #999; text-align:left;}
+.public_nav_bd .nav_m_l_r .goods_list .goods_info .goods_name{text-indent: 0px;height: 24px;line-height: 24px;vertical-align: middle;font-size: 14px;text-overflow:ellipsis;white-space: normal;overflow: hidden;color: #333;}
+ .public_nav_bd .nav_m_l_r .goods_list .goods_info .goods_name:hover{color: #2680df;}
+.public_nav_bd .nav_m_l_r .goods_list .goods_info .goods_mode{width: 158px;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;display: block;}
+.public_nav_bd .nav_m_l_r .goods_list .goods_s_s{margin-top: 5px;width: 68px;float: left;text-align: center;color: #333;}
+.public_nav_bd .nav_m_l_r .goods_list .del_g{width: 17px;height: 17px;display: block;float: left;background: url(../../../common/images/ico.png) no-repeat -100px 0px;margin: 0px 0px 0px 15px; }
+.public_nav_bd .nav_m_l_r .goods_list .empty_cart{text-align: center;font-size: 14px;color:#999;}
+.public_nav_bd .nav_m_l_r .goods_list .del_g:hover{background-position: -100px -17px;}
+.public_nav_bd .nav_m_l_r .count_cart{width: 260px;margin: 17px auto 30px auto;}
+.public_nav_bd .nav_m_l_r .goods_sum{display: block; width: 125px;line-height: 20px; _width:270px; _float:left;text-align:left;font-size: 12px;color:#999;clear: both;}
+.public_nav_bd .nav_m_l_r .pay_sum{float: left;display: block;  width: 125px; height: 20px;font-size: 14px;color:#333;margin-top: 10px;text-align:left;}
+.public_nav_bd .nav_m_l_r .pay_sum i{color: #ff3716; font-weight: bold; font-family: "sans serif", tahoma, verdana, helvetica;}
+.public_nav_bd .nav_m_l_r .goto_checkout{display: block;float: right; width: 128px;height: 26px; line-height: 26px;     margin-top: -20px; border-radius: 3px; padding:12px 0px;text-align: center;font-size: 14px;color:#fff; background-color:#ff6600;text-indent: 0px;}
+#public-header .login .goto_checkout{ color: #fff;} /*修复颜色*/
+.public_nav_bd .nav_m_l_r .goto_checkout:hover{background-position: -96px -35px;}
+
+/*scrolltop*/
+.scroll{
+ display: none;
+ position: fixed;
+ right:0px;
+ top:470px;
+ width: 36px;
+ height: 121px;
+ cursor: pointer;
+}

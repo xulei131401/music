@@ -1,0 +1,46 @@
+#center1{width: 960px;height: 600px;border: 2px solid #ccc;margin-top: 40px}
+.center-left{width: 200px;height: 600px;background: #E2F4FF;float: left;border-right: 2px solid #ccc}
+.center-right{float: left}
+.left-img{width: 170px;height: 170px;background: white;border:2px solid #ccc;border-radius: 4px;margin-left: 13px;margin-top: 30px;text-align: center;}
+.left-test{margin-top: 10px;}
+.left-test ul li{text-align: center;margin: 5px}
+.test-1{color:blue; font-size: 22px;font-family: "黑体";font-weight:600}
+.test-2{font-size: 16px;font-family: "宋体"}
+.test-3{color:#FE9807;font-size: 14px;font-family: "黑体"}
+.right-top{height: 60px;}
+.right-top p{float:left;margin-left: 10px;color:#838383;line-height: 60px}
+.top-ma{font-size: 24px;font-weight: 600}
+.top-in{margin-top: 2px}
+.dh{width:758px;height: 40px;float: left}
+.dh ul{margin-left: 9px}
+.dh ul li{float:left;width: 240px;height: 30px;border: 2px solid #ccc;margin:1px}
+.dh ul li p{font-size: 18px;font-weight: 600;text-align: center;line-height: 30px;color: #7B7B7B}
+.dh ul li:hover{cursor: pointer;}
+.edit{width: 640px;height: 450px;margin-left: 250px;margin-top: 50px;}
+label{text-align: right;float: left;font-family: "微软雅黑";display: block;width: 150px;vertical-align: middle;}
+.input1{border-top: 0px;border-bottom: 0px;border-left: 0px;border-right: 0px}
+.input2{width: 300px;height: 30px;background: #F3F3F3;border: 1px solid #ccc;margin-top: -8px}
+.input3{width: 150px;height: 20px;border: 2px solid #ccc;}
+.input4{background: #F3F3F3;border: 1px solid #ccc}
+.edit{margin-left: 250px;margin-top: 70px}
+.sub{margin-left: 150px}
+#bb{width: 960px;height: 1px;background: #C2C2C2;margin-top: 80px;}
+.em{width: 240px;height: 30px;border:1px solid #B6B6B6;float: left;margin-left: 16px;text-align: center;cursor: pointer;}
+.ph{width: 240px;height: 30px;border:1px solid #54ADE7;border-top: 2px solid #54ADE7;border-bottom: 0px;float: left;margin-left: 1px;text-align: center;cursor: pointer;}
+.ph span{color: #54ADE7}
+.us{width: 240px;height: 30px;border:1px solid #B6B6B6;float: left;margin-left: 1px;text-align: center;cursor: pointer;}
+.dh span{font-size: 18px;font-weight: 600;text-align: center;line-height: 30px;color: #7B7B7B}
+.img{width: 640px;height: 450px;margin-left: 250px;margin-top: 110px;}
+.sub1{margin-left: 150px}
+.ps{width: 640px;height: 450px;margin-left: 250px;margin-top: 100px;}
+/*.sub2{margin-left: 160px;float: left}*/
+/*.ps label{text-align: right;display: block;width: 150px}*/
+.input{width: 300px;height: 40px;background: #F3F3F3;border: 1px solid #ccc;}
+
+#yy{margin-left: 20px;float: left}
+.ps a{cursor: pointer;line-height: 40px;font-size: 13px;color: #007AC1}
+.ps label i{color: red}
+.sub2{margin-left: 150px}
+.ding{margin-left: 40px;margin-top: 20px}
+.ding ul li{margin-top: 10px}
+.ding ul li a{font-size: 16px;color:#0E9EFF;font-weight: 600}

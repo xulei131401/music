@@ -1,0 +1,502 @@
+   	 <include file="Header/header" />
+	<link rel="stylesheet" href="{:C('T_URL')}/css/goodsindex.css" type="text/css">
+
+	<!-- 存储用户ID  商品ID 单价-->
+	<input name="uid" type="hidden" value="{$_SESSION['user']['id']}">
+	<input name="gprice" type="hidden" value="{$list.nowprice}">
+	<input name="gid" type="hidden" value="{$list.id}">
+	<input name="gname" type="hidden" value="{$list.name}">
+	<!-- 可加入购物车成功后div移动 -->
+	<div id="jiaruchengong">
+		加入成功
+	</div>
+	<!-- 产品参数顶部信息 -->
+	<div id="cpxqtop">
+	<!-- 残品详情左侧轮播图 -->
+		<div id="cpxqtop-left">	
+			<image name="lunbo-pics" width="500" height="500" src="{:C('T_URL')}/Uploads/{$lb.imglb1}" style="display:block;" />
+			<image name="lunbo-pics" width="500" height="500" src="{:C('T_URL')}/Uploads/{$lb.imglb2}" style="display:none;" />			
+			<image name="lunbo-pics" width="500" height="500" src="{:C('T_URL')}/Uploads/{$lb.imglb3}" style="display:none;" />			
+			<image name="lunbo-pics" width="500" height="500" src="{:C('T_URL')}/Uploads/{$lb.imglb4}" style="display:none;" />			
+			<image name="lunbo-pics" width="500" height="500" src="{:C('T_URL')}/Uploads/{$lb.imglb5}" />	
+			<div class="lunbo-anniu" name="lunbo-anniu" onclick="funn(0)"></div>
+			<div class="lunbo-anniu" name="lunbo-anniu" onclick="funn(1)"></div>
+			<div class="lunbo-anniu" name="lunbo-anniu" onclick="funn(2)"></div>
+			<div class="lunbo-anniu" name="lunbo-anniu" onclick="funn(3)"></div>
+			<div class="lunbo-anniu" name="lunbo-anniu" onclick="funn(4)"></div>
+		</div>
+
+		<!-- 产品详情右侧购买信息 -->
+		<div id="cpxqtop-right">
+			<if condition="$guanzhu eq 1">
+				<div id="yigzhu">已关注</div>
+			<else/>
+			<div id="addgzhu" value="{$list.id}">加关注</div>
+			</if>
+			<h3 class="cpxqtop-right-title">{$list.name}</h3><!-- 商品标题 -->
+			<h4 style="color:#333; margin-top:5px;">关注度：{$list.notinum}</h4>
+			<p class="cpxqtop-right-description">{$list.descri}</p>
+			<div class="cpxq-price">
+				<table class="cpxq-price-tot">
+					<tr>
+						<td  width="65" ><p class="cpxq-price-1">酷价</p></td>
+						<td  width="366" class="cpxq-price-2"><b class="now-price" style="font-size:38px;color:#ff6600">￥{$list.nowprice}.00 &nbsp;</b><s class="old-price" style="font-size:22px;color:#C2A599">￥{$list.oldprice}.00</s></td>
+					</tr>
+				</table>
+			</div>
+			<div class="cpxq-color"><!-- 商品颜色 -->
+				<table class="cpxq-color-tot">
+					<tr>
+						<td  width="65" ><p class="cpxq-price-1">颜色</p></td>
+						<td  width="366" ><span class="cpxq-color-tot-2" name='color' value="1" >随机</span>
+						<span class="cpxq-color-tot-2" name='color' value="2">纯白</span>
+						<span class="cpxq-color-tot-2" name='color' value="3">纯黑</span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="cpxq-color"><!-- 商品型号 -->
+				<table class="cpxq-color-tot">
+					<tr>
+						<td  width="65" ><p class="cpxq-price-1" >型号</p></td>
+						<td  width="366" ><span class="cpxq-type-2" name="type" value="1" style="border:3px solid #ff4a00">基本</span>
+						<span class="cpxq-type-2" name="type" value="2">标准</span>
+						<span class="cpxq-type-2" name="type" value="3">潮人</span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="cpxq-color"><!-- 购买数量 -->
+				<table class="cpxq-color-tot">
+					<tr>
+						<td  width="65" ><p class="cpxq-price-1">数量</p></td>
+						<td  width="366" ><span class="cpxq-num" width="40">-</span>
+						<input type="text" value=1 id="cpxq-num-insert" width="80">
+						<span class="cpxq-num" width="40">+</span></td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- 购买按钮 -->
+			<div id="cpxq-buy">
+				<button type="submit" id="cpxq-buy-anniu">立即购买</button>
+				<button id="cpxq-buy-anniu1" name="jiarucar" >加入购物车</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 产品参数详细信息 -->
+	<div id="cpxqbottom">
+		<div id="cpxqbottom-top">
+			<div id="cpxqbottom-top1" >产品介绍</div>
+			<div id="cpxqbottom-top2" >规格参数</div>
+			<div id="cpxqbottom-top3" >产品评价</div>
+			<div id="cpxqbottom-top4"></div>
+		</div>
+		<div id="cpxqbottom-foot">
+			<!-- 产品介绍 -->
+			<div id="cpxqbottom-foot1" style="display: block;">
+				<img src="{:C('T_URL')}/images/goodadd.png" style="" width="960">	
+			</div>
+
+			<!-- 规格参数 -->
+			<div id="cpxqbottom-foot2" style="display:none;">
+				<table id="cpxqbottom-table">
+					<tr>
+						<td class="canshuda" colspan="2">主 体</td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>品牌&nbsp;&nbsp;&nbsp;</p></td>
+						<td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.name}</p></td></tr>
+					<tr>
+						<td class="canshuleft"><p>型号&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;Y10</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>类型&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p><p>&nbsp;&nbsp;&nbsp;耳机</p></p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>佩戴方式&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.adorn}</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>颜色&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;棕/白/蓝</p></td>
+					</tr>
+					<tr class="firstRow">
+						<td class="canshuda" colspan="2"><p>耳机规格&nbsp;&nbsp;&nbsp;</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>频响范围&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.rate}</p></td></tr>
+					<tr>
+						<td class="canshuleft"><p>阻抗&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.impedance}</p></td></tr>
+					<tr>
+						<td class="canshuleft"><p>接口类型&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.interfacetype}</p></td></tr>
+					<tr>
+						<td class="canshuleft"><p>灵敏度&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.sensitivity}</p></td></tr>
+					<tr>
+						<td class="canshuleft"><p>最大承载功率&nbsp;&nbsp;&nbsp;</p></td><td  class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.gonglv}</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>线长&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.linetype}</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>重量&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.weight}</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>线型&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.linetype}</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>音频接口&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.cointerface}</p></td>
+					</tr>
+					<tr>
+						<td class="canshuleft"><p>耳机/耳麦是否带线控&nbsp;&nbsp;&nbsp;</p></td><td class="canshuright"><p>&nbsp;&nbsp;&nbsp;{$list.controline}</p></td>
+					</tr>
+				</table>
+			</div>
+			<!-- 产品评价 -->
+			<div id="cpxqbottom-foot3" style="display:none;">
+				<!-- 左侧点击div	 -->
+				<div id="cpxqbottom-foot3-left">
+					<div class="cpxqbottom-foot3-left-all" name="all" style="color:red; fontWeight:bolder; border:2px solid #cEcEBE;">
+					全部评论
+					</div>
+					<div class="cpxqbottom-foot3-left-all" name="tou" style="margin-top:15px;">
+						只看头评
+					</div>
+					<div class="cpxqbottom-foot3-left-all" name="zhui" style="margin-top:15px;">
+						只看追评
+					</div>
+				</div>
+				<!-- 右侧显示div -->
+				<div id="cpxqbottom-foot3-right">
+					<if condition="$allp eq ''">
+						小伙伴们都很懒！还没留下评价！！
+					<else/>
+					<!-- 全部评价 -->
+					<div class="cpxqbottom-foot3-right-all" name="all">
+						<foreach name="allp" item="aa">
+						<div class="jutipingjia">
+							<table >
+								<!-- 判断是匿名与否 -->
+								<if condition="$aa.isopen eq 0">
+									<td width=60 height=60><img src="{:C('T_URL')}/images/user.png" width=60 height=60></td>
+									<td width=20 height=60></td>
+									<td width=190 height=60 style="textalign:left; font-weight:bolder; font-size:20px; color:#3980F4;">狗酷匿名用户</td>
+									
+									<td width=340 height=60 style="  font-size:16px;color:#3980F4;"> {$aa.cmtime|date="Y-m-d H:i:s",###}</td>
+								<else/>
+								<tr>
+									<td width=60 height=60><img src="__ROOT__/{$aa.pic}" width=60 height=60></td>
+									<td width=20 height=60></td>
+									<td width=190 height=60 style="textalign:left; font-weight:bolder; font-size:20px; color:#3980F4;">{$aa.username}</td>
+									
+									<td width=340 height=60 style="  font-size:16px;color:#3980F4;">{$aa.cmtime|date="Y-m-d H:i:s",###}</td>
+								</tr>
+								</if>
+								<tr>
+									<td width=60 height=88 style="text-align:center;font-size:22px;color:red;"><if condition="$aa.cmstatus eq 1">初评<else/>追评</if>:</td>
+									<td width=550 height=88 colspan=3 ><div style="font-size:13px; overflow:hidden;">{$aa.content}</div></td>
+								</tr>
+							</table>
+						</div> 
+						</foreach>
+						<!-- 分页 -->
+						<div class="pingjiafen">{$pageinfo}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					</div >
+					<!-- 头评 -->
+					<div class="cpxqbottom-foot3-right-all" name="tou" style="display:none;">
+						<foreach name="chup" item="bb">
+						<div class="jutipingjia">
+							<table >
+								<!-- 判断是匿名与否 -->
+								<if condition="$bb.isopen eq 0">
+									<td width=60 height=60><img src="{:C('T_URL')}/images/user.png" width=60 height=60></td>
+									<td width=20 height=60></td>
+									<td width=190 height=60 style="textalign:left; font-weight:bolder; font-size:20px; color:#3980F4;">狗酷匿名用户</td>
+									
+									<td width=340 height=60 style="  font-size:16px;color:#3980F4;"> {$bb.cmtime|date="Y-m-d H:i:s",###}</td>
+								<else/>
+								<tr>
+									<td width=60 height=60><img src="__ROOT__/{$bb.pic}" width=60 height=60></td>
+									<td width=20 height=60></td>
+									<td width=190 height=60 style="textalign:left; font-weight:bolder; font-size:20px; color:#3980F4;">{$bb.username}</td>
+									
+									<td width=340 height=60 style="  font-size:16px;color:#3980F4;">{$bb.cmtime|date="Y-m-d H:i:s",###}</td>
+								</tr>
+								</if>
+								<tr>
+									<td width=60 height=88 style="text-align:center;font-size:22px;color:red;">初评:</td>
+									<td width=550 height=88 colspan=3 ><div style="font-size:13px; overflow:hidden;">{$bb.content}</div></td>
+								</tr>
+							</table>
+						</div> 
+						</foreach>
+						<!-- 分页 -->
+						<div class="pingjiafen">{$pageinfo1}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					</div>
+					<!-- 追平 -->
+					<div class="cpxqbottom-foot3-right-all" name="zhui" style="display:none;"> 
+						<foreach name="zhuip" item="cc">
+						<div class="jutipingjia">
+							<table >
+								<!-- 判断是匿名与否 -->
+								<if condition="$cc.isopen eq 0">
+									<td width=60 height=60><img src="{:C('T_URL')}/images/user.png" width=60 height=60></td>
+									<td width=20 height=60></td>
+									<td width=190 height=60 style="textalign:left; font-weight:bolder; font-size:20px; color:#3980F4;">狗酷匿名用户</td>
+									
+									<td width=340 height=60 style="  font-size:16px;color:#3980F4;"> {$cc.cmtime|date="Y-m-d H:i:s",###}</td>
+								<else/>
+								<tr>
+									<td width=60 height=60><img src="__ROOT__/{$cc.pic}" width=60 height=60></td>
+									<td width=20 height=60></td>
+									<td width=190 height=60 style="textalign:left; font-weight:bolder; font-size:20px; color:#3980F4;">{$cc.username}</td>
+									
+									<td width=340 height=60 style="  font-size:16px;color:#3980F4;">{$cc.cmtime|date="Y-m-d H:i:s",###}</td>
+								</tr>
+								</if>
+								<tr>
+									<td width=60 height=88 style="text-align:center;font-size:22px;color:red;">追评:</td>
+									<td width=550 height=88 colspan=3 ><div style="font-size:13px; overflow:hidden;">{$cc.content}</div></td>
+								</tr>
+							</table>
+						</div> 
+						</foreach>
+						<!-- 分页 -->
+						<div class="pingjiafen">{$pageinfo2}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					</if>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<!-- 服务信息开始 --> 
+    <include file="Header/footer" />
+<script type="text/javascript">
+	// 左上脚产品图片轮播特效
+	// 获取图片
+	imglist=document.getElementsByName("lunbo-pics");
+
+	// // 获取按钮
+	anniu=document.getElementsByName("lunbo-anniu");
+
+	// 遍历按钮
+	x=180;
+	for(i=0;i<anniu.length;i++){
+		anniu[i].style.left=x+"px";
+		x+=28;
+	}
+	m=0;
+	runpics();
+	// 轮播函数
+	function runpics(){
+		if(m==imglist.length){
+			m=0;
+		}
+		showpics();
+		m++;
+		mytime=setTimeout(runpics,2000);
+	}
+
+	// 展示图片函数
+	function showpics(){
+		for(j=0;j<imglist.length;j++){
+			if(j==m){
+				imglist[j].style.display="block";
+				anniu[j].style.backgroundColor="#bebebe";
+			}else{
+				imglist[j].style.display="none";
+				anniu[j].style.backgroundColor="white";
+			}
+		}
+	}
+
+	function funn(abab){
+		clearTimeout(mytime);		
+		m=abab;
+		runpics();
+	}
+
+	$(function(){
+		gcolor=0;
+		gnum=1;		
+		gtype=1;
+		// 产品颜色选择特效
+		$("span[name='color']").click(function(){
+			$("span[name='color']").css("border","1px solid #666666");
+			$(this).css('border','3px solid #ff4a00');
+			// 存储选中商品颜色
+			gcolor=$(this).attr("value");
+		});
+		// 产品型号选择特效
+		$("span[name='type']").click(function(){
+			$("span[name='type']").css("border","1px solid #666666");
+			$(this).css('border','3px solid #ff4a00');
+			// 存储选中商品型号
+			gtype=$(this).attr("value");
+		});
+
+		// 产品数量加减特效
+		$(".cpxq-num").click(function(){
+			switch($(this).html()){
+				case '+':
+				ss=parseInt($("#cpxq-num-insert").attr("value"));
+				b=ss+1;
+				$("#cpxq-num-insert").attr("value",b);
+				if(b>10){
+					alert("亲，单笔下单最大量为10个哦");
+					$("#cpxq-num-insert").attr("value",10);
+					b=10;
+				}
+				gnum=b;
+				break;
+				case '-':
+				smsm=parseInt($("#cpxq-num-insert").attr("value"));
+				bm=smsm-1;
+				$("#cpxq-num-insert").attr("value",bm);
+				if(bm<=0){
+					alert("亲，单笔下单量不可以为空!");
+					$("#cpxq-num-insert").attr("value",1);
+					bm=1;
+				}
+				gnum=bm;
+				break;
+			}
+		});
+		// 产品参数和规格参数的切换特效
+		cpxqbottomfoot1=$("#cpxqbottom-foot1");
+		cpxqbottomfoot2=$("#cpxqbottom-foot2");
+		cpxqbottomfoot3=$("#cpxqbottom-foot3");
+		$("#cpxqbottom-top1").click(function(){
+			cpxqbottomfoot1.css('display','block');
+			$("#cpxqbottom-top1").css({borderTop:'3px solid #008ad4',borderBottom:'0px'});
+			cpxqbottomfoot2.css('display','none');
+			$("#cpxqbottom-top2").css('border','1px solid #dadada');
+			cpxqbottomfoot3.css('display','none');
+			$("#cpxqbottom-top3").css('border','1px solid #dadada');
+		});
+		$("#cpxqbottom-top2").click(function(){
+			cpxqbottomfoot2.css('display','block');
+			$("#cpxqbottom-top2").css({borderTop:'3px solid #008ad4',borderBottom:'0px'});
+			cpxqbottomfoot1.css('display','none');
+			$("#cpxqbottom-top1").css('border','1px solid #dadada');
+			cpxqbottomfoot3.css('display','none');
+			$("#cpxqbottom-top3").css('border','1px solid #dadada');
+		});
+		$("#cpxqbottom-top3").click(function(){
+			cpxqbottomfoot3.css('display','block');
+			$("#cpxqbottom-top3").css({borderTop:'3px solid #008ad4',borderBottom:'0px'});
+			cpxqbottomfoot1.css('display','none');
+			$("#cpxqbottom-top1").css('border','1px solid #dadada');
+			cpxqbottomfoot2.css('display','none');
+			$("#cpxqbottom-top2").css('border','1px solid #dadada');
+		});
+
+		// 加入购物车和购买时先获取各个变量值
+		uid=$("input[name='uid']").attr("value");
+		gid=$("input[name='gid']").attr("value");
+		gname=$("input[name='gname']").attr("value");
+		gprice=$("input[name='gprice']").attr("value");
+
+		// 加入购物车	
+		$("#cpxq-buy-anniu1").click(function(){
+
+		// 先判断用户是否登录
+		if(uid==""){
+			alert("请先登录");
+			$("#login").css("display","block");
+		}else if(gcolor==0){
+			alert("亲请选择商品颜色");
+		}else{
+			$.ajax({
+				url:"__MODULE__/Titindents/insert",
+				type:"POST",
+				async:true,
+				dataType:"html",
+				data:{"gcolor":gcolor,"gnum":gnum,"gtype":gtype,"uid":uid,"gname":gname,"gid":gid,"gprice":gprice},
+				success:
+				function(data){
+					
+					// 加入成功后运行div移动到右上角
+					jiaruchengong=document.getElementById("jiaruchengong");
+					$("#jiaruchengong").css("display","block");
+					
+					// movetime=data;
+					// 初始化小球位置
+					startx=800;
+					starty=500;
+					jiaruchengong.style.left=startx+"px";
+					jiaruchengong.style.top=starty+"px";
+					// 设定移动速度
+					xv=5;
+					yv=8;
+					movetime1=setInterval(function(){	
+						startx+=xv;
+						starty-=yv;
+
+						if(starty<-30){
+							// 清除移动定时器
+							clearInterval(movetime1);
+							$("#jiaruchengong").css("display","none");
+						}
+
+						jiaruchengong.style.left=startx+"px";
+						jiaruchengong.style.top=starty+"px";
+					},10);
+				
+					// 防止连续点击加入购物车，将颜色初始化
+					gcolor=0;
+				}
+			});
+		}
+		});
+
+		// 立即购买	
+		$("#cpxq-buy-anniu").click(function(){
+			// 先判断用户是否登录
+			// 测试数据
+			// uid=2;
+			// gid=2;
+			// gname="s333";
+			// gprice=2222;
+			if(uid==""){
+				alert("请先登录");
+				$("#login").css("display","block");
+			}else if(gcolor==0){
+				alert("亲请选择商品颜色");
+			}else{
+				$.ajax({
+				url:"__MODULE__/Titindents/add",
+				type:"POST",
+				async:true,
+				dataType:"html",
+				data:{"gcolor":gcolor,"gnum":gnum,"gtype":gtype,"uid":uid,"gname":gname,"gid":gid,"gprice":gprice},
+				success:					
+				function(data){
+					window.location.href="__MODULE__/Indents/add";
+				}
+				});
+			}
+		});
+
+		// 产品评价特效
+		$(".cpxqbottom-foot3-left-all").click(function(){
+			// 或取名字
+			aa=$(this).attr("name");
+			$(".cpxqbottom-foot3-left-all").css({color:"white",fontWeight:"normal",border:"0px"});
+			$(this).css({color:"red",fontWeight:"bolder",border:"2px solid #cEcEBE"});
+			// 右侧全部隐藏再显示一个
+			$(".cpxqbottom-foot3-right-all").css("display","none");
+			$(".cpxqbottom-foot3-right-all[name="+aa+"]").css("display","block");
+		});
+
+		// 加关注
+		$("#addgzhu").click(function(){
+			gzid=$(this).attr("value");
+	
+			if(uid==""){
+				alert("请先登录");
+			$("#login").css("display","block");
+			}else{					
+				window.location.href="__MODULE__/Notice/add/sgid/"+gzid;
+			}
+		});
+	});
+</script>

@@ -1,0 +1,49 @@
+
+	#notice-top{
+		height:33px;
+		width:960px;
+		/*background: red;*/
+		margin-top:30px;
+	}
+	a{
+		text-decoration:none;
+	}
+	.notice-top-p{
+		line-height:33px;
+		color:#333;
+		font-size:26px;
+	}
+	/*订单号*/
+	.notice-body{
+		width:960px;
+		height:75px;
+		border:1px solid #dadada;
+		margin-top:7px;
+		background: #f5f5f5;
+	}
+	.notice-body1{
+		display:block;
+		height:70px;
+		width:140px;
+		line-height:70px;
+		font-size:15px;
+		color:#666;
+		/*text-align:center;*/
+		font-weight:bold;
+	}
+	.notice-body2{
+		line-height:70px;
+		font-size:17px;
+		color:#666;
+		text-align:center;
+	}
+	#notice-page{
+		width:960px;
+		height:50px;
+		border:1px solid #dadada;
+		margin-top:5px;
+		background: #f5f5f5;
+		text-align:center;
+		line-height:50px;
+		font-size:14px;
+	}

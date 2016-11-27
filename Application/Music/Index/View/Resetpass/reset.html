@@ -1,0 +1,71 @@
+    <include file="./Kugou/Home/View/Header/header.html" />
+	<link rel="stylesheet" href="__ROOT__/Public/css/resetpassreset.css" type="text/css">
+
+	<div id="repas-body">
+		<div id="repas-body-top">
+			&nbsp;&nbsp;重设密码
+		</div>
+		<div id="repas-body-bottom">
+			<table>
+				<form action="__MODULE__/Resetpass/rsave" method="post" id="ss" onsubmit="return funa()"> 
+				
+				<tr>
+					<td width=200 height=60 class="repas-body-bottom-left">
+						用户名:&nbsp;&nbsp;&nbsp;
+					</td>
+					<td width=400 height=60 >
+						<input type="text" name="uname" class="repas-body-bottom-right" value="{$_SESSION['uname']}" disabled>
+					</td>
+				</tr>
+					
+				<tr>
+					<td width=200 height=60 class="repas-body-bottom-left">
+						新密码:&nbsp;&nbsp;&nbsp;
+					</td>
+					<td width=400 height=60 >
+						<input type="password" name="ansa" class="repas-body-bottom-right">
+					</td>
+				</tr>
+				<tr>
+					<td width=200 height=60 class="repas-body-bottom-left">
+						重复新密码:&nbsp;&nbsp;&nbsp;
+					</td>
+					<td width=400 height=60 >
+						<input type="password" name="ansb" class="repas-body-bottom-right">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" height=12></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:center;">
+						<input type="submit" value="提交" id="repas-body-anniu">
+					</td>
+				</tr>
+				</form>
+			</table>
+		</div>
+	</div>
+	<include file="./Kugou/Home/View/Header/footer.html" />
+	<script type="text/javascript">
+		
+		function funa(){
+			raa=$(".repas-body-bottom-right[name='ansa']").attr("value");
+			rbb=$(".repas-body-bottom-right[name='ansb']").attr("value");
+			
+			if(raa!=rbb){
+				alert("两次密码不相同！请重新输入");
+				// alert(aa+":"+bb);
+				return false;
+			}else if(!raa){
+				alert("密码不允许为空");
+				return false;
+			}else if(!rbb){
+				alert("密码不允许为空");
+				return false;
+			}
+			
+			return true;
+			
+		}
+	</script>

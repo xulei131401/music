@@ -1,0 +1,205 @@
+    <include file="Header/header" />
+    <script type="text/javascript">
+        document.title="用户中心-酷狗音乐";
+    </script>
+	<!-- 中间部分 -->
+	<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/geren.css">
+	<div id="center1">
+	    <!-- 左边的信息部分 -->
+		<div class="center-left">
+			<div class="left-img">
+			    <if condition="$_SESSION['user'][pic] eq ''"><img src="{:C('T_URL')}/images/user.png" width="160px" height="160px" style="margin-top:5px"><else /><img src="__ROOT__/{$_SESSION['user'][pic]}" width="160px" height="160px" style="margin-top:5px"></if>
+			</div>
+			<div class="left-test">
+				<ul>
+					<li><a class="test-1" href="">{$_SESSION['user'][username]}</a></li>
+					<li><p class="test-2">(账号:{$_SESSION['user'][username]})</p></li>
+					<li><a class="test-3" href="">开通酷狗VIP>>></a></li>
+				</ul>
+			</div>
+			<div class="ding">
+				<ul>
+					<li><a href="__MODULE__/Titindents/index">我的购物车>>></a></li>
+					<li><a href="__MODULE__/Indents/index">我的订单>>></a></li>
+					<li><a href="__MODULE__/Notice/index">我的关注>>></a></li>
+					<if condition="$_SESSION['user']['pwindent'] eq 0">
+					<li><a href="__MODULE__/Resetpass/add">设定密保>>></a></li>
+					</if>
+				</ul>
+			</div>
+		</div>
+		<!-- 右边的操作部分 -->
+		<div class="cneter-right">
+			<div class="right-top">
+				<p class="top-ma">我的酷狗</p><p class="top-in">Personal information</p>
+			</div>
+			<!-- 导航部分 -->
+			<div class="dh">
+			    
+				<div class="em" id="em">
+					<span id="ab">修改头像</span>
+			    </div>
+			    <div class="ph" id="ph">
+					<span id="cd">编辑资料</span>
+			    </div>
+			    <div class="us" id="us">
+					<span id="ef">修改密码</span>
+			    </div>
+
+			</div>
+			<!-- 修改部分 -->
+			<div class="edit" id="edit" style="display:block">
+				<form action="__MODULE__/User/update" method="post">
+				    <input type="hidden" name="id" value="{$_SESSION['user'][id]}">
+					
+					<label>账号：</label><input type="text" name="username" class="input2" value="{$_SESSION['user'][username]}" disabled="readonly"><br><br>
+					<label>邮箱：</label><input type="text" name="email" class="input3" value="{$us.email}"><br><br>
+					<label>年龄：</label><input type="text" name="age" class="input3" value="{$us.age}"><br><br>
+					<label>真实姓名：</label><input type="text" name="name" class="input3" value="{$us.name}"><br><br>
+					<label>城市：</label><select id="aid" name="dizhi"><option value="请选择" selected="selected">请选择</option><option value="北京市">北京市</option><option value="河北省">河北省</option><option value="湖北省">湖北省</option><option value="广东省">广东省</option></select>&nbsp;&nbsp;<select name="dizhi" id="bid"><option>请选择</option></select><br><br>
+					<label>简介：</label><textarea rows="10" cols="40" class="input4"></textarea><br><br>
+					 <input class="sub" type=image src="{:C('T_URL')}/images/edit.png" name="sub1" onClick="javascript:testclick.submit();">
+				</form>
+			</div>
+			<div class="img" id="img" style="display:none">
+				<form action="__MODULE__/User/xiugai" method="post" enctype="multipart/form-data">
+				    <input type="hidden" name="id" value="{$_SESSION['user']['id']}">
+					<label>原头像：</label> <if condition="$_SESSION['user'][pic] eq ''"><img src="{:C('T_URL')}/images/user.png" width="220px" height="220px"><else /><img src="__ROOT__/{$_SESSION['user'][pic]}" width="220px" height="220px"></if><br><br>
+					<label>新头像：</label><input type="file" name="pic"><br><br>
+					
+					 <input class="sub1" type=image src="{:C('T_URL')}/images/edit.png" name="sub1" onClick="javascript:testclick.submit();">
+				</form>
+			</div>
+			<div class="ps" id="ps" style="display:none">
+				<form action="__MODULE__/User/update1" method="post" enctype="multipart/form-data">
+				    <input type="hidden" name="id" value="{$_SESSION['user']['id']}">
+					<label vertical-align: middle;><i>*</i>&nbsp;原密码：</label><input id="input" type="password" name="oldpassword" class="input" value=""><br><br>
+					<label vertical-align: middle;><i>*</i>&nbsp;新密码：</label><input id="input" type="password" name="password" class="input" value=""><br><br>
+					<label vertical-align: middle;><i>*</i>&nbsp;确认密码：</label><input id="input" type="password" name="repassword" class="input" value=""><br><br>
+					 <label class="nt" vertical-align: middle;><i>*</i>&nbsp;验证码：</label><input type="text" id="input" name="fcode" class="input" style="width:120px;float:left"><img height="40px" width="100px" id="yy"src="__URL__/verify" alt="" onclick='this.src="__URL__/verify?rand="+Math.random()'><a onclick='a.src="__URL__/verify?rand="+Math.random()' class="yzm">&nbsp;&nbsp;&nbsp;换一张</a><br><br>
+					
+					 <input class="sub2" type=image src="{:C('T_URL')}/images/edit.png" name="sub1" onClick="javascript:testclick.submit();">
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	<include file="Header/footer" />
+<script>
+	var a=document.getElementById('yy');
+</script>
+<script type="text/javascript">
+	//修改密码的input框特效
+    //获取焦点事件
+    $(function(){
+        $(".input").focus(function(){
+        	$(this).css({background:"white",border:"1px solid #54ADE7"});
+        })
+        //失去焦点事件
+        $(".input").blur(function(){
+        	$(this).css({background:"#EAF4F9",border:"1px solid #ccc"});
+        	//获取input的值
+        	var v=$(this).val();
+        	if(!v){
+        		// $(this).css("border","1px solid red");
+        		$(this).next("span").remove();
+				$("<span>&nbsp;&nbsp;&nbsp;*&nbsp;不能为空</span>").css("color","red").insertAfter(this);
+        	}else{
+        		$(this).next("span").remove();
+        	}
+        	
+        })
+    })
+
+	var dizhi1=document.getElementById("aid");
+	var dizhi2=document.getElementById("bid");
+	dizhi1.onchange=function(){
+		dizhi2.length=1;
+		sel2=null;
+		sel1=dizhi1.value;
+		switch(dizhi1.value){
+			case "北京市":
+			var city=["三环内","四环内","五环外","六环外"];
+			break;
+			case "河北省":
+			var city=["承德","包头","大同","邯郸"];
+			break;
+			case "湖北省":
+			var city=["武汉","黄冈","荆州","宜昌"];
+			break;
+			case "广东省":
+			var city=["广州","东莞","深圳","佛山"];
+			break;
+		}
+		if(dizhi1.selectedIndex>0){
+			for(i=0;i<city.length;i++){
+				var mm=new Array();
+				mm=document.createElement("option");
+				mm.value=city[i];
+				mm.innerHTML=city[i];
+				dizhi2.appendChild(mm);
+			}
+		}
+		dizhi2.onchange=function(){
+			rel1=dizhi1.value;
+			rel2=dizhi2.value;
+		}
+	}
+</script>
+<script type="text/javascript">
+    var em=document.getElementById("em");
+    var ph=document.getElementById("ph");
+    var us=document.getElementById("us");
+    var ab=document.getElementById("ab");
+    var cd=document.getElementById("cd");
+    var ef=document.getElementById("ef");
+    var edit=document.getElementById("edit");
+    var img=document.getElementById("img");
+    var ps=document.getElementById("ps");
+    em.onclick=function(){
+    	em.style.borderColor="#54ADE7";
+    	em.style.borderTop="2px solid #54ADE7";
+    	em.style.borderBottom="0px"
+    	ab.style.color="#54ADE7";
+    	edit.style.display="none";
+    	img.style.display="block";
+    	ps.style.display="none";
+
+    	ph.style.border="1px solid #B6B6B6";
+    	cd.style.color="#B6B6B6";
+
+    	us.style.border="1px solid #B6B6B6";
+    	ef.style.color="#B6B6B6";
+    }
+    ph.onclick=function(){
+    	ph.style.borderColor="#54ADE7";
+    	ph.style.borderTop="2px solid #54ADE7";
+    	ph.style.borderBottom="0px"
+    	cd.style.color="#54ADE7";
+    	edit.style.display="block";
+    	img.style.display="none";
+    	ps.style.display="none";
+
+    	em.style.border="1px solid #B6B6B6";
+    	ab.style.color="#B6B6B6";
+
+    	us.style.border="1px solid #B6B6B6";
+    	ef.style.color="#B6B6B6";
+    }
+    us.onclick=function(){
+    	us.style.borderColor="#54ADE7";
+    	us.style.borderTop="2px solid #54ADE7";
+    	us.style.borderBottom="0px"
+    	ef.style.color="#54ADE7";
+    	edit.style.display="none";
+    	img.style.display="none";
+    	ps.style.display="block";
+
+    	em.style.border="1px solid #B6B6B6";
+    	ab.style.color="#B6B6B6";
+
+    	ph.style.border="1px solid #B6B6B6";
+    	cd.style.color="#B6B6B6";
+    }
+</script>
+

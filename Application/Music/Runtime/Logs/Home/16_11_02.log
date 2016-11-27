@@ -1,0 +1,68 @@
+[ 2016-11-02T13:13:53+08:00 ] ::1 /music/index.php/Home/Excellent/excellentinsert.html
+ERR: 1364:Field 'count' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `excellent` (`ctime`,`name`,`desc`,`author`,`pic`) VALUES ('2016-11-02 13:13:53','asd','asd','asd','./Public/Home/Uploads/excellent_pic/20161102/58197611b6c38.jpg')
+
+[ 2016-11-02T13:14:46+08:00 ] ::1 /music/index.php/Home/Excellent/excellentinsert.html
+ERR: 1364:Field 'value' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `excellent` (`ctime`,`name`,`desc`,`author`,`pic`) VALUES ('2016-11-02 13:14:46','assd','asd','asd','./Public/Home/Uploads/excellent_pic/20161102/58197646073a0.jpg')
+
+[ 2016-11-02T13:20:19+08:00 ] ::1 /music/index.php/Home/Excellent/editupdate.html
+ERR: 非法操作:editupdate
+
+[ 2016-11-02T13:26:13+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/7.html
+ERR: 1054:Unknown column 'value' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`name`,`desc`,`author`,`pic`,`ctime`,`value` FROM `excellent` WHERE `id` = 7 LIMIT 1  
+
+[ 2016-11-02T13:34:42+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/7.html
+ERR: 1054:Unknown column 'value' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`name`,`desc`,`author`,`pic`,`ctime`,`value` FROM `excellent` WHERE `id` = 7 LIMIT 1  
+
+[ 2016-11-02T13:34:55+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/7.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `song` WHERE `id` IN () LIMIT 1  
+
+[ 2016-11-02T14:09:12+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 0,6' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () LIMIT 0,6  
+
+[ 2016-11-02T14:10:07+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 0,6' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () LIMIT 0,6  
+
+[ 2016-11-02T14:17:11+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 0,6' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () LIMIT 0,6  
+
+[ 2016-11-02T14:17:47+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 0,6' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () LIMIT 0,6  
+
+[ 2016-11-02T14:18:26+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 0,6' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () LIMIT 0,6  
+
+[ 2016-11-02T14:21:21+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 0,6' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () LIMIT 0,6  
+
+[ 2016-11-02T14:21:50+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () 
+
+[ 2016-11-02T14:22:13+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () 
+
+[ 2016-11-02T14:24:16+08:00 ] ::1 /music/index.php/Home/Excellent/song_list/id/9.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `song` WHERE `id` IN () 
+
+[ 2016-11-02T17:03:58+08:00 ] ::1 /music/index.php/Home/Index/Products_List.html
+ERR: 非法操作:Products_List
+
+[ 2016-11-02T17:04:00+08:00 ] ::1 /music/index.php/Home/Bang/index.html
+ERR: 无法加载控制器:Bang
+
+[ 2016-11-02T17:04:19+08:00 ] ::1 /music/index.php/Home/Bang/index.html
+ERR: 无法加载控制器:Bang
+

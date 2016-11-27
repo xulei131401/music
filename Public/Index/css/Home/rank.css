@@ -1,0 +1,143 @@
+#bd{
+		 	/*position:relative;*/
+		 	width:960px;
+		 	/*此处高无法设置为auto*/
+		 	height:1000px;
+		 	/*background:yellow;*/
+		 	/*float:left;*/
+		 	padding-top:6px;
+		 	font-size:13px;
+			color:#5A5A5A;
+			margin:0 auto;
+		}
+		#l{
+		 	width:160px;
+		 	height:auto;
+		 	border-right:1px solid #DCDCDC;
+		 	float:left;
+		 	/*background-color:orange;*/
+		 }
+
+		 /*右边大div框*/
+		 #r{
+		 	width:780px;
+		 	float:right;
+			height:auto;
+			/*background-color:pink;*/
+		 }
+		  #r_action{
+		 	width:780px;
+		 	clear:both;
+		 	/*background-color:pink;*/
+		 	height:auto;
+		 	float:right;
+		 	border-bottom:1px solid #E0E0E0;
+		 }
+		 #r_a_pic_1{
+		 	float:right;
+		 	height:26px;
+		 	margin-top:14px;
+			margin-left:10px;
+			margin-bottom:11px;
+		 }
+		 #r_a_pic_2{
+		 	float:right;
+		 	height:26px;
+		 	margin-top:14px;
+			margin-left:10px;
+			margin-bottom:11px;
+		 }
+		 #r_a_cb{
+		 	float:left;
+		 	margin-top:25px;
+			width:80px;
+			height:20px;
+			/*background-color:orange;*/
+			line-height:20px;
+
+		 }
+		 #tb{
+		 	width:780px;
+		 	/*border:1px solid red;*/
+		 	/*background-color:yellow;*/
+		 	empty-cells:show;
+		 	border-collapse:collapse;
+
+		 }
+		 #tb tr td{
+		 	text-align:center;
+		 	/*border:1px solid red;*/
+		 	height:35px;
+		 }
+		 #l_table,#l_table1{
+		 	border-spacing:0px;
+		 }
+		 #l_table tr td:first-child{
+		 	width:35px;
+		 	height:30px;
+		 	text-align:center;
+		 }
+		 #l_table tr:hover{
+		 	cursor:pointer;
+		 }
+		 #l_table tr td:last-child{
+		 	width:110px;
+		 	height:30px;
+		 	text-align:left;
+		 }
+		 #l_table1 tr td:first-child{
+		 	width:35px;
+		 	height:30px;
+		 	text-align:center;
+		 }
+		 #l_table1 tr:hover{
+		 	cursor:pointer;
+		 }
+		 #l_table1 tr td:last-child{
+		 	width:110px;
+		 	height:30px;
+		 	text-align:left;
+		 }
+		 #l_special tr td{
+		 	width:70px;
+		 	height:30px;
+		 	text-indent:5px;
+		 }
+		 #l_special tr td:hover{
+		 	background-color:#DAF1FB;
+		 }
+		 #l_h4{
+		 	color:#A0A0A0;
+		 	margin-top:10px;
+		 	height:30px;
+		 }
+		 #theme{
+		 	width:420px;
+		 	height:70px;
+		 	margin-top:7px;
+		 	/*background-color:orange;*/
+		 	/*background-image:url("__ROOT__/Public/images/rank/remenbang/b_kugoubiaoshengbang.png");*/
+		 	float:left;
+
+		 }
+		 #theme_cont{
+		 	width:348px;
+		 	height:68px;
+		 	margin-top:7px;
+		 	float:right;
+		 	border:1px solid #B0B0B0;
+		 	line-height:20px;
+		 }
+		 #text{
+		 	margin-left:5px;
+		 	margin-top:3px;
+		 }
+		 td:hover{
+		 	cursor:pointer;
+		 }
+		 #l_table tr:hover{
+		 	background-color:#DAF1FB;
+		 }
+		 #l_table1 tr:hover{
+		 	background-color:#DAF1FB;
+		 }

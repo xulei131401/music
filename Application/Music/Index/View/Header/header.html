@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<foreach name="doop" item="fvg">
+	<title>{$fvg.title}</title>
+	<meta name="keywords" content="{$fvg.keywords}">
+	</foreach>
+	<link rel="shortcut icon" href="{:C('T_URL')}/images/favico.ico">
+	<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/bootstrapValidator.min.css">
+	<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/index.css">
+	<!-- <link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/geren.css"> -->
+	<!-- <script type="text/javascript" src="{:C('T_URL')}/js/index.js"></script> -->
+	<script type="text/javascript" src="{:C('T_URL')}/js/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript" src="{:C('T_URL')}/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{:C('T_URL')}/js/bootstrapValidator.min.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#myform').bootstrapValidator();
+	    });
+	</script>
+</head>
+<body>
+	 <!-- 头部开始 -->
+	<div id="header">
+		<div id="top">
+		    <!-- logo部分 -->
+			<div class="top-left">
+			    <foreach name="doop" item="uup">
+				<a href="__MODULE__/Index/index"><img src="__ROOT__/{$uup.logo}" width="160px" height="50px"></a>
+				</foreach>
+				<img src="{:C('T_URL')}/images/login/logo2.png">
+			</div>
+			<!-- 注册登录部分 -->
+			<div class="top-right">
+			    <if condition="$_SESSION['username'] eq null">
+				<div class="right-t">
+				  <ul>
+				    <li><a class="t-aa" href="{:U('Index/Employee/index')}"></a></li>
+					<li><a href="{:U('Index/Register/index')}">新用户注册</a></li>
+					<li><span data-toggle="modal" data-target="#myModal">立即登录</span></li>
+				  </ul>	
+				</div>
+				<else />
+				<div class="right-t1">
+				  <ul>
+				    <li><a class="t-aa" href="{:U('Index/Employee/index')}"></a></li>
+					<li><if condition="$_SESSION['user'][pic] eq ''"><img src="{:C('T_URL')}/images/user.png" width="40px" height="40px"><else /><img src="__ROOT__/{$_SESSION['user'][pic]}" width="40px" height="40px"></if></li>
+					<li><a href="javascript:void(0)" style="color:#72CEF2;text-decoration: underline"><if condition="$_SESSION['user']['username'] eq ''">{$_SESSION['user']['email']}<else />{$_SESSION['user']['username']}</if></a></li>
+					<li><a href="{:U('Index/Login/logout')}">退出登陆</a></li>
+					<li class="goods"><a href="__MODULE__/Titindents/index" style="border:1px solid red"><img src="{:C('T_URL')}/images/goods.png"></a></li>
+				  </ul>	
+				</div>
+				</if>
+
+				<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                <h4 class="modal-title" id="myModalLabel" align="center">登录框</h4>
+		            </div>
+		         <form id="myform" class="form-horizontal"  action="{:U('Index/Login/isLogin')}" method="post" role="form">
+		  
+			        <div class="form-group">
+			        	<label for="username" class="control-label col-sm-2">用户名:</label>
+			          <div class="col-xs-8">
+			            	 <input type="text" id="username" class="form-control" name="username"
+	                                   data-bv-message="用户名没有验证"
+	                                   required data-bv-notempty-message="用户名不能为空"
+	                                   pattern="^[a-zA-Z0-9]+$" data-bv-regexp-message="用户名只能由字母和数字组成"
+	                                   data-bv-stringlength="true" data-bv-stringlength-min="2" data-bv-stringlength-max="30" data-bv-stringlength-message="用户名最少2个字符,不能超过30个字符"/>
+	          		   </div>           
+			          </div>
+			    
+		         	<div class="form-group">
+                        <label for="password" class="control-label col-sm-2">密码:</label>
+                        <div class="col-xs-8">
+                            <input type="password" id="password" class="form-control" name="password"
+                                   required data-bv-notempty-message="密码不能为空"
+                                   data-bv-different="true" data-bv-different-field="username" data-bv-different-message="用户名和密码不能相同"/>
+                        </div>
+                   	 </div>
+		       
+			       
+			        <div class="form-group">
+			          <div class="col-md-12">
+			          	<div class="control-wrapper">
+			          		
+			          		<a href="__MODULE__/Resetpass/index" class="text-right pull-right">忘记密码?</a>
+			          	</div>
+			          </div>
+			        </div>
+		
+		        	<div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		                <button type="submit" class="btn btn-primary">登录</button>
+		            </div>
+		      </form>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+				<!-- 网页播放器等部分 -->
+				<div class="right-b">
+					<div class="b-1">
+						<img src="{:C('T_URL')}/images/login/01.png">
+						<a href="javascript:void(0)">网页播放器</a>&nbsp;&nbsp;|
+					</div>&nbsp;&nbsp;
+					<div class="b-2">
+						<img src="{:C('T_URL')}/images/login/02.png">
+						<a href="javascript:void(0)">酷狗游戏</a>&nbsp;&nbsp;|
+					</div>&nbsp;&nbsp;
+					<div class="b-3">
+						<img src="{:C('T_URL')}/images/login/03.png">
+						<a href="javascript:void(0)">下载客户端</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 导航部分 -->
+		<div id="dh">
+			<div class="dh-l">
+			<!-- 导航左边的内容 -->
+				<ul class="ul-l">
+					<li><a href="{:U('Index/Index/index')}">乐库</a></li>
+					<li><a href="{:U('Index/Rank/index')}">排行榜</a></li>
+					<li><a href="{:U('Index/Classify/index')}">分类</a></li>
+					<li><a href="{:U('Index/Excellent/index')}">精选</a></li>
+					<li><a href="{:U('Index/Shop/index')}">商城</a></li>
+					<li><a href="{:U('Index/Good/index')}">好歌</a></li>
+					<li><a href="javascript:void(0)">推荐</a></li>
+				</ul>
+				<!-- 导航右边的内容 -->
+				<ul class="ul-b">	
+					<li><a href="">VIP中心</a></li>
+					<li><a href="javascript:void(0)">客服中心</a></li>
+					<li><a href="">产品中心</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>

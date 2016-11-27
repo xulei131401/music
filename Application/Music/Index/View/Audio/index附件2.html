@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{$song['singer']}-{$song['name']}&nbsp;|&nbsp;酷狗音乐</title>
+	<link rel="shortcut icon" href="{:C('T_URL')}/images/favico.ico">
+	<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/audio.css">
+	<script type="text/javascript" src="{:C('T_URL')}/js/jquery-1.8.3.min.js"></script>
+
+</head>
+<body>
+	<div id="all">
+		<div class="a-top">
+			<img src="{:C('T_URL')}/images/login/logo1.png" height="39px">
+		</div>
+		<div class="dh">
+			<div class="a-dh">
+				<img src="{:C('T_URL')}/images/geshou/01.jpg" id="singer">
+				<img src="" height="15px" style="position:relative;top:40px;left:8px;" id="porder">
+				<div class="tit">
+				     <span title="{$song.singer}-{$song.name}" style="cursor:pointer;text-align:left;width:170px;" id="namesong">{$song.singer}—{$song.name}</span>
+				     <audio style="background:yellow;width:190px;" src="__ROOT__/{$song.url}" controls="controls" autoplay="autoplay">您的浏览器不支持audio标签</audio>
+				</div>
+	        </div>
+	        <div class="b-dh">
+	        	<a href="">歌手图片<img src="{:C('T_URL')}/images/geshou/01.png"></a>
+	        </div>
+	    </div>
+	    <div class="txt">
+	    	<div class="t-left">
+	    		<div class="left-top">
+	    			<img src="{:C('T_URL')}/images/geshou/02.png" width="17px">&nbsp;
+	    			<span>默认列表</span>
+	    		</div>
+	    		<div class="tt">
+	    			<div class="ta">
+
+	    				<div class="ta-left"  style="overflow-x:hidden;overflow-y:auto;">
+
+						<!-- 能否得到song这个变量 -->
+	    					<foreach name="songs" item="v" key="m">
+	    					<if condition="$m eq $x">
+	    						<ul style="background-color:#62C4F2;" title="{$v.singer}-{$v.name}">
+	    							<li class="nums">{$m+1}</li>
+	    							<li class="title">{$v.singer}-{$v.name}</li>
+	    						</ul>
+	    					<else/>
+	    					<ul onclick="fun({$m})" title="{$v.singer}-{$v.name}">
+	    						<li class="nums">{$m+1}</li>
+	    						<li class="title">{$v.singer}-{$v.name}</li>
+	    					</ul>
+	    					</if>
+	    					</foreach>
+						<!-- 能否得到song这个变量 -->
+	
+	    				</div>
+
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="t-right">
+	    	    <img src="{:C('T_URL')}/images/geshou/0.jpg" width="428px" height="250px">
+	    	    <img src="{:C('T_URL')}/images/login/logo2.png" width="180px" height="90px" style="margin-left:100px">
+	    		
+	    	</div>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript">
+	//歌曲播放结束后的操作
+	var audio=document.getElementsByTagName("audio")[0];
+	audio.addEventListener('ended', function(){
+		if($("#porder").attr("src")=="{:C('T_URL')}/images/list.png"){
+			//得到的是下标为$x的歌曲,将下标再传回控制器
+   			window.location.href="__MODULE__/Audio/play/sid/"+{$x}+"/id/{$selectedid}"+"/pmode/list";
+		}else if($("#porder").attr("src")=="{:C('T_URL')}/images/random.png"){
+			//如果是随机播放?-------加上随机标示参数
+			window.location.href="__MODULE__/Audio/play/sid/"+{$x}+"/id/{$selectedid}"+"/rd/"+"tr"+"/pmode/random";
+		}else if($("#porder").attr("src")=="{:C('T_URL')}/images/recyle.png"){
+			//单曲循环
+			window.location.href="__MODULE__/Audio/play/sid/"+({$x}-1)+"/id/{$selectedid}"+"/pmode/recyle";
+		}							
+	}, false);
+	//获得歌曲的id数组
+	function fun(a){
+		//得到路径信息
+		mode=$("#porder").attr("src");
+		s=mode.match(/list/);
+		r=mode.match(/recyle/);
+		ra=mode.match(/random/);
+		if(s!=null){
+			window.location.href="__MODULE__/Audio/play/sid/"+(a-1)+"/id/{$selectedid}"+"/pmode/list";
+		}else if(r!=null){
+			window.location.href="__MODULE__/Audio/play/sid/"+(a-1)+"/id/{$selectedid}"+"/pmode/recyle";
+		}else if(ra!=null){
+			window.location.href="__MODULE__/Audio/play/sid/"+(a-1)+"/id/{$selectedid}"+"/pmode/random";
+		}
+		
+
+	}
+
+	$(function(){
+		$("#porder").mouseover(function(){
+			if($(this).attr("src")=="{:C('T_URL')}/images/recyle.png"){
+  				$(this).attr("title","单曲循环");
+  				//接下来怎么选择歌曲的id?
+  			}else if($(this).attr("src")=="{:C('T_URL')}/images/random.png"){
+  				$(this).attr("title","随机播放");
+  				
+  			}else if($(this).attr("src")=="{:C('T_URL')}/images/list.png"){
+  				$(this).attr("title","列表播放");
+  				
+  			}
+		}).click(function(){
+  			if($(this).attr("src")=="{:C('T_URL')}/images/recyle.png"){
+  				$(this).attr("src","{:C('T_URL')}/images/random.png");
+  				//接下来怎么选择歌曲的id?
+  			}else if($(this).attr("src")=="{:C('T_URL')}/images/random.png"){
+  				$(this).attr("src","{:C('T_URL')}/images/list.png");
+  				
+  			}else if($(this).attr("src")=="{:C('T_URL')}/images/list.png"){
+  				$(this).attr("src","{:C('T_URL')}/images/recyle.png");
+  				
+  			}
+		});
+
+  			
+
+	});
+	if($("#porder").attr("src")=="{:C('T_URL')}/images/recyle.png"){
+  		$(this).attr("title","随机播放");
+  				//接下来怎么选择歌曲的id?
+  	}else if($("#porder").attr("src")=="{:C('T_URL')}/images/random.png"){
+  		$(this).attr("title","列表播放");
+  	}else if($("#porder").attr("src")=="{:C('T_URL')}/images/list.png"){
+  		$(this).attr("title","单曲循环");
+  			}
+</script>
+</html>
+

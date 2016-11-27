@@ -1,0 +1,251 @@
+    <include file="./Kugou/Home/View/Header/header.html" />
+	<!-- // <script type="text/javascript" src="__ROOT__/Public/js/jquery-1.8.3.min.js"></script> -->
+	<style type="text/css">
+	*{
+		margin: 0 auto;
+		padding: 0px;
+	}
+	div{
+		display:block;
+	}
+	a{
+		text-decoration:none;
+	}
+	#payheader{
+		margin-top:10px;
+		width:960px;
+		height:240px;
+		border:1px solid #dadada;
+	}
+	.payheader-right-1{
+		text-align:left;
+		line-height:50px;
+		font-size:38px;
+	}
+	.payheader-right{
+		text-align:left;
+		line-height:25px;
+		font-size:14px;
+		color:#666;
+	}
+	.payheader-red{
+		color:red;
+	}
+	.payheader-right-3{
+		text-align:left;
+		line-height:25px;
+		font-size:15px;
+		color:#40BBEC;
+	}
+	#payheader-bottom{
+		width:960px;
+		height:68px;
+		line-height:68px;
+		color:#666;
+		text-align:left;
+		font-size:30px;
+	}
+	#paytype{
+		width:960px;
+		height:354px;
+		border:1px solid #dadada;
+		overflow:hidden;
+
+	}
+	/*支付宝支付部分*/
+	#paytype-top{
+		width:960px;
+		height:90px;
+		border-bottom:1px dotted #dadada;
+	}
+	#paytype-top-left{
+		width:140px;
+		height:90px;
+		background-color:#f3f3f3;
+		float:left;
+	}
+	.paytype-p{
+		/*display:block;*/
+		text-align:center;
+		line-height:30px;
+		color:#333;
+		font-size:19px;
+	}
+	.paytype-p1{
+		/*display:block;*/
+		text-align:center;
+		line-height:20px;
+		color:#999;
+		font-size:14px;
+	}
+	#paytype-top-right{
+		width:820px;
+		height:90px;
+		float:left;
+
+	}
+	/*网银支付部分*/
+	#paytype-bottom{
+		width:960px;
+		height:260px;
+	}
+	#paytype-bottom-left{
+		width:140px;
+		height:262px;
+		background-color:#f3f3f3;
+		float:left;
+	}
+	#paytype-bottom-right{
+		width:820px;
+		height:262px;
+		float:left;
+
+	}
+	.paytype-bottom-right-input{
+		width:20px;
+		height:65px;
+	}
+	.paytype-bottom-right-image{
+		width:144px;
+		height:280px;
+		overflow:hidden;
+	}
+	#paybut{
+		width:960px;
+		height:100px;
+	}
+	#paybut-now{
+		width:196px;
+		height:45px;
+		display:block;
+		background:#F60;
+		font-size:24px;
+		line-height:45px;
+		color:white;
+		float:right;
+		margin-top:20px;
+		text-align:center;
+		cursor:pointer;
+	}
+	</style>
+	<div id="payheader">
+		<input type="hidden" value="{$list.id}" id="payfuid">
+		<table>
+			<tr>
+				<td rowspan='2' width='224' height="84"><img src="__ROOT__/Public/images/2015-12-06_125627.png"></td>
+				<td width='734'height="50"class="payheader-right-1">等待支付...</td>
+			</tr>
+			<tr >
+				<td width='734' height='25'class="payheader-right">应付金额&nbsp;<span class="payheader-red">{$list.mtotal}.00</span>&nbsp;元请您在<span class="payheader-red">1</span>日内完成支付，否则订单会自动取消</td>
+			</tr>
+			<tr>
+				<td width='224'height='150' rowspan='5'></td>
+				<td width='734' height='25' class="payheader-right"></td>
+			</tr>
+			<tr>
+				<td width='734' height='25' class="payheader-right">订单号:{$list.num}</td>
+			</tr>
+			<tr>
+				<td width='734' height='25' class="payheader-right">配送:{$list.address} {$list.phone} {$list.receiver}收</td>
+			</tr>
+			<tr>
+				<td width='734' height='25' class="payheader-right">
+				<if condition="$list.receivetime eq 1"> 周一至周日均可配送<elseif condition='$list.receivetime eq 2'/>只限工作日收货<else /> 只限周末和节假日配送</if></td>
+			</tr>
+			<tr>
+				<td width='734' height='25' class="payheader-right-3"><a href="__MODULE__/Indents/find/id/{$list.id}">查看订单>></a></td>
+			</tr>
+		</table>
+	</div>
+	<div id="payheader-bottom">请选择支付方式</div>
+	<div id="paytype">
+		<!-- 支付方式上半部分 -->
+		<div id="paytype-top">
+			<div id="paytype-top-left">
+			<span class='paytype-p'>支付平台</span></br>
+			<span class='paytype-p1'>手机等大额支付推荐使用支付宝平台支付</span>
+			</div>
+			<div id="paytype-top-right">
+				<table>
+					<tr>
+						<td width=27 height=90><input type="radio" name="paytype"></td>
+						<td width=108 height=90><img src="__ROOT__/Public/images/buyimages/2015-12-06_151938.png"></td>
+						<td width=685></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- 支付方式下半部分 -->
+		<div id="paytype-bottom">
+			<div id="paytype-bottom-left">
+				<span class='paytype-p'>银行网银</span></br>
+				<span class='paytype-p1'>支持以下银行各银行卡及借记卡</span>
+			</div>
+			<div id="paytype-bottom-right">
+				<table>
+					<tr>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-image" rowspan=4><img src="__ROOT__/Public/images/buyimages/2015-12-06_152551.png"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-image" rowspan=4><img src="__ROOT__/Public/images/buyimages/2015-12-06_152755.png"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-image" rowspan=4><img src="__ROOT__/Public/images/buyimages/2015-12-06_152944.png"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-image" rowspan=4><img src="__ROOT__/Public/images/buyimages/2015-12-06_153216.png"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-image" rowspan=4><img src="__ROOT__/Public/images/buyimages/2015-12-06_153248.png"></td>
+					</tr>
+					<tr>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+
+					</tr>
+					<tr>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+
+					</tr>
+					<tr>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"><input type="radio" name="paytype"></td>
+						<td class="paytype-bottom-right-input"></td>
+						<td class="paytype-bottom-right-input"></td>
+
+					</tr>					
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="paybut">
+		<span id="paybut-now">立即支付</span>
+	</div>
+    <include file="./Kugou/Home/View/Header/buyfooter.html" />
+	<script type="text/javascript">
+	// 立即支付
+		$(function(){
+			$('#paybut-now').click(function(){
+				// 获取订单的id
+				id=$("#payfuid").attr("value");
+				$.ajax({
+					url:"__MODULE__/Pay/edit",
+					type:"POST",
+					datatype:"html",
+					async:true,
+					data:{"id":id},
+					success:
+					function(data){
+						alert("支付成功！去我的订单看看吧！");
+						window.location.href="__MODULE__/Indents/index";
+					}
+				})
+				
+			});
+		});
+	</script>

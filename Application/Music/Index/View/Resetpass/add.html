@@ -1,0 +1,91 @@
+    <include file="./Kugou/Home/View/Header/header.html" />
+	<link rel="stylesheet" href="__ROOT__/Public/css/resetpassadd.css" type="text/css">
+
+	<div id="repas-body">
+		<div id="repas-body-top">
+			&nbsp;&nbsp;密保问题添加
+		</div>
+		<div id="repas-body-bottom">
+			<table>
+				<form action="__MODULE__/Resetpass/insert" method="post" id="ss" onsubmit="return funa()"> 
+				<tr>
+					<td width=200 height=60 class="repas-body-bottom-left">
+						密保问题一:&nbsp;&nbsp;&nbsp;
+					</td>
+					<td width=400 height=60 >
+						<select name="quesa" class="repas-body-bottom-right">
+							<option value=1 selected>你父亲姓名</option>
+							<option value=2>你母亲姓名</option>
+							<option value=3>你小学班主任是谁</option>
+							<option value=4>高中班主任是谁</option>
+							<option value=5>你最难忘的事</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width=200 height=60 class="repas-body-bottom-left">
+						问题一答案:&nbsp;&nbsp;&nbsp;
+					</td>
+					<td width=400 height=60 >
+						<input type="text" name="ansa" class="repas-body-bottom-right">
+					</td>
+				</tr>
+				<tr>
+					<td width=200 height=60 class="repas-body-bottom-left">
+						密保问题二:&nbsp;&nbsp;&nbsp;
+					</td>
+					<td width=400 height=60 >
+						<select name="quesb" class="repas-body-bottom-right">
+							<option value=1>你父亲姓名</option>
+							<option value=2>你母亲姓名</option>
+							<option value=3>你小学班主任是谁</option>
+							<option value=4 selected>高中班主任是谁</option>
+							<option value=5>你最难忘的事</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td width=200 height=60 class="repas-body-bottom-left">
+						问题二答案:&nbsp;&nbsp;&nbsp;
+					</td>
+					<td width=400 height=60 >
+						<input type="text" name="ansb" class="repas-body-bottom-right">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" height=12></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:center;">
+						<input type="submit" value="提交" id="repas-body-anniu">
+					</td>
+				</tr>
+				</form>
+			</table>
+		</div>
+	</div>
+	<include file="./Kugou/Home/View/Header/footer.html" />
+	<script type="text/javascript">
+		
+		function funa(){
+			aa=$(".repas-body-bottom-right[name='quesa']").attr("value");
+			bb=$(".repas-body-bottom-right[name='quesb']").attr("value");
+			raa=$(".repas-body-bottom-right[name='ansa']").attr("value");
+			rbb=$(".repas-body-bottom-right[name='ansb']").attr("value");
+
+			if(aa==bb){
+				alert("两个密保问题不能为同一个！");
+				// alert(aa+":"+bb);
+				return false;
+			}else if(!raa){
+				alert("密保答案不允许为空");
+				return false;
+			}else if(!rbb){
+				alert("密保答案不允许为空");
+				return false;
+			}
+			
+			return true;
+		}
+	</script>

@@ -1,0 +1,161 @@
+* {
+    transition: 0.2s ease-in-out;           //过渡属性(transition-timing-function 属性)
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+}
+/*更改默认浏览器选中的文本内容背景色和字体色*/
+::selection {
+    background: red;
+    color: #fff;
+    text-shadow: none;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #999;
+    font-family: 'Microsoft Yahei','微软雅黑',arial;
+}
+html {
+    background-color: #1b2426;
+}
+header h1 {
+    display: inline-block;
+}
+header h1 a {
+    color: #bbb;
+}
+a {
+    color: #999;
+    text-decoration: none;
+}
+a:hover {
+    color: #eee;
+    text-decoration: underline;
+}
+/*网页背景图片*/
+.imageBg {
+    background: url(../images/music/1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.colorBg {
+    background-image: none;
+}
+.wrapper {
+    text-align: center;
+    width: 99%;
+    margin: 0 auto;
+}
+#player {
+    margin:0 auto;
+    position: fixed;
+    bottom: 5px;
+    opacity: 0.2;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+#player:hover {
+    opacity: 1;
+}
+/*歌曲列表*/
+#playlist {
+    text-align: left;
+    max-width: 300px;
+    height: 500px;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+.info a {
+    color: #bbb;
+    text-decoration: underline;
+}
+.info {
+	width: 300px;
+	height: 20px;
+	margin-top:-15px;
+}
+.bg,.bg1 {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    cursor: pointer;
+}
+#playlist ol {
+    height: 450px;
+    overflow: auto;         //滚动条
+    margin: 0;
+}
+/*歌词外DIV*/
+#lyricWrapper {
+    height: 315px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#lyricContainer {
+    position: relative;
+    top: 130px;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000; 
+}
+
+/*当前歌词行高亮显示(提供4种变换)*/
+.current-line-0 {
+    color: #FAFA17;             //黄色
+}
+.current-line-1 {
+    color: #404040;             //深灰色
+}
+.current-line-2 {
+    color: #adff2f;             //浅绿色
+}
+.current-line-3 {
+    color: #c617e8;         //紫色
+}
+
+/*hide the default audio controls when overflow, the 526px is the width of the controls in IE*/
+@media screen and (max-width: 526px) {
+    #player {
+        display: none;
+   }
+}
+
+/*custom scrollbar for webkit browsers*/
+#playlist ol::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 15px;
+	background-color: #F5F5F5;
+}
+
+#playlist ol::-webkit-scrollbar
+{
+	width: 5px;
+    border-radius: 15px;
+	background-color: #F5F5F5;
+}
+
+#playlist ol::-webkit-scrollbar-thumb
+{
+	border-radius: 15px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #BCBCBC;
+}
+#show{
+    // border:1px solid red;
+    margin:0 auto;
+    margin-top: 10px;
+    width: 600px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #EE1196;
+}

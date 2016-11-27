@@ -1,0 +1,1 @@
+a:6:{i:0;s:2:"id";i:1;s:13:"category_name";i:2;s:3:"pid";i:3;s:5:"level";s:3:"_pk";s:2:"id";s:5:"_type";a:4:{s:2:"id";s:16:"int(10) unsigned";s:13:"category_name";s:12:"varchar(255)";s:3:"pid";s:16:"int(10) unsigned";s:5:"level";s:16:"int(10) unsigned";}}

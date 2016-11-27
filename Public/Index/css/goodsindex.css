@@ -1,0 +1,334 @@
+	*{
+		margin:0 auto;
+		padding:0px;
+	}
+	/*产品详情上半部分信息*/
+	#cpxqtop{
+		margin-top:10px;
+		width:960px;
+		height:600px;
+	}
+	/*图片轮播*/
+	#cpxqtop-left{
+		width:500px;
+		height:550px;
+		float:left;
+		position: relative;
+	}
+	/*轮播按钮*/
+	.lunbo-anniu{
+		width:10px;
+		height:10px;
+		border:1px solid #bebebe;
+		background-color:#ffffff;	
+		position:absolute;
+		cursor:pointer;
+		border-radius: 5px;
+		top:530px;
+	}
+	/*产品购买参数*/
+	#cpxqtop-right{
+		width:430px;
+		height:550px;
+		float:left;
+		margin-left:30px;
+	}
+	/*.addgzhu{};*/
+	.cpxqtop-right-title{
+		display:block;
+		color:#333;
+	}
+	/*产品描述*/
+	.cpxqtop-right-description{
+		display:block;
+		height:40px;
+		font-size:15px;
+		color:#ff6600;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+	/*价格*/
+	.cpxq-price{
+		height:70px;
+		width:430px;
+		border-top:1px dotted #d0d0d0; 
+		border-bottom:1px dotted #d0d0d0; 
+	}
+	.cpxq-price-1{
+		line-height:65px;
+		font-size:20px;
+		color:#333;
+	}
+	/*产品颜色 以及型号*/
+	.cpxq-color{
+		height:60px;
+		width:430px;
+	}
+	.cpxq-color-tot-2{
+		display:block;
+		height:30px;
+		width:100px;
+		float:left;
+		margin-right:15px;
+		background-color:#f5f5f5;
+		border:1px solid #666;
+		text-align:center;
+		line-height:30px;
+		font-size:18px;
+		color:#666;
+		cursor:pointer;
+	}
+	/*产品类型*/
+	.cpxq-type-2{
+		display:block;
+		height:30px;
+		width:100px;
+		float:left;
+		margin-right:15px;
+		background-color:#f5f5f5;
+		border:1px solid #666;
+		text-align:center;
+		line-height:30px;
+		font-size:18px;
+		color:#666;
+		cursor:pointer;
+	}
+	/*残品购买数量*/
+	.cpxq-num{
+		display:block;
+		height:40px;
+		width:40px;
+		float:left;
+		background-color:#f5f5f5;
+		border:1px solid #666;
+		text-align:center;
+		line-height:40px;
+		font-size:28px;
+		color:#666;
+		cursor:pointer;
+	}
+	/*数量输入框*/
+	#cpxq-num-insert{
+		text-align:center;
+		font-size:18px;
+		float:left;
+		height:40px;
+		width:80px;
+		border-top:1px solid #666;
+		border-bottom:1px solid #666;
+		border-left:1px solid white;
+		border-right:1px solid white;
+	}
+	/*购买按钮*/
+	#cpxq-buy{
+		height:80px;
+		width:430px;
+		border-top:1px dotted #d0d0d0;  
+		/*background-color:red; */
+		margin-top:75px;
+	}
+	#cpxq-buy-anniu{
+		font-size:20px;
+		color:white;
+		float:left;
+		height:45px;
+		width:190px;
+		background:#008AD4;
+		margin-top:20px;
+		margin-right:20px;
+		border:0px;
+		text-align:center;
+		line-height:45px;
+		cursor:pointer;
+	}
+	#cpxq-buy-anniu1{
+		font-size:20px;
+		color:white;
+		float:left;
+		height:45px;
+		width:190px;
+		background:#ff6600;
+		margin-top:20px;
+		border:0px;
+		text-align:center;
+		line-height:45px;
+		cursor:pointer;
+	}
+	#cpxqbottom{
+		width:960px;
+	}
+	/*产品详情下部分*/
+	#cpxqbottom-top{
+		height:63px;
+		width:960px;
+	}
+
+	#cpxqbottom-top1{
+		height:62px;
+		width:208px;
+		float:left;
+		border:1px solid #dadada;
+		border-top:3px solid #008AD4;
+		border-bottom:0px;
+		line-height:62px;
+		text-align:center;
+		cursor:pointer;
+	}
+	#cpxqbottom-top2{
+		height:62px;
+		width:208px;
+		float:left;
+		border:1px solid #dadada;
+		border-left:0px;
+		line-height:62px;
+		text-align:center;
+		cursor:pointer;
+	}
+	#cpxqbottom-top3{
+		height:62px;
+		width:208px;
+		float:left;
+		border:1px solid #dadada;
+		border-left:0px;
+		line-height:62px;
+		text-align:center;
+		cursor:pointer;
+	}
+	#cpxqbottom-top4{
+		height:63px;
+		width:326px;
+		float:left;
+		border-bottom:1px solid #dadada;
+	}
+	#cpxqbottom-foot{
+		width:960px;
+		margin-top:30px;
+	}
+	#cpxqbottom-foot2{
+		width:960px;
+		margin-top:30px;
+	}
+	/*残品参数表格样式*/
+	#cpxqbottom-table{
+		width:960px;
+		border:1px solid #dadada;
+		border-collapse:collapse;
+	}
+	.canshuda{
+		border:1px solid #dadada;
+		text-align:center;
+		background-color:#f5f5f5;
+		height:38px;
+		line-height:38px;
+		font-size:18px;
+		color:#666666;
+	}
+	.canshuleft{
+		border:1px solid #dadada;
+		width:480px;
+		height:38px;
+		text-align:right;
+		line-height:38px;
+		font-size:12px;
+		color:#666666;
+
+	}
+	.canshuright{
+		border:1px solid #dadada;
+		text-align:left;
+		line-height:38px;
+		font-size:12px;
+		color:#666666;
+	}
+	#cpxqbottom-foot3{
+		width:960px;
+		height:900px;
+		/*background: #f5f5f5;*/
+		border:1px solid #dadada;
+	}
+	#cpxqbottom-foot3-left{
+		width:208px;
+		height:900px;
+		float:left;
+		background: #f5f5f5;
+	}
+	.cpxqbottom-foot3-left-all{
+		width:208px;
+		height:100px;
+		line-height:100px;
+		color:white;
+		font-size:23px;
+		text-align:center;
+		background: #BEBEBE;
+		cursor:pointer;
+	}
+	/*右侧评价*/
+	#cpxqbottom-foot3-right{
+		width:620px;
+		height:900px;
+		/*border:1px solid red;*/
+		
+		float:right;
+	}
+	/*右侧各个div(全部)(追平)*/
+	.cpxqbottom-foot3-right-all{
+		width:620px;
+		height:900px;
+
+	}
+	/*单个评价*/
+	.jutipingjia{
+		width:620px;
+		height:150px;
+		background: #f5f5f5;
+		margin-top:10px;
+	}
+	/*评价分页*/
+	.pingjiafen{
+		width:620px;
+		height:120px;
+		margin-top:15px;
+		text-align:right;
+		font-size:16px;
+		/*background:red;*/
+		/*padding-right:20px;*/
+	}
+	#addgzhu{
+		width:70px;
+		height:25px;
+		background:#3AB7E9;
+		float:right;
+		color:#f60;
+		text-align:center;
+		line-height:25px;
+		font-size:16px;
+		font-weight:bolder;
+		cursor:pointer;
+	}
+	/*已关注*/
+	#yigzhu{
+		width:70px;
+		height:25px;
+		background:#f5f5f5;
+		float:right;
+		color:#f66;
+		text-align:center;
+		line-height:25px;
+		font-size:16px;
+		font-weight:bolder;
+	}
+	/*加入购物车成功后移动div*/
+	#jiaruchengong{
+		width:70px;
+		height:30px;
+		line-height:30px;
+		font-weight: bolder;
+		border: 1px solid #666;
+		background: red;
+		z-index:5;
+		position: fixed;
+		left:800px;
+		top:500px;
+		display: none;
+	}
+	

@@ -1,0 +1,119 @@
+    	<include file="./Kugou/Home/View/Header/header.html" />
+	<link rel="stylesheet" href="__ROOT__/Public/css/indentsindex.css" type="text/css">
+
+	<div id="ddxq-top">
+		<table>
+			<tr>
+				<td width=33 height=33><img src="__ROOT__/Public/images/buyimages/2015-12-07_100832.png"></td>
+				<td width=927 height=33 class="ddxq-top-p">我的订单</td>
+			</tr>
+		</table>
+	</div>
+	<div id="myddan-top">
+		<table>
+			<tr>
+				<td height=35 width=300 class="myddan-top-p">订单信息</td>
+				<td height=35 width=130 class="myddan-top-p">收货人</td>
+				<td height=35 width=130 class="myddan-top-p">订单金额</td>
+				<td height=35 width=140 class="myddan-top-p">下单时间</td>
+				<td height=35 width=130 class="myddan-top-p">订单状态</td>
+				<td height=35 width=130 class="myddan-top-p" style="border:0px;">操作</td>
+			</tr>
+		</table>
+	</div>
+	<!-- 没有下订单的情况 -->
+	<if condition="$list eq null">
+	<div id="noindent"> 
+		<a id="noindent-p" href="__MODULE__/Buyindex/index">您还没有订单，赶紧去买点货吧！！</a>
+	</div>
+	<div id="indents-no">
+		<a href="__MODULE__/Buyindex/index"><input type="submit" class="indents-no-anniu" value="去购物"</button></a>
+	</div>
+	<else/>
+	<!-- 循环订单信息 -->
+	<foreach name="list" item="v">
+	<div class="myddan-body">
+		<div class="myddan-body-top" >
+			<table>
+				<tr>
+					<td width=85 height=50 class="myddan-body-top1">&nbsp;订单号：</td>
+					<td width=883 height=50 class="myddan-body-top2"><a href="__MODULE__/Indents/find/id/{$v.id}">{$v.num}</a></td>
+				</tr>
+			</table>
+		</div>
+		<!-- 左侧显示一个商品的图片-->
+		<div class="myddan-body1">
+			<div class="myddan-body1-left">
+				<img src="__ROOT__/Public/Uploads/{$v[1].img}" width=84 height=84>
+			</div>
+			<div class="myddan-body1-right">
+				<table>
+					<tr>
+						<td width=175 height=25 style="color:#008AD4;">{$v[1].gname} 等商品</td>
+					</tr>
+					<tr>
+						<td width=175 height=25 style="color:#999;">颜色：<if condition="$v[1].gcolor eq 1"> 随机<elseif condition='$v[1].gcolor eq 2'/>白色<else /> 黑色</if></td>
+					</tr>
+					<tr>
+						<td width=175 height=25 style="color:#999;">{$v[1].gprice}.00元&nbsp;X&nbsp;{$v[1].gnum}件</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="myddan-body2">
+			<p class="myddan-body2-p">{$v.receiver}</p>
+		</div>
+		<div class="myddan-body3">
+			<p class="myddan-body2-p" style="color:#f60">￥{$v.mtotal}.00</br>
+			在线支付</p>
+		</div>
+		<div class="myddan-body4">
+			<p class="myddan-body2-p">{$v.ddtime|date="Y-m-d",###}</br>{$v.ddtime|date="H:i:s",###}</p>
+		</div>
+		<div class="myddan-body5">
+			<p class="myddan-body2-p" name="{$v.id}"><if condition="$v.status eq 1"> 待支付<elseif condition="$v.status eq 2"/>待发货<elseif condition="$v.status eq 3"/>待收货<elseif condition="$v.status eq 4"/>已完成<else />已取消</if></p>
+		</div>
+		<div class="myddan-body6">
+			<p class="myddan-body2-p" style="color:#ff6600"><a href="__MODULE__/Indents/find/id/{$v.id}">订单详情></a></p>
+			<!-- 定义一个sapn用来包含状态为未支付时的点击按钮，方便js特效直接隐藏 -->
+			<span class="zheshisha" name="{$v.id}">
+			<if condition="$v.status eq 1"><button class="myddan-body2-pay" value="{$v.id}">立即支付</button>
+			<p style="color:#ff6600;text-align:center;"><span style="cursor:pointer;" class="quxiaodd" value="{$v.id}" >取消订单</span></p></if>
+			</span>
+		</div>
+	</div>
+	</foreach>
+	</if>
+   	<include file="./Kugou/Home/View/Header/buyfooter.html" />
+  	<script type="text/javascript">
+   	
+   	$(function(){
+   	// // 取消订单特效
+   		$(".quxiaodd").click(function(){
+   			// 获取当前订单的id
+   			id=$(this).attr("value");
+   			// alert(id);
+   			$.ajax({
+				url:"__MODULE__/Indents/edit",
+				type:"POST",
+				async:true,
+				data:{"id":id},
+				success:
+				function(){
+					alert("该订单已被你残忍取消！");
+					// 订单取消成功后，把订单状态修改，并且把立即支付和取消订单按钮隐藏
+					$(".myddan-body2-p[name="+id+"]").html("已取消");
+					$(".zheshisha[name="+id+"]").css("display","none");
+				}
+			});
+   		});
+
+   		// 立即支付
+   		$(".myddan-body2-pay").click(function(){
+   			// 获取订单id
+   			sid=$(this).attr("value");
+   			// alert(sid);
+   			window.location.href="__MODULE__/Pay/index/id/"+sid;
+   		});
+   	});
+   </script>

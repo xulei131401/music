@@ -1,0 +1,32 @@
+.lunbotu {
+	width:960px;
+	height:250px;
+	margin:0 auto;
+	// border:1px solid red;
+}
+/*轮播图*/
+#myCarousel {
+	width: 100%;
+	margin-top: -10px;
+}
+.showgoods {
+	width:960px;
+	height:750px;
+	margin:0 auto;
+	// border:1px solid red;
+}
+/*商品缩略图*/
+.thumbnail {
+	width: 210px;
+	height: 330px;
+}
+.cate-title{
+	width: 100%;
+	height: 30px;
+	// border:1px solid red;
+}
+.cate-title span {
+	font-family: '微软雅黑';
+	font-size: 18px;
+	color:blue;
+}

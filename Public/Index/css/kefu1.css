@@ -1,0 +1,40 @@
+#kefu{width: 960px;height: 45px;margin-top: 40px}
+#kefu ul li{float: left;font-size: 14px;font-family: "宋体";text-align: center;line-height: 45px;}
+#kefu ul li:hover{background: #3399FF;color:white;}
+.kl1{border-right: 0px;border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;background: #F3F3F3;width: 238px;height: 45px;cursor: pointer;}
+.kl2{border-right: 0px;border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;background: #F3F3F3;width: 238px;height: 45px;cursor: pointer;}
+.kl3{border-right: 0px;border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;background: #F3F3F3;width: 238px;height: 45px;cursor: pointer;}
+.kl4{border-right: 1px solid #ccc;border-left: 1px solid #ccc;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;background: #F3F3F3;width: 238px;height: 45px;cursor: pointer;}
+#ruan{width: 960px;margin-top: 50px;}
+form{margin-left: 30px}
+#ruan label{font-size: 13px;font-weight: 700;color: #666666;vertical-align: top}
+.sp1{font-size: 13px;}
+.ping1{width: 80px;height: 30px;border: 1px solid black;float: left;font-size: 14px;color: #777777;text-align: center;line-height: 30px;cursor: pointer;}
+.ping2{width: 80px;height: 30px;border: 1px solid black;float: left;font-size: 14px;color: #777777;text-align: center;line-height: 30px;cursor: pointer;margin-left: 20px}
+.ping3{width: 80px;height: 30px;border: 1px solid black;float: left;font-size: 14px;color: #777777;text-align: center;line-height: 30px;cursor: pointer;margin-left: 20px}
+.ping1:hover{border-color: #80DBFF;}
+.ping2:hover{border-color: #80DBFF}
+.ping3:hover{border-color: #80DBFF}
+.inp_key{width: 200px;height: 25px}
+.sp2{font-size: 12px;color: #C0C0C0}
+.sub{margin-left: 70px}
+.QQ{margin-top: 50px;margin-left: 100px}
+.QQ p{font-size: 14px;font-weight: 600;color: #888888}
+#goods{width: 960px;margin-top: 20px;margin-bottom: 80px}
+.goods-t{width: 960px;height: 45px;border: 1px solid #DADADA;border-bottom: 0px}
+.goods-t span{font-size: 15px;font-weight: bold;line-height: 45px;margin-left: 20px}
+.goods-c{width: 960px;height: 320px;}
+.goods-c-c{width: 238px;height: 320px;float: left;border: 1px solid #DADADA;text-align: center;}
+.goods-c-c img{margin-top: 90px}
+.tr_con1 span{display: block;width: 70px;height: 25px;background: #008AD4;border-radius: 5px;text-align: center;line-height: 25px}
+.tr_con1 span a{color: white;font-size: 14px;}
+.goods-c-c p{font-size: 14px;color: #999999;margin-top: 5px}
+.h2{font-size: 19px}
+.h1{font-size: 19px;color: #008AD4}
+#help{width: 960px;margin-top: 20px}
+.he-t{width: 900px;margin: 0 auto;}
+.ttop{width: 900px;height: 40px;border-bottom: 1px solid #ccc}
+.ttop span{font-size: 16px;color: #36B4E7;font-weight: 600;line-height: 40px;display: block;}
+.he-t ul a{font-size: 13px;color: #777777}
+.he-t ul li{font-size: 13px;color: #777777;margin-left: 20px;margin-top: 5px;width: 800px}
+.sq{cursor: pointer;display: block;width: 40px;height: 20px;font-size: 14px;color: #C0C0C0;border-bottom: 1px solid #C0C0C0;margin-left: 0px;margin-top: 10px;margin-bottom: 10px}

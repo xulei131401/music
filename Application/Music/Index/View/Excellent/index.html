@@ -1,0 +1,102 @@
+
+	<include file="Header/header" />
+	<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/Home/excellent.css">
+
+	<div id="body">
+		<div id="left">
+			<h3>按时间</h3>
+			<ul>
+				<if condition="$etime eq 'd'">
+					<li style="background-color:#7CDBFF;">全部</li>
+				<else/>
+					<li onclick="time('d')">全部</li>
+				</if>
+				
+				<if condition="$etime eq 'a'">
+					<li style="background-color:#7CDBFF;">最近七天</li>
+				<else/>
+				<li onclick="time('a')">最近七天</li>
+				</if>
+
+				<if condition="$etime eq 'b'">
+					<li style="background-color:#7CDBFF;">最近一月</li>
+				<else/>
+				<li onclick="time('b')">最近一月</li>
+				</if>
+				<if condition="$etime eq 'c'">
+					<li style="background-color:#7CDBFF;">最近一季</li>
+				<else/>
+				<li onclick="time('c')">最近一季</li>
+				</if>
+			</ul>
+		</div>
+		<div id="right">
+
+			<!-- 右边的最上面一行  -->
+			<table id="r_title">
+				<tr>
+					<th>全部精选集</th>
+					<td id="td">排序:</td>
+					<td style="width:86px;text-align:right;">
+						
+						<select name="order" onchange="efun(this.value)">
+							<option value="1">按时间</option>
+							<if condition="$order eq 2">
+								<option value="2" selected>按浏览</option>
+							<else/>
+							<option value="2">按浏览</option>
+							</if>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<!-- 右边的最上面一行  -->
+
+			<foreach name="excellentlist" item="v">
+			<!-- 右边的精选区 需要循环的部分-->
+			<table style="empty-cells:show;border-collapse:collapse;width:780px;margin-top:15px;border-bottom:1px solid #DCDCDC;table-layout:fixed;">
+				<tr>
+					<td rowspan="3"  style="width:104px;height:104px;"><a href="{:U('Index/Excellent/songlist',array('id'=>$v['id']))}" id="ename"><img id="logo" src="__ROOT__/{$v.pic}" width="104px" height="104px" ></a></td>
+					<td rowspan="3" style="width:20px;"></td>
+					<td style="height:25px;"><a href="__MODULE__/Excellent/songlist/id/{$v.id}" id="ename">{$v.name}</a></td>
+					<td style="width:15%;font-size:14px;color:#333333;">制作人:{$v.author}</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="height:52px;color:#999999;font-size:12px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{$v.desc}</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-indent:5px;height:26px;line-height:26px;">
+						<a href="{:U('Index/Audio/playExcellent',array('id'=>$v['id']))}"><img src="{:C('T_URL')}/images/login/list.png" width="100px" height="26px" style="position:relative;top:5px;"></a>&nbsp;分享到:
+						<a href="http://www.sina.com.cn/"><img src="{:C('T_URL')}/images/sina.png" style="border-radius:2px;margin-left:5px;"width="15px" height="15px"></a>
+						<a href="http://t.qq.com/"><img src="{:C('T_URL')}/images/qqweibo.png" style="border-radius:2px;margin-left:5px;"width="15px" height="15px"></a>
+						<a href="http://www.renren.com/"><img src="{:C('T_URL')}/images/renren.png" style="border-radius:2px;margin-left:5px;"width="15px" height="15px"></a>
+						<a href="http://www.douban.com/"><img src="{:C('T_URL')}/images/douban.png" style="border-radius:2px;margin-left:5px;"width="15px" height="15px"></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="height:16px;"></td>
+				</tr>
+			</table>
+			<!-- 右边的精选区 需要循环的部分-->
+			 </foreach>
+
+		</div>
+
+	</div>
+	<div style="width:200px;text-align:center;margin:0 auto;">{$page}</div>
+<script type="text/javascript">
+	order=document.getElementsByName("order")[0];
+	function efun(a){
+		window.location.href="__MODULE__/Excellent/index/order/"+a+"/time/"+"{$etime}";
+	}
+	function time(b){
+		window.location.href="__MODULE__/Excellent/index/time/"+b+"/order/"+"{$eorder}";
+	}
+	function eplay(c){
+		window.location.href="__MODULE__/Excellent/eplay/eid/"+c;
+	}
+	$(function(){
+		$("title").html("酷狗 乐库 精选");
+	});
+</script>
+<include file="Header/footer" />

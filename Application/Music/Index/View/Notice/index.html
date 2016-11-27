@@ -1,0 +1,46 @@
+<include file="./Kugou/Home/View/Header/header.html" />
+<link rel="stylesheet" href="__ROOT__/Public/css/noticeindex.css" type="text/css">
+
+	<div id="notice-top">
+		<table>
+			<tr>
+				<td width=33 height=33><img src="__ROOT__/Public/images/buyimages/2015-12-07_100832.png"></td>
+				<td width=927 height=33 class="notice-top-p">我的关注</td>
+			</tr>
+		</table>
+	</div>
+
+	<foreach name="list" item="v">
+	<div class="notice-body">
+		<table width=960 height=70>
+			<tr>
+				<td width=70 height=70 >
+					<a href="__MODULE__/Goods/index/id/{$v.id}"><img src="__ROOT__/Public/Uploads/{$v.img}" width=70 height=70></a>
+				</td>
+				<td width=150 height=70  style="text-align:center;">
+					<span style="overflow:hidden;" class="notice-body1"><a href="__MODULE__/Goods/index/id/{$v.id}" >{$v.name}</a></span>
+				</td>
+				
+				<td width=150 height=70 class="notice-body2" >
+					现价:￥{$v.nowprice}.00
+				</td>
+				<td width=350 height=70 class="notice-body2" >
+					<span style="text-align:left; overflow: hidden; width:320px;height:70px; display:block;">简介：{$v.descri}</span>
+				</td>
+				<td width=120 height=70 class="notice-body2">
+					关注度：{$v.notinum}
+				</td>
+				<td width=120 height=70>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="notice-gnum3" href="__MODULE__/notice/del/id/{$v.nid}" onclick="return confirm('亲爱的你真狠心取消吗?');">取消关注</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</foreach>
+	<div id="notice-page">
+		{$pageinfo}
+	</div>
+	
+
+
+<include file="./Kugou/Home/View/Header/buyfooter.html" />

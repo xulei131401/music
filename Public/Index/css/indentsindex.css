@@ -1,0 +1,176 @@
+
+	*{
+		margin: 0 auto;
+		padding:0px;
+	}
+	a{
+		text-decoration: none;
+		cursor:pointer;
+	}
+	#ddxq-top{
+		height:33px;
+		width:960px;
+		/*background: red;*/
+		margin-top:30px;
+	}
+	.ddxq-top-p{
+		line-height:33px;
+		color:#333;
+		font-size:26px;
+	}
+	#myddan-top{
+		margin-top:15px;
+		width:960px;
+		height:42px;
+		border:1px solid #e5e5e5;
+		background: #f3f3f3;
+	}
+	.myddan-top-p{
+		line-height:35px;
+		text-align:center;
+		color:#333;
+		font-size:18px;
+		border-right: 1px solid #e5e5e5;
+	}
+	/*循环订单div*/
+	.myddan-body{
+		height:195px;
+		width:960px;
+		border:1px solid #e5e5e5;
+		/*background:#f3f3f3;*/
+		margin-top:10px;
+	}
+	/*订单头部*/
+	.myddan-body-top{
+		height:50px;
+		width:960px;
+		background:#f3f3f3;
+		float:left;
+	}
+	.myddan-body-top1{
+		line-height:50px;
+		color:#333;
+		font-size:18px;
+		text-align:center;
+	}
+	.myddan-body-top2{
+		line-height:50px;
+		color:#0F90D6;
+		font-size:18px;
+		text-align:left;
+	}
+	.myddan-body1{
+		width:296px;
+		height:145px;
+		float:left;
+		/*background: #ccc;*/
+		border-right:1px solid #e5e5e5;
+	}
+	/*左侧图片信息*/
+	.myddan-body1-left{
+		width:85px;
+		height:85px;
+		float:left;
+		margin-left:10px;
+		margin-top:35px;
+	}
+	.myddan-body1-right{
+		font-size:17px;
+		width:175px;
+		height:75px;
+		float:left;
+		margin-left:20px;
+		margin-top:30px;
+	}
+	.myddan-body2{
+		width:130px;
+		height:145px;
+		float:left;
+		/*background: #ccc;*/
+		border-right:1px solid #e5e5e5;
+	}
+	.myddan-body2-p{
+		margin-top:40px;
+		line-height:20px;
+		color:#999;
+		text-align:center;
+		font-size:17px;
+	}
+	.myddan-body3{
+		width:130px;
+		height:145px;
+		float:left;
+		/*background: #ccc;*/
+		border-right:1px solid #e5e5e5;
+	}
+	.myddan-body4{
+		width:138px;
+		height:145px;
+		float:left;
+		/*background: #ccc;*/
+		border-right:1px solid #e5e5e5;
+	}
+	.myddan-body5{
+		width:130px;
+		height:145px;
+		float:left;
+		/*background: #ccc;*/
+		border-right:1px solid #e5e5e5;
+	}
+	.myddan-body6{
+		width:130px;
+		height:145px;
+		float:left;
+		/*background: #ccc;*/
+	}
+	/*支付按钮*/
+	.myddan-body2-pay{
+		text-align:center;
+		width:100px;
+		height:35px;
+		border:0px;
+		background: #f60;
+		color:#fff;
+		font-size:17px;
+		margin-left:15px;
+		cursor:pointer;
+	}
+	/*没有下订单div*/
+	#noindent{
+		height:200px;
+		width:960px;
+		border:1px solid #e5e5e5;
+		/*background:#f3f3f3;*/
+		margin-top:10px;
+	}
+	#noindent-p{
+		display: block;
+		width:660px;
+		height:40px;
+		text-align:center;
+		line-height:40px;
+		color:#666;
+		font-size:30px;
+		margin-top:90px;
+		text-decoration: none:
+	}
+	#indents-no{
+		margin-top:15px;
+		width:960px;
+		height:80px;
+		background-color:#f3f3f3;
+	}
+	.indents-no-anniu{
+		font-size:23px;
+		color:white;
+		float:right;
+		height:45px;
+		width:190px;
+		background:#008AD4;
+		margin-top:20px;
+		margin-right:20px;
+		border:0px;
+		text-align:center;
+		line-height:45px;
+		cursor:pointer;
+	}

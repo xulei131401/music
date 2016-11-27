@@ -1,0 +1,86 @@
+	<include file="Header/header" />
+	<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/Home/esonglist.css">
+		<script type="text/javascript" src="{:C('T_URL')}/js/jquery-1.8.3.min.js"></script>
+	<div id="body">
+
+		<!-- 所处位置的导航条 -->
+		<div id="nav">
+			我的位置&nbsp;>&nbsp;<a href="__MODULE__/Excellent/index">乐库</a>&nbsp;>&nbsp;<a href="__MODULE__/Excellent/index">精选集</a>&nbsp;>&nbsp;{$excellentlist.name}
+		</div>
+		
+		<div id="left">
+			<table>
+				<tr>
+					<td style="width:153px;height:170px;">
+						<img src="__ROOT__{$excellentlist.pic}" width="153px" height="153px">
+					</td>
+				</tr>
+				<tr>
+					<td style="height:40px;">
+						<a href="{:U('Index/Audio/playExcellent',array('id'=>$id))}"><img src="{:C('T_URL')}/images/login/list.png" width="100px" height="27px"></a>
+					</td>
+				</tr>
+				<tr>
+					<td style="height:25px;line-height:25px;letter-spacing:1px;color:#7D7D7D;">名称:{$excellentlist.name}</td>
+				</tr>
+				<tr>
+					<td style="height:25px;line-height:25px;letter-spacing:1px;color:#7D7D7D;">创建人:{$excellentlist.author}</td>
+				</tr>
+				<tr>
+					<td style="height:25px;line-height:25px;letter-spacing:1px;color:#7D7D7D;">心情:</td>
+				</tr>
+				<tr>
+					<td style="height:25px;line-height:25px;letter-spacing:1px;color:#7D7D7D;">更新时间:{$excellentlist.ctime|date="Y-m-d",###}</td>
+				</tr>
+			</table>
+			<div style="margin-top:10px;line-height:24px;font-size:13px;letter-spacing:1px;width:172px;text-align:justify;">简介：{$excellentlist.desc}</div>
+		</div>
+		<div style="width:2px;height:680px;border-right:1px solid #DCDCDC;float:left;"></div>
+		<div id="right"style="width:765px;float:right;">
+			<div id="title"><strong><{$excellentlist.name}> - 歌曲列表</strong></div>
+
+			<!-- 右边全选输入框 播放图片按钮和全部播放按钮 -->
+			<div id="r_action">
+				<div id="r_a_cb">&nbsp;&nbsp;<input type="checkbox" style="position:relative;top:2px;" id="allcheck">&nbsp;&nbsp;全选</div>
+				<input type="image" src="{:C('T_URL')}/images/login/list.png" id="r_a_pic_1">
+				<input type="image" src="{:C('T_URL')}/images/login/play.png" id="r_a_pic_2">
+			</div>
+		<div id="wai">
+			<!-- 歌曲列表页面 -->
+			<foreach name="songlist" item="vo" key="k">
+			<div id="r_list" title="{$v.singer}-{$v.name}">
+				<div id="r_l_cb">&nbsp;&nbsp;<input type="checkbox" style="position:relative;top:1px;" name="songid" id="{$vo.id}">&nbsp;&nbsp;&nbsp;{$k+1}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U('Index/Audio/index',array('id'=>$vo['id']))}">{$vo.singer}-{$vo.name}</a></div>
+				<a href="{:U('Index/Audio/index',array('id'=>$vo['id']))}"><input type="image" src="{:C('T_URL')}/images/login/listener.png" id="r_l_pic"></a>
+				<a href="javascript:(void);"><input type="image" src="{:C('T_URL')}/images/login/share.png" id="r_l_pic"></a>
+			</div>
+			</foreach>
+		</div>
+		<div align="center">{$page}</div>
+	</div>
+	</div>
+	<div style="width:200px;text-align:center;margin:0 auto;">{$pageinfo}</div>
+<script type="text/javascript">
+	$(function(){
+		//全选特效
+		$("#allcheck").click(function(){
+			if(this.checked){
+				$("#wai :checkbox").attr("checked",true);
+			}else{
+				$("#wai :checkbox").attr("checked",false);
+			}
+		});
+	
+		//点击播放
+		$('#r_a_pic_1').click(function () {
+			window.location.href = "{:U('Index/Audio/playExcellent',array('id'=>$id))}";
+		});
+		$('#r_a_pic_2').click(function () {
+			window.location.href = "{:U('Index/Audio/index',array('id'=>$id))}";
+		});
+
+
+
+	});
+	
+</script>
+<include file="Header/footer" />

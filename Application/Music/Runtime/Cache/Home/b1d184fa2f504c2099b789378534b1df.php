@@ -1,0 +1,207 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="<?php echo C('T_URL');?>/assets/js/jquery.min.js"></script>
+        <link href="<?php echo C('T_URL');?>/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="<?php echo C('T_URL');?>/css/style.css"/>       
+        <link href="<?php echo C('T_URL');?>/assets/css/codemirror.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo C('T_URL');?>/assets/css/ace.min.css" />
+        <link rel="stylesheet" href="<?php echo C('T_URL');?>/assets/css/font-awesome.min.css" />
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+        <!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+		<!--文件上传插件样式-->
+		<script src="<?php echo C('T_URL');?>/assets/js/jquery-2.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css"  href="<?php echo C('T_URL');?>/dist/css/dropify.css"/>
+		<script src="<?php echo C('T_URL');?>/dist/js/dropify.js"></script>
+		
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../Public/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/jquery.dataTables.min.js"></script>
+		<script src="assets/js/jquery.dataTables.bootstrap.js"></script>
+        <script type="text/javascript" src="js/H-ui.js"></script> 
+        <script type="text/javascript" src="js/H-ui.admin.js"></script> 
+        <script src="assets/layer/layer.js" type="text/javascript" ></script>
+        <script src="assets/laydate/laydate.js" type="text/javascript"></script>
+        <!--文件上传JS代码-->
+        <script>
+            $(document).ready(function(){
+                // Basic
+                $('.dropify').dropify();       
+            });
+        </script>
+<title>友情链接修改页面</title>
+</head>
+
+<body>
+<div class="page-content clearfix">
+    <div id="Member_Ratings">
+      <div class="d_Confirm_Order_style">
+   
+    
+     <!---->
+     <div class="table_menu_list">
+     <h2 align="center">修改用户信息</h2>
+     <form  action="<?php echo U('Home/Link/editHandle');?>" method="post" enctype="multipart/form-data">
+    	 <input type="hidden" value = "<?php echo ($link['id']); ?>" name = "id"/>
+         <table class="table table-striped table-bordered table-hover" id="sample-table">
+		<thead>
+		 <tr>
+			<td width="30%">友情链接名称:</td>
+			<td><input type="text" name = "linkname" placeholder="输入友情链接名称" value = "<?php echo ($link['linkname']); ?>"></td>
+		</tr>
+		<tr>
+			<td width="30%">友情链接地址:</td>
+			<td><input type="text" name = "linkaddress" placeholder="输入友情链接地址" value = "<?php echo ($link['linkaddress']); ?>"></td>
+		</tr>
+    	<tr>
+			<td width="30%">原始图片:</td>
+			<td>
+				<img src="/music/<?php echo ($link['linkpic']); ?>" width = "100" height = "100"><br/>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%">新图片:</td>
+			<td>
+				<label for="input-file-now">上传新头像</label>
+				<input type="file" id="input-file-now" class="dropify" data-default-file="默认文件" name = "npic" />
+			</td>
+		</tr>
+        <tr>
+			<td width="30%" height="40"></td>
+			<td><input type="submit" value="修改"><input type="reset" value="重置"></td>
+        </tr>
+		</thead>
+	</table>
+	</form>
+   </div>
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
+<script>
+jQuery(function($) {
+				var oTable1 = $('#sample-table').dataTable( {
+				"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+		"bStateSave": true,//状态保存
+		"aoColumnDefs": [
+		  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+		  {"orderable":false,"aTargets":[0,8,9]}// 制定列不参与排序
+		] } );
+				
+				
+				$('table th input:checkbox').on('click' , function(){
+					var that = this;
+					$(this).closest('table').find('tr > td:first-child input:checkbox')
+					.each(function(){
+						this.checked = that.checked;
+						$(this).closest('tr').toggleClass('selected');
+					});
+						
+				});
+			
+			
+				$('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('table')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+			})
+
+
+
+/*用户-启用*/
+function member_start(obj,id){
+	layer.confirm('确认要启用吗？',function(index){
+		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn btn-xs btn-success" onClick="member_stop(this,id)" href="javascript:;" title="停用"><i class="icon-ok bigger-120"></i></a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已启用</span>');
+		$(obj).remove();
+		layer.msg('已启用!',{icon: 6,time:1000});
+	});
+}
+/*用户-编辑*/
+function member_edit(id){
+	  layer.open({
+        type: 1,
+        title: '修改用户信息',
+		maxmin: true, 
+		shadeClose:false, //点击遮罩关闭层
+        area : ['800px' , ''],
+        content:$('#add_menber_style'),
+		btn:['提交','取消'],
+		yes:function(index,layero){	
+		 var num=0;
+		 var str="";
+     $(".add_menber input[type$='text']").each(function(n){
+          if($(this).val()=="")
+          {
+               
+			   layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
+                title: '提示框',				
+				icon:0,								
+          }); 
+		    num++;
+            return false;            
+          } 
+		 });
+		  if(num>0){  return false;}	 	
+          else{
+			  layer.alert('添加成功！',{
+               title: '提示框',				
+			icon:1,		
+			  });
+			   layer.close(index);	
+		  }		  		     				
+		}
+    });
+}
+/*用户-删除*/
+function member_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$(obj).parents("tr").remove();
+		layer.msg('已删除!',{icon:1,time:1000});
+	});
+}
+laydate({
+    elem: '#start',
+    event: 'focus' 
+});
+
+</script>

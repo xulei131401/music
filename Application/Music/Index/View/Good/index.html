@@ -1,0 +1,52 @@
+<include file="Header/header" />
+<link rel="stylesheet" type="text/css" href="{:C('T_URL')}/css/Home/good.css">
+	<script type="text/javascript" src="{:C('T_URL')}/js/jquery-1.8.3.min.js"></script>
+<div id="aaa">
+	<div id="l">
+		<!-- 左边的标题列 -->
+		<ul id="goodul">
+			<li style="text-align:left;text-indent:10px;font-size:16px;" class="goodli"><strong>所有好歌</strong></li>
+			<foreach name="goodSong" item="vo" key="k">
+					<li id="{$vo.id}" class="goodli"><a href="{:U('Index/Good/songlist',array('id'=>$vo['id']))}">{$vo.name}</a></li>
+			</foreach>
+		</ul>
+	</div>
+	<div id="r">
+		<div>
+			<a href="{:U('Index/Audio/playGood',array('id'=>$id))}"><img src="{:C('T_URL')}/images/all_play.png" alt="" style="margin-top:4px;"></a>
+		</div>
+		<div id="wai">
+			<table style="border-top:1px solid #E6E6E6;border-bottom:1px solid #E6E6E6;width:750px;margin-top:8px;margin-left:0;margin-bottom:8px;font-size:14px;">
+			
+				<tr style="height:32px;border-bottom:1px solid #E0E0E0;">
+					<td style="width: 45px;"><input type="checkbox" name="check" id="quanxuan">全选</td>
+					<td style="width:45px;text-align:left;">编号</td>
+					<td>歌曲名称</td>
+					<td style="width:40px;">试听</td>
+					<td style="width:40px;">分享</td>
+				</tr>
+				<tr style="height:10px;"></tr>
+				<foreach name="songlist" item="vo" key="k">
+				<tr>
+					<td style="text-align:left;text-indent:3px;"><input type="checkbox" id="{$vo.id}" name="songid"></td>
+					<td style="text-align:left;text-indent:5px;">{$k+1}</td>
+					<td style="text-align:left;width:390px;">{$vo.singer}&nbsp;-&nbsp;{$vo.name}</td>
+					<td><a href="{:U('Index/Audio/index',array('id'=>$vo['id']))}"><input type="image" src="{:C('T_URL')}/images/listener.png" id="r_l_pic"></a></td>
+					<td><input type="image" src="{:C('T_URL')}/images/share.png" id="r_l_pic"></td>
+				</tr>
+			</foreach>	
+			</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">	
+	$("#quanxuan").click(function(){
+			if(this.checked){
+				$("#wai :checkbox").attr("checked", true);
+			}else{
+				$("#wai :checkbox").attr("checked", false);
+			}
+		});
+</script>
+<include file="Header/footer" />

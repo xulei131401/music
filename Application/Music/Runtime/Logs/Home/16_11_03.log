@@ -1,0 +1,139 @@
+[ 2016-11-03T13:04:16+08:00 ] ::1 /music/index.php/Home/Bang/index.html
+ERR: 无法加载控制器:Bang
+
+[ 2016-11-03T13:04:22+08:00 ] ::1 /music/index.php/Home/Index/Products_List.html
+ERR: 非法操作:Products_List
+
+[ 2016-11-03T13:47:01+08:00 ] ::1 /music/index.php/Home/Index/Products_List.html
+ERR: 非法操作:Products_List
+
+[ 2016-11-03T14:49:10+08:00 ] ::1 /music/index.php/Home/Index/Products_List.html
+ERR: 非法操作:Products_List
+
+[ 2016-11-03T15:44:20+08:00 ] ::1 /music/index.php/Home/Goods/goodsAdd.html
+ERR: 1146:Table 'music.category' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `category`
+
+[ 2016-11-03T15:48:48+08:00 ] ::1 /music/index.php/Home/Goods/member-add.html
+ERR: 非法操作:member-add
+
+[ 2016-11-03T16:03:19+08:00 ] ::1 /music/index.php/Home/Goods/goodsAdd.html
+ERR: 非法操作:goodsAdd
+
+[ 2016-11-03T16:03:34+08:00 ] ::1 /music/index.php/Home/Goods/add.html
+ERR: 1146:Table 'music.category' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `category`
+
+[ 2016-11-03T19:57:47+08:00 ] ::1 /music/index.php/Home/Goods/addHandle.html
+ERR: 1364:Field 'name' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `goods` (`regtime`,`img`) VALUES ('2016-11-03 19:57:47','/music/Home/Uploads/Goods/20161103/581b263be45e8.jpg')
+
+[ 2016-11-03T19:59:07+08:00 ] ::1 /music/index.php/Home/Goods/addHandle.html
+ERR: 1364:Field 'name' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `goods` (`regtime`,`img`) VALUES ('2016-11-03 19:59:07','/music/Home/Uploads/Goods/20161103/581b268b18830.jpg')
+
+[ 2016-11-03T20:01:28+08:00 ] ::1 /music/index.php/Home/Goods/addHandle.html
+ERR: 1364:Field 'category_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `goods` (`name`,`desc`,`nowprice`,`oldprice`,`adorn`,`rate`,`interfacetype`,`sensitivity`,`gonglv`,`linelength`,`weight`,`linetype`,`vointerface`,`controline`,`ison`,`img`) VALUES ('asd','asd','56','56','we','qwe','qwe','qwe','qwe','qwe','qwe','qwe','qwe','是','1','/music/Home/Uploads/Goods/20161103/581b2718525f8.jpg')
+
+[ 2016-11-03T20:28:13+08:00 ] ::1 /music/index.php/Home/Goods/member-add.html
+ERR: 非法操作:member-add
+
+[ 2016-11-03T20:29:50+08:00 ] ::1 /music/index.php/Home/Goods/member-add.html
+ERR: 非法操作:member-add
+
+[ 2016-11-03T20:29:56+08:00 ] ::1 /music/index.php/Home/Goods/member-add.html
+ERR: 非法操作:member-add
+
+[ 2016-11-03T20:30:10+08:00 ] ::1 /music/index.php/Home/Goods/member-add.html
+ERR: 非法操作:member-add
+
+[ 2016-11-03T20:49:32+08:00 ] ::1 /music/index.php/Home/Index/Products_List.html
+ERR: 非法操作:Products_List
+
+[ 2016-11-03T20:49:37+08:00 ] ::1 /music/index.php/Home/Index/advertising.html
+ERR: 非法操作:advertising
+
+[ 2016-11-03T20:49:38+08:00 ] ::1 /music/index.php/Home/Index/Sort_ads.html
+ERR: 非法操作:Sort_ads
+
+[ 2016-11-03T20:49:41+08:00 ] ::1 /music/index.php/Home/Index/advertising.html
+ERR: 非法操作:advertising
+
+[ 2016-11-03T20:53:58+08:00 ] ::1 /music/index.php/Home/Index/Guestbook.html
+ERR: 非法操作:Guestbook
+
+[ 2016-11-03T21:03:17+08:00 ] ::1 /music/index.php/Home/Index/Products_List.html
+ERR: 非法操作:Products_List
+
+[ 2016-11-03T21:09:50+08:00 ] ::1 /music/index.php/Home/Goodsong/index.html
+ERR: 1146:Table 'music.good' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `good`
+
+[ 2016-11-03T21:18:15+08:00 ] ::1 /music/index.php/Home/Goodsong/index.html
+ERR: 1054:Unknown column 'value' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`name`,`value` FROM `goodsong` 
+
+[ 2016-11-03T22:21:27+08:00 ] ::1 /music/index.php/Home/Index/Systems.html
+ERR: 非法操作:Systems
+
+[ 2016-11-03T22:21:28+08:00 ] ::1 /music/index.php/Home/Index/%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86.html
+ERR: 非法操作:菜单管理
+
+[ 2016-11-03T22:21:29+08:00 ] ::1 /music/index.php/Home/Index/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86.html
+ERR: 非法操作:用户管理
+
+[ 2016-11-03T22:22:03+08:00 ] ::1 /music/index.php/Home/Index/admin_Competence.html
+ERR: 非法操作:admin_Competence
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/typeahead-bs2.min.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/jquery.dataTables.min.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/bootstrap.min.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/jquery.dataTables.bootstrap.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/js/H-ui.js
+ERR: 非法操作:js
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/js/H-ui.admin.js
+ERR: 非法操作:js
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/layer/layer.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/laydate/laydate.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/bootstrap.min.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:09+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/typeahead-bs2.min.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:10+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/jquery.dataTables.min.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:10+08:00 ] ::1 /music/index.php/Home/Admin/assets/js/jquery.dataTables.bootstrap.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:10+08:00 ] ::1 /music/index.php/Home/Admin/js/H-ui.js
+ERR: 非法操作:js
+
+[ 2016-11-03T22:22:10+08:00 ] ::1 /music/index.php/Home/Admin/js/H-ui.admin.js
+ERR: 非法操作:js
+
+[ 2016-11-03T22:22:10+08:00 ] ::1 /music/index.php/Home/Admin/assets/layer/layer.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:10+08:00 ] ::1 /music/index.php/Home/Admin/assets/laydate/laydate.js
+ERR: 非法操作:assets
+
+[ 2016-11-03T22:22:16+08:00 ] ::1 /music/index.php/Home/Index/admin_Competence.html
+ERR: 非法操作:admin_Competence
+
